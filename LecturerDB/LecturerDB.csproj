@@ -48,6 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="Entities\Enums\Degree.cs" />
+    <Compile Include="Entities\Group.cs" />
+    <Compile Include="Entities\Language.cs" />
+    <Compile Include="Entities\Lecturer.cs" />
+    <Compile Include="Entities\LectureReading.cs" />
+    <Compile Include="Entities\Publication.cs" />
+    <Compile Include="Entities\Subject.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
