@@ -128,6 +128,7 @@ namespace LecturerDB {
                     _lecturer.Languages,
                     _lecturer.Cathedra);
                 clearFields();
+                dataGridView1.Refresh();
             }
             catch (Exception)
             {
