@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace LecturerDB.Entities {
     class Lecturer {
-        public String PK { get; set; }
-        public String FirstName { get; set; }
-        public String LastName { get; set; }
-        public String Languages { get; set; }
-        public String SecondName { get; set; }
-        public String Degree { get; set; }
-        public String Occupation { get; set; }
+        public string PK { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Languages { get; set; }
+        public string SecondName { get; set; }
+        public string Degree { get; set; }
+        public string Occupation { get; set; }
         public DateTime Birthday { get; set; }
-        public Byte[] CV { get; set; }
-        public Bitmap Photo { get; set; }
+        public byte[] CV { get; set; }
+        public byte[] Photo { get; set; }
+        public string Cathedra { get; set; }
 
         public List<Publication> Publications { get; set; }
     }

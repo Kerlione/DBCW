@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace LecturerDB.Entities {
     class Language {
         public int LanguageID { get; set; }
-        public String Name { get; set; }
+        public string Name { get; set; }
     }
 }
