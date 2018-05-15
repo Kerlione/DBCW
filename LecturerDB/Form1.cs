@@ -127,6 +127,7 @@ namespace LecturerDB {
                     _lecturer.SecondName,
                     _lecturer.Languages,
                     _lecturer.Cathedra);
+                prepodavatelTableAdapter.Update(kafedraDataSet.Prepodavatel);
                 clearFields();
                 dataGridView1.Refresh();
             }
@@ -186,6 +187,33 @@ namespace LecturerDB {
                    
                 }
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+            predmetTableAdapter.Insert(
+                kodPredmetaTextBox.Text,
+                nazvanijePredmeta_rusTextBox.Text,
+                (int)kpNumberBox.Value,
+                (int)lekcii_VNumberBox.Value,
+                (int)lekcii_ZNumberBox.Value,
+                (int)praktiki_VNumberBox.Value,
+                (int)praktiki_ZNumberBox.Value,
+                (int)labor_ZNumberBox.Value,
+                (int)labor_VNumberBox.Value,
+                (int)lekcii_DNumberBox.Value,
+                (int)praktiki_DNumberBox.Value,
+                (int)labor_DNumberBox.Value,
+                kontrolRabotaCheckBox.Enabled,
+                kursovajaCheckBox.Enabled,
+                TematicPlan,
+                SubjectDescription,
+                (int)kontaktchasiNumberBox.Value,
+                nazvanijePredmeta_lvTextBox.Text,
+                nazvanijePredmeta_enTextBox.Text
+                );
+            //this.predmetTableAdapter.Update();
         }
     }
 }
