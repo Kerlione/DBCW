@@ -123,13 +123,14 @@ namespace LecturerDB {
                     _lecturer.CV,
                     _lecturer.Photo,
                     _lecturer.Birthday,
-                    null,
+                    new byte[0],
                     _lecturer.SecondName,
                     _lecturer.Languages,
                     _lecturer.Cathedra);
-                prepodavatelTableAdapter.Update(kafedraDataSet.Prepodavatel);
+                
                 clearFields();
-                dataGridView1.Refresh();
+                prepodavatelBindingSource.DataSource = new List<Lecturer>();
+                prepodavatelBindingSource.DataSource = prepodavatelTableAdapter.GetData();
             }
             catch (Exception)
             {

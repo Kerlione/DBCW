@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label spisokPublikacijLabel;
             System.Windows.Forms.Label kodPredmetaLabel;
             System.Windows.Forms.Label nazvanijePredmeta_rusLabel;
             System.Windows.Forms.Label kPLabel;
@@ -60,7 +59,6 @@
             this.prepodavatelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kafedraDataSet = new LecturerDB.KafedraDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.spisokPublikacijListBox = new System.Windows.Forms.ListBox();
             this.degreeTextBox5 = new System.Windows.Forms.TextBox();
             this.occupationTextBox = new System.Windows.Forms.TextBox();
             this.cathedraTextBox = new System.Windows.Forms.TextBox();
@@ -110,16 +108,27 @@
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.predmetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.kpNumberBox = new System.Windows.Forms.NumericUpDown();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.labor_ZNumberBox = new System.Windows.Forms.NumericUpDown();
+            this.praktiki_ZNumberBox = new System.Windows.Forms.NumericUpDown();
+            this.lekcii_ZNumberBox = new System.Windows.Forms.NumericUpDown();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.labor_VNumberBox = new System.Windows.Forms.NumericUpDown();
+            this.praktiki_VNumberBox = new System.Windows.Forms.NumericUpDown();
+            this.lekcii_VNumberBox = new System.Windows.Forms.NumericUpDown();
             this.nazvanijePredmeta_rusTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.kodPredmetaTextBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.labor_DNumberBox = new System.Windows.Forms.NumericUpDown();
+            this.praktiki_DNumberBox = new System.Windows.Forms.NumericUpDown();
+            this.lekcii_DNumberBox = new System.Windows.Forms.NumericUpDown();
+            this.kontaktchasiNumberBox = new System.Windows.Forms.NumericUpDown();
             this.kursovajaCheckBox = new System.Windows.Forms.CheckBox();
             this.nazvanijePredmeta_enTextBox = new System.Windows.Forms.TextBox();
             this.kontrolRabotaCheckBox = new System.Windows.Forms.CheckBox();
@@ -136,18 +145,6 @@
             this.lectureReadingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog4 = new System.Windows.Forms.OpenFileDialog();
-            this.kpNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.kontaktchasiNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.lekcii_DNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.praktiki_DNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.labor_DNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.lekcii_VNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.praktiki_VNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.labor_VNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.lekcii_ZNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.praktiki_ZNumberBox = new System.Windows.Forms.NumericUpDown();
-            this.labor_ZNumberBox = new System.Windows.Forms.NumericUpDown();
-            spisokPublikacijLabel = new System.Windows.Forms.Label();
             kodPredmetaLabel = new System.Windows.Forms.Label();
             nazvanijePredmeta_rusLabel = new System.Windows.Forms.Label();
             kPLabel = new System.Windows.Forms.Label();
@@ -176,33 +173,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.predmetDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.predmetBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kpNumberBox)).BeginInit();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labor_ZNumberBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.praktiki_ZNumberBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lekcii_ZNumberBox)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labor_VNumberBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.praktiki_VNumberBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lekcii_VNumberBox)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labor_DNumberBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.praktiki_DNumberBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lekcii_DNumberBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kontaktchasiNumberBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruppaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectureReadingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kpNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kontaktchasiNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekcii_DNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.praktiki_DNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labor_DNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekcii_VNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.praktiki_VNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labor_VNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekcii_ZNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.praktiki_ZNumberBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labor_ZNumberBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // spisokPublikacijLabel
-            // 
-            spisokPublikacijLabel.AutoSize = true;
-            spisokPublikacijLabel.Location = new System.Drawing.Point(264, 185);
-            spisokPublikacijLabel.Name = "spisokPublikacijLabel";
-            spisokPublikacijLabel.Size = new System.Drawing.Size(90, 13);
-            spisokPublikacijLabel.TabIndex = 31;
-            spisokPublikacijLabel.Text = "Spisok Publikacij:";
             // 
             // kodPredmetaLabel
             // 
@@ -507,8 +495,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(spisokPublikacijLabel);
-            this.groupBox1.Controls.Add(this.spisokPublikacijListBox);
             this.groupBox1.Controls.Add(this.degreeTextBox5);
             this.groupBox1.Controls.Add(this.occupationTextBox);
             this.groupBox1.Controls.Add(this.cathedraTextBox);
@@ -540,16 +526,6 @@
             this.groupBox1.Size = new System.Drawing.Size(709, 220);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Добавление/Редактирование";
-            // 
-            // spisokPublikacijListBox
-            // 
-            this.spisokPublikacijListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.prepodavatelBindingSource, "SpisokPublikacij", true));
-            this.spisokPublikacijListBox.FormattingEnabled = true;
-            this.spisokPublikacijListBox.Location = new System.Drawing.Point(360, 185);
-            this.spisokPublikacijListBox.Name = "spisokPublikacijListBox";
-            this.spisokPublikacijListBox.Size = new System.Drawing.Size(120, 95);
-            this.spisokPublikacijListBox.TabIndex = 32;
             // 
             // degreeTextBox5
             // 
@@ -1018,6 +994,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "О предмете";
             // 
+            // kpNumberBox
+            // 
+            this.kpNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "KP", true));
+            this.kpNumberBox.Location = new System.Drawing.Point(135, 185);
+            this.kpNumberBox.Name = "kpNumberBox";
+            this.kpNumberBox.Size = new System.Drawing.Size(98, 20);
+            this.kpNumberBox.TabIndex = 7;
+            // 
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(132, 227);
@@ -1061,6 +1045,30 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Заочная форма";
             // 
+            // labor_ZNumberBox
+            // 
+            this.labor_ZNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Laborator_Z", true));
+            this.labor_ZNumberBox.Location = new System.Drawing.Point(94, 72);
+            this.labor_ZNumberBox.Name = "labor_ZNumberBox";
+            this.labor_ZNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.labor_ZNumberBox.TabIndex = 17;
+            // 
+            // praktiki_ZNumberBox
+            // 
+            this.praktiki_ZNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Praktiki_Z", true));
+            this.praktiki_ZNumberBox.Location = new System.Drawing.Point(94, 45);
+            this.praktiki_ZNumberBox.Name = "praktiki_ZNumberBox";
+            this.praktiki_ZNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.praktiki_ZNumberBox.TabIndex = 16;
+            // 
+            // lekcii_ZNumberBox
+            // 
+            this.lekcii_ZNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Lekcii_Z", true));
+            this.lekcii_ZNumberBox.Location = new System.Drawing.Point(94, 22);
+            this.lekcii_ZNumberBox.Name = "lekcii_ZNumberBox";
+            this.lekcii_ZNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.lekcii_ZNumberBox.TabIndex = 15;
+            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(244, 176);
@@ -1085,6 +1093,30 @@
             this.groupBox4.TabIndex = 36;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Вечерняя форма";
+            // 
+            // labor_VNumberBox
+            // 
+            this.labor_VNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Laborator_V", true));
+            this.labor_VNumberBox.Location = new System.Drawing.Point(94, 73);
+            this.labor_VNumberBox.Name = "labor_VNumberBox";
+            this.labor_VNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.labor_VNumberBox.TabIndex = 14;
+            // 
+            // praktiki_VNumberBox
+            // 
+            this.praktiki_VNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Praktiki_V", true));
+            this.praktiki_VNumberBox.Location = new System.Drawing.Point(94, 44);
+            this.praktiki_VNumberBox.Name = "praktiki_VNumberBox";
+            this.praktiki_VNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.praktiki_VNumberBox.TabIndex = 13;
+            // 
+            // lekcii_VNumberBox
+            // 
+            this.lekcii_VNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Lekcii_V", true));
+            this.lekcii_VNumberBox.Location = new System.Drawing.Point(94, 19);
+            this.lekcii_VNumberBox.Name = "lekcii_VNumberBox";
+            this.lekcii_VNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.lekcii_VNumberBox.TabIndex = 12;
             // 
             // nazvanijePredmeta_rusTextBox
             // 
@@ -1128,6 +1160,38 @@
             this.groupBox3.TabIndex = 35;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Дневная форма";
+            // 
+            // labor_DNumberBox
+            // 
+            this.labor_DNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Laborator_D", true));
+            this.labor_DNumberBox.Location = new System.Drawing.Point(120, 94);
+            this.labor_DNumberBox.Name = "labor_DNumberBox";
+            this.labor_DNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.labor_DNumberBox.TabIndex = 11;
+            // 
+            // praktiki_DNumberBox
+            // 
+            this.praktiki_DNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Praktiki_D", true));
+            this.praktiki_DNumberBox.Location = new System.Drawing.Point(120, 68);
+            this.praktiki_DNumberBox.Name = "praktiki_DNumberBox";
+            this.praktiki_DNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.praktiki_DNumberBox.TabIndex = 10;
+            // 
+            // lekcii_DNumberBox
+            // 
+            this.lekcii_DNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Lekcii_D", true));
+            this.lekcii_DNumberBox.Location = new System.Drawing.Point(120, 42);
+            this.lekcii_DNumberBox.Name = "lekcii_DNumberBox";
+            this.lekcii_DNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.lekcii_DNumberBox.TabIndex = 9;
+            // 
+            // kontaktchasiNumberBox
+            // 
+            this.kontaktchasiNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "KontakChasi_D", true));
+            this.kontaktchasiNumberBox.Location = new System.Drawing.Point(120, 14);
+            this.kontaktchasiNumberBox.Name = "kontaktchasiNumberBox";
+            this.kontaktchasiNumberBox.Size = new System.Drawing.Size(100, 20);
+            this.kontaktchasiNumberBox.TabIndex = 8;
             // 
             // kursovajaCheckBox
             // 
@@ -1234,94 +1298,6 @@
             this.openFileDialog4.FileName = "openFileDialog4";
             this.openFileDialog4.Filter = "Any Document | *.doc;*.docx;*.pdf";
             // 
-            // kpNumberBox
-            // 
-            this.kpNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "KP", true));
-            this.kpNumberBox.Location = new System.Drawing.Point(135, 185);
-            this.kpNumberBox.Name = "kpNumberBox";
-            this.kpNumberBox.Size = new System.Drawing.Size(98, 20);
-            this.kpNumberBox.TabIndex = 7;
-            // 
-            // kontaktchasiNumberBox
-            // 
-            this.kontaktchasiNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "KontakChasi_D", true));
-            this.kontaktchasiNumberBox.Location = new System.Drawing.Point(120, 14);
-            this.kontaktchasiNumberBox.Name = "kontaktchasiNumberBox";
-            this.kontaktchasiNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.kontaktchasiNumberBox.TabIndex = 8;
-            // 
-            // lekcii_DNumberBox
-            // 
-            this.lekcii_DNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Lekcii_D", true));
-            this.lekcii_DNumberBox.Location = new System.Drawing.Point(120, 42);
-            this.lekcii_DNumberBox.Name = "lekcii_DNumberBox";
-            this.lekcii_DNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.lekcii_DNumberBox.TabIndex = 9;
-            // 
-            // praktiki_DNumberBox
-            // 
-            this.praktiki_DNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Praktiki_D", true));
-            this.praktiki_DNumberBox.Location = new System.Drawing.Point(120, 68);
-            this.praktiki_DNumberBox.Name = "praktiki_DNumberBox";
-            this.praktiki_DNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.praktiki_DNumberBox.TabIndex = 10;
-            // 
-            // labor_DNumberBox
-            // 
-            this.labor_DNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Laborator_D", true));
-            this.labor_DNumberBox.Location = new System.Drawing.Point(120, 94);
-            this.labor_DNumberBox.Name = "labor_DNumberBox";
-            this.labor_DNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.labor_DNumberBox.TabIndex = 11;
-            // 
-            // lekcii_VNumberBox
-            // 
-            this.lekcii_VNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Lekcii_V", true));
-            this.lekcii_VNumberBox.Location = new System.Drawing.Point(94, 19);
-            this.lekcii_VNumberBox.Name = "lekcii_VNumberBox";
-            this.lekcii_VNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.lekcii_VNumberBox.TabIndex = 12;
-            // 
-            // praktiki_VNumberBox
-            // 
-            this.praktiki_VNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Praktiki_V", true));
-            this.praktiki_VNumberBox.Location = new System.Drawing.Point(94, 44);
-            this.praktiki_VNumberBox.Name = "praktiki_VNumberBox";
-            this.praktiki_VNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.praktiki_VNumberBox.TabIndex = 13;
-            // 
-            // labor_VNumberBox
-            // 
-            this.labor_VNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Laborator_V", true));
-            this.labor_VNumberBox.Location = new System.Drawing.Point(94, 73);
-            this.labor_VNumberBox.Name = "labor_VNumberBox";
-            this.labor_VNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.labor_VNumberBox.TabIndex = 14;
-            // 
-            // lekcii_ZNumberBox
-            // 
-            this.lekcii_ZNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Lekcii_Z", true));
-            this.lekcii_ZNumberBox.Location = new System.Drawing.Point(94, 22);
-            this.lekcii_ZNumberBox.Name = "lekcii_ZNumberBox";
-            this.lekcii_ZNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.lekcii_ZNumberBox.TabIndex = 15;
-            // 
-            // praktiki_ZNumberBox
-            // 
-            this.praktiki_ZNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Praktiki_Z", true));
-            this.praktiki_ZNumberBox.Location = new System.Drawing.Point(94, 45);
-            this.praktiki_ZNumberBox.Name = "praktiki_ZNumberBox";
-            this.praktiki_ZNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.praktiki_ZNumberBox.TabIndex = 16;
-            // 
-            // labor_ZNumberBox
-            // 
-            this.labor_ZNumberBox.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.predmetBindingSource, "Laborator_Z", true));
-            this.labor_ZNumberBox.Location = new System.Drawing.Point(94, 72);
-            this.labor_ZNumberBox.Name = "labor_ZNumberBox";
-            this.labor_ZNumberBox.Size = new System.Drawing.Size(100, 20);
-            this.labor_ZNumberBox.TabIndex = 17;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1344,26 +1320,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.predmetBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kpNumberBox)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labor_ZNumberBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.praktiki_ZNumberBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lekcii_ZNumberBox)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labor_VNumberBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.praktiki_VNumberBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lekcii_VNumberBox)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labor_DNumberBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.praktiki_DNumberBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lekcii_DNumberBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kontaktchasiNumberBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruppaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectureReadingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kpNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kontaktchasiNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekcii_DNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.praktiki_DNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labor_DNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekcii_VNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.praktiki_VNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labor_VNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekcii_ZNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.praktiki_ZNumberBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labor_ZNumberBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1408,7 +1384,6 @@
         private System.Windows.Forms.BindingSource prepodavatelBindingSource;
         private KafedraDataSetTableAdapters.PrepodavatelTableAdapter prepodavatelTableAdapter;
         private KafedraDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.ListBox spisokPublikacijListBox;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private KafedraDataSetTableAdapters.PredmetTableAdapter predmetTableAdapter;
         private System.Windows.Forms.BindingSource predmetBindingSource;
