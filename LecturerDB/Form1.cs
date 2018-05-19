@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,6 +22,28 @@ namespace LecturerDB {
         private Lecturer _lecturer = new Lecturer();
 
         private void Form1_Load(object sender, EventArgs e) {
+            // TODO: This line of code loads data into the 'kafedraDataSet.Language' table. You can move, or remove it, as needed.
+            this.languageTableAdapter.Fill(this.kafedraDataSet.Language);
+            // TODO: This line of code loads data into the 'kafedraDataSet.RezultatiObuchenija' table. You can move, or remove it, as needed.
+            this.rezultatiObuchenijaTableAdapter.Fill(this.kafedraDataSet.RezultatiObuchenija);
+            // TODO: This line of code loads data into the 'kafedraDataSet._Publikacija_Teacher' table. You can move, or remove it, as needed.
+            this.publikacija_TeacherTableAdapter.Fill(this.kafedraDataSet._Publikacija_Teacher);
+            // TODO: This line of code loads data into the 'kafedraDataSet.Publikacija' table. You can move, or remove it, as needed.
+            this.publikacijaTableAdapter.Fill(this.kafedraDataSet.Publikacija);
+            // TODO: This line of code loads data into the 'kafedraDataSet.TeacherProject' table. You can move, or remove it, as needed.
+            this.teacherProjectTableAdapter.Fill(this.kafedraDataSet.TeacherProject);
+            // TODO: This line of code loads data into the 'kafedraDataSet.Project' table. You can move, or remove it, as needed.
+            this.projectTableAdapter.Fill(this.kafedraDataSet.Project);
+            // TODO: This line of code loads data into the 'kafedraDataSet.MoveStudent' table. You can move, or remove it, as needed.
+            this.moveStudentTableAdapter.Fill(this.kafedraDataSet.MoveStudent);
+            // TODO: This line of code loads data into the 'kafedraDataSet.Obazanost' table. You can move, or remove it, as needed.
+            this.obazanostTableAdapter.Fill(this.kafedraDataSet.Obazanost);
+            // TODO: This line of code loads data into the 'kafedraDataSet.NagruzkaPlan' table. You can move, or remove it, as needed.
+            this.nagruzkaPlanTableAdapter.Fill(this.kafedraDataSet.NagruzkaPlan);
+            // TODO: This line of code loads data into the 'kafedraDataSet.ZaschitaDiploma' table. You can move, or remove it, as needed.
+            this.zaschitaDiplomaTableAdapter.Fill(this.kafedraDataSet.ZaschitaDiploma);
+            // TODO: This line of code loads data into the 'kafedraDataSet.VipolnenijePlana' table. You can move, or remove it, as needed.
+            this.vipolnenijePlanaTableAdapter.Fill(this.kafedraDataSet.VipolnenijePlana);
             // TODO: This line of code loads data into the 'kafedraDataSet.LectureReading' table. You can move, or remove it, as needed.
             this.lectureReadingTableAdapter.Fill(this.kafedraDataSet.LectureReading);
             // TODO: This line of code loads data into the 'kafedraDataSet.Predmet' table. You can move, or remove it, as needed.
@@ -123,7 +147,7 @@ namespace LecturerDB {
                     _lecturer.CV,
                     _lecturer.Photo,
                     _lecturer.Birthday,
-                    new byte[0],
+                    new byte[0], 
                     _lecturer.SecondName,
                     _lecturer.Languages,
                     _lecturer.Cathedra);
@@ -192,29 +216,129 @@ namespace LecturerDB {
 
         private void button8_Click(object sender, EventArgs e)
         {
-            
-            predmetTableAdapter.Insert(
-                kodPredmetaTextBox.Text,
-                nazvanijePredmeta_rusTextBox.Text,
-                (int)kpNumberBox.Value,
-                (int)lekcii_VNumberBox.Value,
-                (int)lekcii_ZNumberBox.Value,
-                (int)praktiki_VNumberBox.Value,
-                (int)praktiki_ZNumberBox.Value,
-                (int)labor_ZNumberBox.Value,
-                (int)labor_VNumberBox.Value,
-                (int)lekcii_DNumberBox.Value,
-                (int)praktiki_DNumberBox.Value,
-                (int)labor_DNumberBox.Value,
-                kontrolRabotaCheckBox.Enabled,
-                kursovajaCheckBox.Enabled,
-                TematicPlan,
-                SubjectDescription,
-                (int)kontaktchasiNumberBox.Value,
-                nazvanijePredmeta_lvTextBox.Text,
-                nazvanijePredmeta_enTextBox.Text
+            try
+            {
+                predmetTableAdapter.Insert(
+                    kodPredmetaTextBox.Text,
+                    nazvanijePredmeta_rusTextBox.Text,
+                    (int) kpNumberBox.Value,
+                    (int) lekcii_VNumberBox.Value,
+                    (int) lekcii_ZNumberBox.Value,
+                    (int) praktiki_VNumberBox.Value,
+                    (int) praktiki_ZNumberBox.Value,
+                    (int) labor_ZNumberBox.Value,
+                    (int) labor_VNumberBox.Value,
+                    (int) lekcii_DNumberBox.Value,
+                    (int) praktiki_DNumberBox.Value,
+                    (int) labor_DNumberBox.Value,
+                    kontrolRabotaCheckBox.Enabled,
+                    kursovajaCheckBox.Enabled,
+                    TematicPlan,
+                    SubjectDescription,
+                    (int) kontaktchasiNumberBox.Value,
+                    nazvanijePredmeta_lvTextBox.Text,
+                    nazvanijePredmeta_enTextBox.Text
                 );
-            //this.predmetTableAdapter.Update();
+            }
+            catch (SqlException)
+            {
+                
+            }
+            
+            this.predmetTableAdapter.Update(this.kafedraDataSet.Predmet);
+            predmetBindingSource.DataSource = predmetTableAdapter.GetData();
+        }
+
+        private void button11_Click(object sender, EventArgs e) //save group
+        {
+            try
+            {
+                gruppaTableAdapter.Insert(nomerGruppiTextBox.Text,
+                    kolichestvoStudentovNumericUpDown.Value.ToString(),
+                    starostaTextBox.Text,
+                    kontaktInfoTextBox.Text,
+                    fakultetTextBox.Text,
+                    formaObuchenijaTextBox.Text,
+                    programmaTextBox.Text,
+                    (int) godNaboraNumericUpDown.Value);
+            }
+            catch (Exception)
+            {
+
+            }
+
+            gruppaTableAdapter.Update(kafedraDataSet.Gruppa);
+            gruppaBindingSource.DataSource = gruppaTableAdapter.GetData();
+        }
+
+        private void button13_Click(object sender, EventArgs e) //delete
+        {
+            try
+            {
+                gruppaTableAdapter.Delete(nomerGruppiTextBox.Text,
+                    kolichestvoStudentovNumericUpDown.Value.ToString(),
+                    starostaTextBox.Text,
+                    kontaktInfoTextBox.Text,
+                    fakultetTextBox.Text,
+                    formaObuchenijaTextBox.Text,
+                    programmaTextBox.Text,
+                    (int) godNaboraNumericUpDown.Value);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            nomerGruppiTextBox.Clear();
+            kolichestvoStudentovNumericUpDown.Value = 0;
+            starostaTextBox.Clear();
+            kontaktInfoTextBox.Clear();
+            fakultetTextBox.Clear();
+            formaObuchenijaTextBox.Clear();
+            programmaTextBox.Clear();
+            godNaboraNumericUpDown.Value = 1970;
+        }
+
+        private void lekciiNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            totalChasiNumericUpDown.Value += lekciiNumericUpDown.Value;
+        }
+
+        private void praktikiNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            totalChasiNumericUpDown.Value += praktikiNumericUpDown.Value;
+        }
+
+        private void laborNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            totalChasiNumericUpDown.Value += laborNumericUpDown.Value;
+        }
+
+        private void jazikListBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (jazikListBox.SelectedValue.ToString() == "Eng")
+            {
+                koef_nagruzNumericUpDown.Value = Convert.ToDecimal(1.5);
+            }
+            else
+            {
+                koef_nagruzNumericUpDown.Value = 1;
+            }
+        }
+
+        private void kolichestvoStartSemNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            otchislenoNumericUpDown.Value =
+                kolichestvoStartSemNumericUpDown.Value - kolichestvoEndSemNumericUpDown.Value;
+        }
+
+        private void kolichestvoEndSemNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            otchislenoNumericUpDown.Value =
+                kolichestvoStartSemNumericUpDown.Value - kolichestvoEndSemNumericUpDown.Value;
         }
     }
 }
