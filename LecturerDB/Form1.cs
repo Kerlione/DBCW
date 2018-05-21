@@ -59,6 +59,12 @@ namespace LecturerDB {
 
         }
 
+        private void refreshGruppaGrid()
+        {
+            gruppaTableAdapter.Update(kafedraDataSet.Gruppa);
+            gruppaBindingSource.DataSource = gruppaTableAdapter.GetData();
+        }
+
         private void button3_Click(object sender, EventArgs e) { // Photo button
             DialogResult result = openFileDialog1.ShowDialog();
             if (result != DialogResult.OK) return;
@@ -253,25 +259,38 @@ namespace LecturerDB {
         {
             try
             {
-                gruppaTableAdapter.Insert(nomerGruppiTextBox.Text,
-                    kolichestvoStudentovNumericUpDown.Value.ToString(),
-                    starostaTextBox.Text,
-                    kontaktInfoTextBox.Text,
-                    fakultetTextBox.Text,
-                    formaObuchenijaTextBox.Text,
-                    programmaTextBox.Text,
-                    (int) godNaboraNumericUpDown.Value);
+                
+                    gruppaTableAdapter.Insert(nomerGruppiTextBox.Text,
+                        kolichestvoStudentovNumericUpDown.Value.ToString(),
+                        starostaTextBox.Text,
+                        kontaktInfoTextBox.Text,
+                        fakultetTextBox.Text,
+                        formaObuchenijaTextBox.Text,
+                        programmaTextBox.Text,
+                        (int)godNaboraNumericUpDown.Value);
+                
             }
             catch (Exception)
             {
+                string pk = "NomerGruppi=" + nomerGruppiTextBox.Text;
+                DataRow dr = kafedraDataSet.Gruppa.Select(pk).FirstOrDefault(); //fix exception with missing operand DB(from group num)
+                if (dr != null)
+                {
+                    dr["KolichestvoStudentov"] = kolichestvoEndSemNumericUpDown.Value.ToString();
+                    dr["Starosta"] = starostaTextBox.Text;
+                    dr["KontaktInfo"] = kontaktInfoTextBox.Text;
+                    dr["Fakultet"] = fakultetTextBox.Text;
+                    dr["FormaObuchenija"] = formaObuchenijaTextBox.Text;
+                    dr["Programma"] = programmaTextBox.Text;
+                    dr["GodNabora"] = (int)godNaboraNumericUpDown.Value;
+                }
 
             }
 
-            gruppaTableAdapter.Update(kafedraDataSet.Gruppa);
-            gruppaBindingSource.DataSource = gruppaTableAdapter.GetData();
+            refreshGruppaGrid();
         }
 
-        private void button13_Click(object sender, EventArgs e) //delete
+        private void button13_Click(object sender, EventArgs e) //gruppa delete
         {
             try
             {
@@ -288,9 +307,10 @@ namespace LecturerDB {
             {
 
             }
+            refreshGruppaGrid();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e) //gruppa clear
         {
             nomerGruppiTextBox.Clear();
             kolichestvoStudentovNumericUpDown.Value = 0;
@@ -304,22 +324,25 @@ namespace LecturerDB {
 
         private void lekciiNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            totalChasiNumericUpDown.Value += lekciiNumericUpDown.Value;
+            //totalChasiNumericUpDown.Value = 0;
+            totalChasiNumericUpDown.Value = lekciiNumericUpDown.Value + praktikiNumericUpDown.Value + laborNumericUpDown.Value;
         }
 
         private void praktikiNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            totalChasiNumericUpDown.Value += praktikiNumericUpDown.Value;
+            //totalChasiNumericUpDown.Value = 0;
+            totalChasiNumericUpDown.Value = lekciiNumericUpDown.Value + praktikiNumericUpDown.Value + laborNumericUpDown.Value;
         }
 
         private void laborNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            totalChasiNumericUpDown.Value += laborNumericUpDown.Value;
+            //totalChasiNumericUpDown.Value = 0;
+            totalChasiNumericUpDown.Value = lekciiNumericUpDown.Value + praktikiNumericUpDown.Value + laborNumericUpDown.Value;
         }
 
         private void jazikListBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (jazikListBox.SelectedValue.ToString() == "Eng")
+            if ((string)jazikListBox.SelectedItem == "Eng")
             {
                 koef_nagruzNumericUpDown.Value = Convert.ToDecimal(1.5);
             }
@@ -338,7 +361,27 @@ namespace LecturerDB {
         private void kolichestvoEndSemNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             otchislenoNumericUpDown.Value =
-                kolichestvoStartSemNumericUpDown.Value - kolichestvoEndSemNumericUpDown.Value;
+                kolichestvoStartSemNumericUpDown.Value - otchislenoNumericUpDown.Value;
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                vipolnenijePlanaTableAdapter.Insert(personKodPrepodavatelComboBox.SelectedText,
+                    kodPredmetaComboBox.SelectedText,
+                    numGruppaComboBox.SelectedText,
+                    dataProvZanjatijaDateTimePicker.Value,
+                    tipZanjatijaListBox.DisplayMember, // TODO - fix not converting 
+                    temaZanjatijaPlanTextBox.Text,
+                    temaZanjatijaFactTextBox.Text,
+                    (int)chasiNumericUpDown.Value);
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

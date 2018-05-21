@@ -107,9 +107,22 @@
             System.Windows.Forms.Label pK_lecturerLabel;
             this.tabPanel1 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.chasiNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.vipolnenijePlanaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vipolnenijePlanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kafedraDataSet = new LecturerDB.KafedraDataSet();
+            this.chasiNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.temaZanjatijaFactTextBox = new System.Windows.Forms.TextBox();
             this.temaZanjatijaPlanTextBox = new System.Windows.Forms.TextBox();
             this.tipZanjatijaListBox = new System.Windows.Forms.ListBox();
@@ -158,8 +171,12 @@
             this.rukovoditelTextBox = new System.Windows.Forms.TextBox();
             this.temaRabotiTextBox = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.kontaktChasiNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.nagruzkaPlanDataGridView = new System.Windows.Forms.DataGridView();
             this.nagruzkaPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kontaktChasiNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.totalChasiNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.koef_nagruzNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.jazikListBox = new System.Windows.Forms.ListBox();
@@ -172,7 +189,40 @@
             this.kodPredmetaComboBox = new System.Windows.Forms.ComboBox();
             this.gruppaComboBox = new System.Windows.Forms.ComboBox();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.obazanostDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.obazanostBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.persKodPrepodComboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataEndDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dataStartDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.objazanostTextBox = new System.Windows.Forms.TextBox();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.moveStudentDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moveStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.prichinaTextBox = new System.Windows.Forms.TextBox();
+            this.otchislenoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.kolichestvoEndSemNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.kolichestvoStartSemNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.semestrListBox1 = new System.Windows.Forms.ListBox();
+            this.godUchebnijTextBox = new System.Windows.Forms.TextBox();
+            this.numGroupComboBox = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.predmetDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -262,9 +312,79 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.teacherProjectDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacherProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataEndDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataStartDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.typeTextBox = new System.Windows.Forms.TextBox();
+            this.nazvanijeTextBox = new System.Windows.Forms.TextBox();
+            this.numProjectTextBox = new System.Windows.Forms.TextBox();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.publikacija_TeacherDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.publikacija_TeacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.publikacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.publikacijaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reitingTextBox = new System.Windows.Forms.TextBox();
+            this.placeTextBox = new System.Windows.Forms.TextBox();
+            this.godTextBox = new System.Windows.Forms.TextBox();
+            this.nazvanijeTextBox1 = new System.Windows.Forms.TextBox();
+            this.iD_publikaciiTextBox = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.rezultatiObuchenijaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rezultatiObuchenijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kolichestvoNeudovNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.srednijBallNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.semestrListBox2 = new System.Windows.Forms.ListBox();
+            this.uchebGodTextBox1 = new System.Windows.Forms.TextBox();
+            this.id_PredmetComboBox = new System.Windows.Forms.ComboBox();
+            this.numGroupComboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.lectureReadingDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lectureReadingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pK_lecturerComboBox = new System.Windows.Forms.ComboBox();
+            this.iD_subjectComboBox = new System.Windows.Forms.ComboBox();
+            this.iD_languageComboBox = new System.Windows.Forms.ComboBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.languageDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.languageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.languageTextBox = new System.Windows.Forms.TextBox();
             this.gruppaTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.GruppaTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
@@ -273,153 +393,33 @@
             this.lectureReadingTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.LectureReadingTableAdapter();
             this.predmetTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.PredmetTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lectureReadingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog4 = new System.Windows.Forms.OpenFileDialog();
             this.vipolnenijePlanaTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.VipolnenijePlanaTableAdapter();
             this.vipolnenijePlanaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.zaschitaDiplomaTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.ZaschitaDiplomaTableAdapter();
             this.nagruzkaPlanTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.NagruzkaPlanTableAdapter();
-            this.nagruzkaPlanDataGridView = new System.Windows.Forms.DataGridView();
+            this.obazanostTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.ObazanostTableAdapter();
+            this.moveStudentTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.MoveStudentTableAdapter();
+            this.projectTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.ProjectTableAdapter();
+            this.teacherProjectTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.TeacherProjectTableAdapter();
+            this.publikacijaTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.PublikacijaTableAdapter();
+            this.publikacija_TeacherTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.Publikacija_TeacherTableAdapter();
+            this.rezultatiObuchenijaTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.RezultatiObuchenijaTableAdapter();
+            this.languageTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.LanguageTableAdapter();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.obazanostBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.obazanostTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.ObazanostTableAdapter();
-            this.objazanostTextBox = new System.Windows.Forms.TextBox();
-            this.dataStartDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dataEndDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.persKodPrepodComboBox1 = new System.Windows.Forms.ComboBox();
-            this.obazanostDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moveStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.moveStudentTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.MoveStudentTableAdapter();
-            this.numGroupComboBox = new System.Windows.Forms.ComboBox();
-            this.godUchebnijTextBox = new System.Windows.Forms.TextBox();
-            this.semestrListBox1 = new System.Windows.Forms.ListBox();
-            this.kolichestvoStartSemNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.kolichestvoEndSemNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.otchislenoNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.prichinaTextBox = new System.Windows.Forms.TextBox();
-            this.moveStudentDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.vipolnenijePlanaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.projectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.projectTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.ProjectTableAdapter();
-            this.numProjectTextBox = new System.Windows.Forms.TextBox();
-            this.nazvanijeTextBox = new System.Windows.Forms.TextBox();
-            this.typeTextBox = new System.Windows.Forms.TextBox();
-            this.dataStartDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataEndDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.teacherProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.teacherProjectTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.TeacherProjectTableAdapter();
-            this.teacherProjectDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.publikacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.publikacijaTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.PublikacijaTableAdapter();
-            this.iD_publikaciiTextBox = new System.Windows.Forms.TextBox();
-            this.nazvanijeTextBox1 = new System.Windows.Forms.TextBox();
-            this.godTextBox = new System.Windows.Forms.TextBox();
-            this.placeTextBox = new System.Windows.Forms.TextBox();
-            this.reitingTextBox = new System.Windows.Forms.TextBox();
-            this.publikacija_TeacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.publikacija_TeacherTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.Publikacija_TeacherTableAdapter();
-            this.publikacijaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.publikacija_TeacherDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.rezultatiObuchenijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rezultatiObuchenijaTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.RezultatiObuchenijaTableAdapter();
-            this.numGroupComboBox1 = new System.Windows.Forms.ComboBox();
-            this.id_PredmetComboBox = new System.Windows.Forms.ComboBox();
-            this.uchebGodTextBox1 = new System.Windows.Forms.TextBox();
-            this.semestrListBox2 = new System.Windows.Forms.ListBox();
-            this.srednijBallNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.kolichestvoNeudovNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.rezultatiObuchenijaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.languageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.languageTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.LanguageTableAdapter();
-            this.languageTextBox = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.iD_languageComboBox = new System.Windows.Forms.ComboBox();
-            this.iD_subjectComboBox = new System.Windows.Forms.ComboBox();
-            this.pK_lecturerComboBox = new System.Windows.Forms.ComboBox();
-            this.lectureReadingDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.languageDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             kodPredmetaLabel = new System.Windows.Forms.Label();
             nazvanijePredmeta_rusLabel = new System.Windows.Forms.Label();
             kPLabel = new System.Windows.Forms.Label();
@@ -503,9 +503,10 @@
             pK_lecturerLabel = new System.Windows.Forms.Label();
             this.tabPanel1.SuspendLayout();
             this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chasiNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafedraDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chasiNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruppaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.predmetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prepodavatelBindingSource)).BeginInit();
@@ -518,15 +519,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.zaschitaDiplomaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ocenkaNumericUpDown)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kontaktChasiNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nagruzkaPlanDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nagruzkaPlanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kontaktChasiNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalChasiNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.koef_nagruzNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laborNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.praktikiNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekciiNumericUpDown)).BeginInit();
             this.tabPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.obazanostDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obazanostBindingSource)).BeginInit();
             this.tabPage12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moveStudentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moveStudentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otchislenoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoEndSemNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoStartSemNumericUpDown)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.predmetDataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -549,37 +558,28 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.tabPage13.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.tabPage11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lectureReadingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nagruzkaPlanDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obazanostBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obazanostDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moveStudentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoStartSemNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoEndSemNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.otchislenoNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moveStudentDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherProjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherProjectDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publikacijaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publikacija_TeacherBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publikacijaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherProjectBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).BeginInit();
+            this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.publikacija_TeacherDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rezultatiObuchenijaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.srednijBallNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoNeudovNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.publikacija_TeacherBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.publikacijaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.publikacijaDataGridView)).BeginInit();
+            this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rezultatiObuchenijaDataGridView)).BeginInit();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.languageBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rezultatiObuchenijaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoNeudovNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.srednijBallNumericUpDown)).BeginInit();
+            this.tabPage11.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lectureReadingDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectureReadingBindingSource)).BeginInit();
+            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.languageDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.languageBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // kodPredmetaLabel
@@ -1032,6 +1032,285 @@
             kontaktChasiLabel.TabIndex = 22;
             kontaktChasiLabel.Text = "Контактные часы:";
             // 
+            // objazanostLabel
+            // 
+            objazanostLabel.AutoSize = true;
+            objazanostLabel.Location = new System.Drawing.Point(55, 54);
+            objazanostLabel.Name = "objazanostLabel";
+            objazanostLabel.Size = new System.Drawing.Size(63, 13);
+            objazanostLabel.TabIndex = 0;
+            objazanostLabel.Text = "Objazanost:";
+            // 
+            // dataStartLabel
+            // 
+            dataStartLabel.AutoSize = true;
+            dataStartLabel.Location = new System.Drawing.Point(341, 18);
+            dataStartLabel.Name = "dataStartLabel";
+            dataStartLabel.Size = new System.Drawing.Size(58, 13);
+            dataStartLabel.TabIndex = 2;
+            dataStartLabel.Text = "Data Start:";
+            // 
+            // dataEndLabel
+            // 
+            dataEndLabel.AutoSize = true;
+            dataEndLabel.Location = new System.Drawing.Point(344, 51);
+            dataEndLabel.Name = "dataEndLabel";
+            dataEndLabel.Size = new System.Drawing.Size(55, 13);
+            dataEndLabel.TabIndex = 4;
+            dataEndLabel.Text = "Data End:";
+            // 
+            // persKodPrepodLabel1
+            // 
+            persKodPrepodLabel1.AutoSize = true;
+            persKodPrepodLabel1.Location = new System.Drawing.Point(28, 21);
+            persKodPrepodLabel1.Name = "persKodPrepodLabel1";
+            persKodPrepodLabel1.Size = new System.Drawing.Size(90, 13);
+            persKodPrepodLabel1.TabIndex = 6;
+            persKodPrepodLabel1.Text = "Pers Kod Prepod:";
+            // 
+            // numGroupLabel
+            // 
+            numGroupLabel.AutoSize = true;
+            numGroupLabel.Location = new System.Drawing.Point(8, 19);
+            numGroupLabel.Name = "numGroupLabel";
+            numGroupLabel.Size = new System.Drawing.Size(83, 13);
+            numGroupLabel.TabIndex = 0;
+            numGroupLabel.Text = "Номер группы:";
+            // 
+            // godUchebnijLabel
+            // 
+            godUchebnijLabel.AutoSize = true;
+            godUchebnijLabel.Location = new System.Drawing.Point(16, 46);
+            godUchebnijLabel.Name = "godUchebnijLabel";
+            godUchebnijLabel.Size = new System.Drawing.Size(75, 13);
+            godUchebnijLabel.TabIndex = 2;
+            godUchebnijLabel.Text = "Учебный год:";
+            // 
+            // semestrLabel1
+            // 
+            semestrLabel1.AutoSize = true;
+            semestrLabel1.Location = new System.Drawing.Point(43, 69);
+            semestrLabel1.Name = "semestrLabel1";
+            semestrLabel1.Size = new System.Drawing.Size(54, 13);
+            semestrLabel1.TabIndex = 4;
+            semestrLabel1.Text = "Семестр:";
+            // 
+            // kolichestvoStartSemLabel
+            // 
+            kolichestvoStartSemLabel.AutoSize = true;
+            kolichestvoStartSemLabel.Location = new System.Drawing.Point(286, 24);
+            kolichestvoStartSemLabel.Name = "kolichestvoStartSemLabel";
+            kolichestvoStartSemLabel.Size = new System.Drawing.Size(168, 13);
+            kolichestvoStartSemLabel.TabIndex = 6;
+            kolichestvoStartSemLabel.Text = "Количество в начале семестра:";
+            // 
+            // kolichestvoEndSemLabel
+            // 
+            kolichestvoEndSemLabel.AutoSize = true;
+            kolichestvoEndSemLabel.Location = new System.Drawing.Point(286, 52);
+            kolichestvoEndSemLabel.Name = "kolichestvoEndSemLabel";
+            kolichestvoEndSemLabel.Size = new System.Drawing.Size(163, 13);
+            kolichestvoEndSemLabel.TabIndex = 8;
+            kolichestvoEndSemLabel.Text = "Количество в конце семестра:";
+            // 
+            // otchislenoLabel
+            // 
+            otchislenoLabel.AutoSize = true;
+            otchislenoLabel.Location = new System.Drawing.Point(385, 78);
+            otchislenoLabel.Name = "otchislenoLabel";
+            otchislenoLabel.Size = new System.Drawing.Size(64, 13);
+            otchislenoLabel.TabIndex = 10;
+            otchislenoLabel.Text = "Отчислено:";
+            // 
+            // prichinaLabel
+            // 
+            prichinaLabel.AutoSize = true;
+            prichinaLabel.Location = new System.Drawing.Point(396, 105);
+            prichinaLabel.Name = "prichinaLabel";
+            prichinaLabel.Size = new System.Drawing.Size(53, 13);
+            prichinaLabel.TabIndex = 12;
+            prichinaLabel.Text = "Причина:";
+            // 
+            // numProjectLabel
+            // 
+            numProjectLabel.AutoSize = true;
+            numProjectLabel.Location = new System.Drawing.Point(25, 26);
+            numProjectLabel.Name = "numProjectLabel";
+            numProjectLabel.Size = new System.Drawing.Size(68, 13);
+            numProjectLabel.TabIndex = 0;
+            numProjectLabel.Text = "Num Project:";
+            // 
+            // nazvanijeLabel
+            // 
+            nazvanijeLabel.AutoSize = true;
+            nazvanijeLabel.Location = new System.Drawing.Point(36, 52);
+            nazvanijeLabel.Name = "nazvanijeLabel";
+            nazvanijeLabel.Size = new System.Drawing.Size(57, 13);
+            nazvanijeLabel.TabIndex = 2;
+            nazvanijeLabel.Text = "Nazvanije:";
+            // 
+            // typeLabel
+            // 
+            typeLabel.AutoSize = true;
+            typeLabel.Location = new System.Drawing.Point(59, 78);
+            typeLabel.Name = "typeLabel";
+            typeLabel.Size = new System.Drawing.Size(34, 13);
+            typeLabel.TabIndex = 4;
+            typeLabel.Text = "Type:";
+            // 
+            // dataStartLabel1
+            // 
+            dataStartLabel1.AutoSize = true;
+            dataStartLabel1.Location = new System.Drawing.Point(297, 27);
+            dataStartLabel1.Name = "dataStartLabel1";
+            dataStartLabel1.Size = new System.Drawing.Size(58, 13);
+            dataStartLabel1.TabIndex = 6;
+            dataStartLabel1.Text = "Data Start:";
+            // 
+            // dataEndLabel1
+            // 
+            dataEndLabel1.AutoSize = true;
+            dataEndLabel1.Location = new System.Drawing.Point(300, 56);
+            dataEndLabel1.Name = "dataEndLabel1";
+            dataEndLabel1.Size = new System.Drawing.Size(55, 13);
+            dataEndLabel1.TabIndex = 8;
+            dataEndLabel1.Text = "Data End:";
+            // 
+            // iD_publikaciiLabel
+            // 
+            iD_publikaciiLabel.AutoSize = true;
+            iD_publikaciiLabel.Location = new System.Drawing.Point(32, 24);
+            iD_publikaciiLabel.Name = "iD_publikaciiLabel";
+            iD_publikaciiLabel.Size = new System.Drawing.Size(68, 13);
+            iD_publikaciiLabel.TabIndex = 0;
+            iD_publikaciiLabel.Text = "ID publikacii:";
+            // 
+            // nazvanijeLabel1
+            // 
+            nazvanijeLabel1.AutoSize = true;
+            nazvanijeLabel1.Location = new System.Drawing.Point(43, 50);
+            nazvanijeLabel1.Name = "nazvanijeLabel1";
+            nazvanijeLabel1.Size = new System.Drawing.Size(57, 13);
+            nazvanijeLabel1.TabIndex = 2;
+            nazvanijeLabel1.Text = "Nazvanije:";
+            // 
+            // godLabel
+            // 
+            godLabel.AutoSize = true;
+            godLabel.Location = new System.Drawing.Point(70, 76);
+            godLabel.Name = "godLabel";
+            godLabel.Size = new System.Drawing.Size(30, 13);
+            godLabel.TabIndex = 4;
+            godLabel.Text = "God:";
+            // 
+            // placeLabel
+            // 
+            placeLabel.AutoSize = true;
+            placeLabel.Location = new System.Drawing.Point(63, 102);
+            placeLabel.Name = "placeLabel";
+            placeLabel.Size = new System.Drawing.Size(37, 13);
+            placeLabel.TabIndex = 6;
+            placeLabel.Text = "Place:";
+            // 
+            // reitingLabel
+            // 
+            reitingLabel.AutoSize = true;
+            reitingLabel.Location = new System.Drawing.Point(57, 128);
+            reitingLabel.Name = "reitingLabel";
+            reitingLabel.Size = new System.Drawing.Size(43, 13);
+            reitingLabel.TabIndex = 8;
+            reitingLabel.Text = "Reiting:";
+            // 
+            // numGroupLabel1
+            // 
+            numGroupLabel1.AutoSize = true;
+            numGroupLabel1.Location = new System.Drawing.Point(10, 15);
+            numGroupLabel1.Name = "numGroupLabel1";
+            numGroupLabel1.Size = new System.Drawing.Size(64, 13);
+            numGroupLabel1.TabIndex = 0;
+            numGroupLabel1.Text = "Num Group:";
+            // 
+            // id_PredmetLabel
+            // 
+            id_PredmetLabel.AutoSize = true;
+            id_PredmetLabel.Location = new System.Drawing.Point(13, 42);
+            id_PredmetLabel.Name = "id_PredmetLabel";
+            id_PredmetLabel.Size = new System.Drawing.Size(61, 13);
+            id_PredmetLabel.TabIndex = 2;
+            id_PredmetLabel.Text = "Id Predmet:";
+            // 
+            // uchebGodLabel1
+            // 
+            uchebGodLabel1.AutoSize = true;
+            uchebGodLabel1.Location = new System.Drawing.Point(9, 69);
+            uchebGodLabel1.Name = "uchebGodLabel1";
+            uchebGodLabel1.Size = new System.Drawing.Size(65, 13);
+            uchebGodLabel1.TabIndex = 4;
+            uchebGodLabel1.Text = "Ucheb God:";
+            // 
+            // semestrLabel2
+            // 
+            semestrLabel2.AutoSize = true;
+            semestrLabel2.Location = new System.Drawing.Point(26, 92);
+            semestrLabel2.Name = "semestrLabel2";
+            semestrLabel2.Size = new System.Drawing.Size(48, 13);
+            semestrLabel2.TabIndex = 6;
+            semestrLabel2.Text = "Semestr:";
+            // 
+            // srednijBallLabel
+            // 
+            srednijBallLabel.AutoSize = true;
+            srednijBallLabel.Location = new System.Drawing.Point(266, 13);
+            srednijBallLabel.Name = "srednijBallLabel";
+            srednijBallLabel.Size = new System.Drawing.Size(62, 13);
+            srednijBallLabel.TabIndex = 8;
+            srednijBallLabel.Text = "Srednij Ball:";
+            // 
+            // kolichestvoNeudovLabel
+            // 
+            kolichestvoNeudovLabel.AutoSize = true;
+            kolichestvoNeudovLabel.Location = new System.Drawing.Point(222, 42);
+            kolichestvoNeudovLabel.Name = "kolichestvoNeudovLabel";
+            kolichestvoNeudovLabel.Size = new System.Drawing.Size(106, 13);
+            kolichestvoNeudovLabel.TabIndex = 10;
+            kolichestvoNeudovLabel.Text = "Kolichestvo Neudov:";
+            // 
+            // languageLabel
+            // 
+            languageLabel.AutoSize = true;
+            languageLabel.Location = new System.Drawing.Point(21, 45);
+            languageLabel.Name = "languageLabel";
+            languageLabel.Size = new System.Drawing.Size(58, 13);
+            languageLabel.TabIndex = 0;
+            languageLabel.Text = "Language:";
+            // 
+            // iD_languageLabel
+            // 
+            iD_languageLabel.AutoSize = true;
+            iD_languageLabel.Location = new System.Drawing.Point(17, 26);
+            iD_languageLabel.Name = "iD_languageLabel";
+            iD_languageLabel.Size = new System.Drawing.Size(68, 13);
+            iD_languageLabel.TabIndex = 0;
+            iD_languageLabel.Text = "ID language:";
+            // 
+            // iD_subjectLabel
+            // 
+            iD_subjectLabel.AutoSize = true;
+            iD_subjectLabel.Location = new System.Drawing.Point(27, 53);
+            iD_subjectLabel.Name = "iD_subjectLabel";
+            iD_subjectLabel.Size = new System.Drawing.Size(58, 13);
+            iD_subjectLabel.TabIndex = 2;
+            iD_subjectLabel.Text = "ID subject:";
+            // 
+            // pK_lecturerLabel
+            // 
+            pK_lecturerLabel.AutoSize = true;
+            pK_lecturerLabel.Location = new System.Drawing.Point(23, 82);
+            pK_lecturerLabel.Name = "pK_lecturerLabel";
+            pK_lecturerLabel.Size = new System.Drawing.Size(62, 13);
+            pK_lecturerLabel.TabIndex = 4;
+            pK_lecturerLabel.Text = "PK lecturer:";
+            // 
             // tabPanel1
             // 
             this.tabPanel1.Controls.Add(this.tabPage7);
@@ -1050,7 +1329,7 @@
             this.tabPanel1.Multiline = true;
             this.tabPanel1.Name = "tabPanel1";
             this.tabPanel1.SelectedIndex = 0;
-            this.tabPanel1.Size = new System.Drawing.Size(731, 480);
+            this.tabPanel1.Size = new System.Drawing.Size(731, 501);
             this.tabPanel1.TabIndex = 0;
             // 
             // tabPage7
@@ -1078,19 +1357,112 @@
             this.tabPage7.Controls.Add(this.persKodPrepodComboBox);
             this.tabPage7.Location = new System.Drawing.Point(4, 40);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(723, 436);
+            this.tabPage7.Size = new System.Drawing.Size(723, 457);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Выполнение плана";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // chasiNumericUpDown
+            // button25
             // 
-            this.chasiNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vipolnenijePlanaBindingSource, "Chasi", true));
-            this.chasiNumericUpDown.DecimalPlaces = 1;
-            this.chasiNumericUpDown.Location = new System.Drawing.Point(117, 104);
-            this.chasiNumericUpDown.Name = "chasiNumericUpDown";
-            this.chasiNumericUpDown.Size = new System.Drawing.Size(122, 20);
-            this.chasiNumericUpDown.TabIndex = 17;
+            this.button25.Location = new System.Drawing.Point(287, 192);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(75, 23);
+            this.button25.TabIndex = 20;
+            this.button25.Text = "Сбросить";
+            this.button25.UseVisualStyleBackColor = true;
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(435, 192);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(75, 23);
+            this.button24.TabIndex = 19;
+            this.button24.Text = "Удалить";
+            this.button24.UseVisualStyleBackColor = true;
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(601, 192);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(75, 23);
+            this.button23.TabIndex = 18;
+            this.button23.Text = "Сохранить";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // vipolnenijePlanaDataGridView
+            // 
+            this.vipolnenijePlanaDataGridView.AutoGenerateColumns = false;
+            this.vipolnenijePlanaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vipolnenijePlanaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn54,
+            this.dataGridViewTextBoxColumn55,
+            this.dataGridViewTextBoxColumn56,
+            this.dataGridViewTextBoxColumn57,
+            this.dataGridViewTextBoxColumn58,
+            this.dataGridViewTextBoxColumn59,
+            this.dataGridViewTextBoxColumn60,
+            this.dataGridViewTextBoxColumn61,
+            this.dataGridViewTextBoxColumn62});
+            this.vipolnenijePlanaDataGridView.DataSource = this.vipolnenijePlanaBindingSource;
+            this.vipolnenijePlanaDataGridView.Location = new System.Drawing.Point(25, 247);
+            this.vipolnenijePlanaDataGridView.Name = "vipolnenijePlanaDataGridView";
+            this.vipolnenijePlanaDataGridView.Size = new System.Drawing.Size(688, 207);
+            this.vipolnenijePlanaDataGridView.TabIndex = 17;
+            // 
+            // dataGridViewTextBoxColumn54
+            // 
+            this.dataGridViewTextBoxColumn54.DataPropertyName = "PersKodPrepod";
+            this.dataGridViewTextBoxColumn54.HeaderText = "PersKodPrepod";
+            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
+            // 
+            // dataGridViewTextBoxColumn55
+            // 
+            this.dataGridViewTextBoxColumn55.DataPropertyName = "KodPredmet";
+            this.dataGridViewTextBoxColumn55.HeaderText = "KodPredmet";
+            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
+            // 
+            // dataGridViewTextBoxColumn56
+            // 
+            this.dataGridViewTextBoxColumn56.DataPropertyName = "NumGruppa";
+            this.dataGridViewTextBoxColumn56.HeaderText = "NumGruppa";
+            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
+            // 
+            // dataGridViewTextBoxColumn57
+            // 
+            this.dataGridViewTextBoxColumn57.DataPropertyName = "DataProvZanjatija";
+            this.dataGridViewTextBoxColumn57.HeaderText = "DataProvZanjatija";
+            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
+            // 
+            // dataGridViewTextBoxColumn58
+            // 
+            this.dataGridViewTextBoxColumn58.DataPropertyName = "TipZanjatija";
+            this.dataGridViewTextBoxColumn58.HeaderText = "TipZanjatija";
+            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
+            // 
+            // dataGridViewTextBoxColumn59
+            // 
+            this.dataGridViewTextBoxColumn59.DataPropertyName = "TemaZanjatijaPlan";
+            this.dataGridViewTextBoxColumn59.HeaderText = "TemaZanjatijaPlan";
+            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
+            // 
+            // dataGridViewTextBoxColumn60
+            // 
+            this.dataGridViewTextBoxColumn60.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn60.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
+            // 
+            // dataGridViewTextBoxColumn61
+            // 
+            this.dataGridViewTextBoxColumn61.DataPropertyName = "TemaZanjatijaFact";
+            this.dataGridViewTextBoxColumn61.HeaderText = "TemaZanjatijaFact";
+            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
+            // 
+            // dataGridViewTextBoxColumn62
+            // 
+            this.dataGridViewTextBoxColumn62.DataPropertyName = "Chasi";
+            this.dataGridViewTextBoxColumn62.HeaderText = "Chasi";
+            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
             // 
             // vipolnenijePlanaBindingSource
             // 
@@ -1101,6 +1473,15 @@
             // 
             this.kafedraDataSet.DataSetName = "KafedraDataSet";
             this.kafedraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // chasiNumericUpDown
+            // 
+            this.chasiNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vipolnenijePlanaBindingSource, "Chasi", true));
+            this.chasiNumericUpDown.DecimalPlaces = 1;
+            this.chasiNumericUpDown.Location = new System.Drawing.Point(117, 104);
+            this.chasiNumericUpDown.Name = "chasiNumericUpDown";
+            this.chasiNumericUpDown.Size = new System.Drawing.Size(122, 20);
+            this.chasiNumericUpDown.TabIndex = 17;
             // 
             // temaZanjatijaFactTextBox
             // 
@@ -1215,9 +1596,9 @@
             this.tabPage3.Controls.Add(this.starostaTextBox);
             this.tabPage3.Controls.Add(nomerGruppiLabel);
             this.tabPage3.Controls.Add(this.nomerGruppiTextBox);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 40);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(723, 454);
+            this.tabPage3.Size = new System.Drawing.Size(723, 457);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Группа";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1435,9 +1816,9 @@
             this.tabPage6.Controls.Add(this.rukovoditelTextBox);
             this.tabPage6.Controls.Add(temaRabotiLabel);
             this.tabPage6.Controls.Add(this.temaRabotiTextBox);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(4, 40);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(723, 454);
+            this.tabPage6.Size = new System.Drawing.Size(723, 457);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Защита";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1604,12 +1985,68 @@
             this.tabPage4.Controls.Add(this.kodPredmetaComboBox);
             this.tabPage4.Controls.Add(gruppaLabel);
             this.tabPage4.Controls.Add(this.gruppaComboBox);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(723, 454);
+            this.tabPage4.Size = new System.Drawing.Size(723, 457);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Нагрузка";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(44, 175);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(75, 23);
+            this.button19.TabIndex = 27;
+            this.button19.Text = "Очистить";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(163, 175);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 23);
+            this.button18.TabIndex = 26;
+            this.button18.Text = "Удалить";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(600, 175);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(75, 23);
+            this.button17.TabIndex = 25;
+            this.button17.Text = "Сохранить";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // nagruzkaPlanDataGridView
+            // 
+            this.nagruzkaPlanDataGridView.AutoGenerateColumns = false;
+            this.nagruzkaPlanDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.nagruzkaPlanDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn36});
+            this.nagruzkaPlanDataGridView.DataSource = this.nagruzkaPlanBindingSource;
+            this.nagruzkaPlanDataGridView.Location = new System.Drawing.Point(9, 213);
+            this.nagruzkaPlanDataGridView.Name = "nagruzkaPlanDataGridView";
+            this.nagruzkaPlanDataGridView.Size = new System.Drawing.Size(709, 220);
+            this.nagruzkaPlanDataGridView.TabIndex = 24;
+            // 
+            // nagruzkaPlanBindingSource
+            // 
+            this.nagruzkaPlanBindingSource.DataMember = "NagruzkaPlan";
+            this.nagruzkaPlanBindingSource.DataSource = this.kafedraDataSet;
             // 
             // kontaktChasiNumericUpDown
             // 
@@ -1618,11 +2055,6 @@
             this.kontaktChasiNumericUpDown.Name = "kontaktChasiNumericUpDown";
             this.kontaktChasiNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.kontaktChasiNumericUpDown.TabIndex = 23;
-            // 
-            // nagruzkaPlanBindingSource
-            // 
-            this.nagruzkaPlanBindingSource.DataMember = "NagruzkaPlan";
-            this.nagruzkaPlanBindingSource.DataSource = this.kafedraDataSet;
             // 
             // totalChasiNumericUpDown
             // 
@@ -1778,12 +2210,126 @@
             this.tabPage10.Controls.Add(this.dataStartDateTimePicker);
             this.tabPage10.Controls.Add(objazanostLabel);
             this.tabPage10.Controls.Add(this.objazanostTextBox);
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Location = new System.Drawing.Point(4, 40);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(723, 454);
+            this.tabPage10.Size = new System.Drawing.Size(723, 436);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "Обязанности";
             this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // button28
+            // 
+            this.button28.Location = new System.Drawing.Point(566, 134);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(75, 23);
+            this.button28.TabIndex = 11;
+            this.button28.Text = "button28";
+            this.button28.UseVisualStyleBackColor = true;
+            // 
+            // button27
+            // 
+            this.button27.Location = new System.Drawing.Point(196, 134);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(75, 23);
+            this.button27.TabIndex = 10;
+            this.button27.Text = "button27";
+            this.button27.UseVisualStyleBackColor = true;
+            // 
+            // button26
+            // 
+            this.button26.Location = new System.Drawing.Point(92, 134);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(75, 23);
+            this.button26.TabIndex = 9;
+            this.button26.Text = "button26";
+            this.button26.UseVisualStyleBackColor = true;
+            // 
+            // obazanostDataGridView
+            // 
+            this.obazanostDataGridView.AutoGenerateColumns = false;
+            this.obazanostDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.obazanostDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46});
+            this.obazanostDataGridView.DataSource = this.obazanostBindingSource;
+            this.obazanostDataGridView.Location = new System.Drawing.Point(92, 182);
+            this.obazanostDataGridView.Name = "obazanostDataGridView";
+            this.obazanostDataGridView.Size = new System.Drawing.Size(549, 220);
+            this.obazanostDataGridView.TabIndex = 8;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn42.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.DataPropertyName = "Objazanost";
+            this.dataGridViewTextBoxColumn43.HeaderText = "Objazanost";
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.DataPropertyName = "DataStart";
+            this.dataGridViewTextBoxColumn44.HeaderText = "DataStart";
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "DataEnd";
+            this.dataGridViewTextBoxColumn45.HeaderText = "DataEnd";
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "PersKodPrepod";
+            this.dataGridViewTextBoxColumn46.HeaderText = "PersKodPrepod";
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            // 
+            // obazanostBindingSource
+            // 
+            this.obazanostBindingSource.DataMember = "Obazanost";
+            this.obazanostBindingSource.DataSource = this.kafedraDataSet;
+            // 
+            // persKodPrepodComboBox1
+            // 
+            this.persKodPrepodComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.obazanostBindingSource, "PersKodPrepod", true));
+            this.persKodPrepodComboBox1.DataSource = this.prepodavatelBindingSource;
+            this.persKodPrepodComboBox1.DisplayMember = "PersKodTeacher";
+            this.persKodPrepodComboBox1.FormattingEnabled = true;
+            this.persKodPrepodComboBox1.Location = new System.Drawing.Point(124, 18);
+            this.persKodPrepodComboBox1.Name = "persKodPrepodComboBox1";
+            this.persKodPrepodComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.persKodPrepodComboBox1.TabIndex = 7;
+            this.persKodPrepodComboBox1.ValueMember = "PersKodTeacher";
+            // 
+            // dataEndDateTimePicker
+            // 
+            this.dataEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.obazanostBindingSource, "DataEnd", true));
+            this.dataEndDateTimePicker.Location = new System.Drawing.Point(405, 47);
+            this.dataEndDateTimePicker.Name = "dataEndDateTimePicker";
+            this.dataEndDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dataEndDateTimePicker.TabIndex = 5;
+            // 
+            // dataStartDateTimePicker
+            // 
+            this.dataStartDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.obazanostBindingSource, "DataStart", true));
+            this.dataStartDateTimePicker.Location = new System.Drawing.Point(405, 14);
+            this.dataStartDateTimePicker.Name = "dataStartDateTimePicker";
+            this.dataStartDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dataStartDateTimePicker.TabIndex = 3;
+            // 
+            // objazanostTextBox
+            // 
+            this.objazanostTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.obazanostBindingSource, "Objazanost", true));
+            this.objazanostTextBox.Location = new System.Drawing.Point(124, 51);
+            this.objazanostTextBox.Name = "objazanostTextBox";
+            this.objazanostTextBox.Size = new System.Drawing.Size(121, 20);
+            this.objazanostTextBox.TabIndex = 1;
             // 
             // tabPage12
             // 
@@ -1806,22 +2352,187 @@
             this.tabPage12.Controls.Add(this.godUchebnijTextBox);
             this.tabPage12.Controls.Add(numGroupLabel);
             this.tabPage12.Controls.Add(this.numGroupComboBox);
-            this.tabPage12.Location = new System.Drawing.Point(4, 22);
+            this.tabPage12.Location = new System.Drawing.Point(4, 40);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(723, 454);
+            this.tabPage12.Size = new System.Drawing.Size(723, 436);
             this.tabPage12.TabIndex = 11;
             this.tabPage12.Text = "Перемещение студента";
             this.tabPage12.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(22, 156);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(75, 23);
+            this.button22.TabIndex = 17;
+            this.button22.Text = "button22";
+            this.button22.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(177, 156);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(75, 23);
+            this.button21.TabIndex = 16;
+            this.button21.Text = "button21";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(589, 156);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(75, 23);
+            this.button20.TabIndex = 15;
+            this.button20.Text = "button20";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // moveStudentDataGridView
+            // 
+            this.moveStudentDataGridView.AutoGenerateColumns = false;
+            this.moveStudentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.moveStudentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn47,
+            this.dataGridViewTextBoxColumn48,
+            this.dataGridViewTextBoxColumn49,
+            this.dataGridViewTextBoxColumn50,
+            this.dataGridViewTextBoxColumn51,
+            this.dataGridViewTextBoxColumn52,
+            this.dataGridViewTextBoxColumn53});
+            this.moveStudentDataGridView.DataSource = this.moveStudentBindingSource;
+            this.moveStudentDataGridView.Location = new System.Drawing.Point(11, 200);
+            this.moveStudentDataGridView.MultiSelect = false;
+            this.moveStudentDataGridView.Name = "moveStudentDataGridView";
+            this.moveStudentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.moveStudentDataGridView.Size = new System.Drawing.Size(709, 220);
+            this.moveStudentDataGridView.TabIndex = 14;
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "NumGroup";
+            this.dataGridViewTextBoxColumn47.HeaderText = "NumGroup";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "GodUchebnij";
+            this.dataGridViewTextBoxColumn48.HeaderText = "GodUchebnij";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "Semestr";
+            this.dataGridViewTextBoxColumn49.HeaderText = "Semestr";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "KolichestvoStartSem";
+            this.dataGridViewTextBoxColumn50.HeaderText = "KolichestvoStartSem";
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            this.dataGridViewTextBoxColumn51.DataPropertyName = "KolichestvoEndSem";
+            this.dataGridViewTextBoxColumn51.HeaderText = "KolichestvoEndSem";
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            // 
+            // dataGridViewTextBoxColumn52
+            // 
+            this.dataGridViewTextBoxColumn52.DataPropertyName = "Otchisleno";
+            this.dataGridViewTextBoxColumn52.HeaderText = "Otchisleno";
+            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
+            // 
+            // dataGridViewTextBoxColumn53
+            // 
+            this.dataGridViewTextBoxColumn53.DataPropertyName = "Prichina";
+            this.dataGridViewTextBoxColumn53.HeaderText = "Prichina";
+            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
+            // 
+            // moveStudentBindingSource
+            // 
+            this.moveStudentBindingSource.DataMember = "MoveStudent";
+            this.moveStudentBindingSource.DataSource = this.kafedraDataSet;
+            // 
+            // prichinaTextBox
+            // 
+            this.prichinaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moveStudentBindingSource, "Prichina", true));
+            this.prichinaTextBox.Location = new System.Drawing.Point(460, 102);
+            this.prichinaTextBox.Name = "prichinaTextBox";
+            this.prichinaTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.prichinaTextBox.Size = new System.Drawing.Size(120, 20);
+            this.prichinaTextBox.TabIndex = 13;
+            // 
+            // otchislenoNumericUpDown
+            // 
+            this.otchislenoNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.moveStudentBindingSource, "Otchisleno", true));
+            this.otchislenoNumericUpDown.Location = new System.Drawing.Point(460, 76);
+            this.otchislenoNumericUpDown.Name = "otchislenoNumericUpDown";
+            this.otchislenoNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.otchislenoNumericUpDown.TabIndex = 11;
+            // 
+            // kolichestvoEndSemNumericUpDown
+            // 
+            this.kolichestvoEndSemNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.moveStudentBindingSource, "KolichestvoEndSem", true));
+            this.kolichestvoEndSemNumericUpDown.Location = new System.Drawing.Point(460, 50);
+            this.kolichestvoEndSemNumericUpDown.Name = "kolichestvoEndSemNumericUpDown";
+            this.kolichestvoEndSemNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.kolichestvoEndSemNumericUpDown.TabIndex = 9;
+            this.kolichestvoEndSemNumericUpDown.ValueChanged += new System.EventHandler(this.kolichestvoEndSemNumericUpDown_ValueChanged);
+            // 
+            // kolichestvoStartSemNumericUpDown
+            // 
+            this.kolichestvoStartSemNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.moveStudentBindingSource, "KolichestvoStartSem", true));
+            this.kolichestvoStartSemNumericUpDown.Location = new System.Drawing.Point(460, 22);
+            this.kolichestvoStartSemNumericUpDown.Name = "kolichestvoStartSemNumericUpDown";
+            this.kolichestvoStartSemNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.kolichestvoStartSemNumericUpDown.TabIndex = 7;
+            this.kolichestvoStartSemNumericUpDown.ValueChanged += new System.EventHandler(this.kolichestvoStartSemNumericUpDown_ValueChanged);
+            // 
+            // semestrListBox1
+            // 
+            this.semestrListBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.moveStudentBindingSource, "Semestr", true));
+            this.semestrListBox1.FormattingEnabled = true;
+            this.semestrListBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.semestrListBox1.Location = new System.Drawing.Point(97, 69);
+            this.semestrListBox1.Name = "semestrListBox1";
+            this.semestrListBox1.Size = new System.Drawing.Size(120, 56);
+            this.semestrListBox1.TabIndex = 5;
+            // 
+            // godUchebnijTextBox
+            // 
+            this.godUchebnijTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moveStudentBindingSource, "GodUchebnij", true));
+            this.godUchebnijTextBox.Location = new System.Drawing.Point(97, 43);
+            this.godUchebnijTextBox.MaxLength = 255;
+            this.godUchebnijTextBox.Name = "godUchebnijTextBox";
+            this.godUchebnijTextBox.Size = new System.Drawing.Size(120, 20);
+            this.godUchebnijTextBox.TabIndex = 3;
+            // 
+            // numGroupComboBox
+            // 
+            this.numGroupComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moveStudentBindingSource, "NumGroup", true));
+            this.numGroupComboBox.FormattingEnabled = true;
+            this.numGroupComboBox.Location = new System.Drawing.Point(96, 16);
+            this.numGroupComboBox.Name = "numGroupComboBox";
+            this.numGroupComboBox.Size = new System.Drawing.Size(121, 21);
+            this.numGroupComboBox.TabIndex = 1;
             // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.Controls.Add(this.predmetDataGridView);
             this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(723, 454);
+            this.tabPage2.Size = new System.Drawing.Size(723, 436);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Предмет";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2263,10 +2974,10 @@
             this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(723, 454);
+            this.tabPage1.Size = new System.Drawing.Size(723, 436);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Преподаватель";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2688,874 +3399,39 @@
             this.tabPage5.Controls.Add(this.nazvanijeTextBox);
             this.tabPage5.Controls.Add(numProjectLabel);
             this.tabPage5.Controls.Add(this.numProjectTextBox);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(723, 454);
+            this.tabPage5.Size = new System.Drawing.Size(723, 436);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Проекты";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tabPage13
-            // 
-            this.tabPage13.AutoScroll = true;
-            this.tabPage13.Controls.Add(this.button34);
-            this.tabPage13.Controls.Add(this.button33);
-            this.tabPage13.Controls.Add(this.button32);
-            this.tabPage13.Controls.Add(this.publikacija_TeacherDataGridView);
-            this.tabPage13.Controls.Add(this.publikacijaDataGridView);
-            this.tabPage13.Controls.Add(reitingLabel);
-            this.tabPage13.Controls.Add(this.reitingTextBox);
-            this.tabPage13.Controls.Add(placeLabel);
-            this.tabPage13.Controls.Add(this.placeTextBox);
-            this.tabPage13.Controls.Add(godLabel);
-            this.tabPage13.Controls.Add(this.godTextBox);
-            this.tabPage13.Controls.Add(nazvanijeLabel1);
-            this.tabPage13.Controls.Add(this.nazvanijeTextBox1);
-            this.tabPage13.Controls.Add(iD_publikaciiLabel);
-            this.tabPage13.Controls.Add(this.iD_publikaciiTextBox);
-            this.tabPage13.Location = new System.Drawing.Point(4, 40);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(723, 436);
-            this.tabPage13.TabIndex = 12;
-            this.tabPage13.Text = "Публикации";
-            this.tabPage13.UseVisualStyleBackColor = true;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.AutoScroll = true;
-            this.tabPage8.Controls.Add(this.button37);
-            this.tabPage8.Controls.Add(this.button36);
-            this.tabPage8.Controls.Add(this.button35);
-            this.tabPage8.Controls.Add(this.rezultatiObuchenijaDataGridView);
-            this.tabPage8.Controls.Add(kolichestvoNeudovLabel);
-            this.tabPage8.Controls.Add(this.kolichestvoNeudovNumericUpDown);
-            this.tabPage8.Controls.Add(srednijBallLabel);
-            this.tabPage8.Controls.Add(this.srednijBallNumericUpDown);
-            this.tabPage8.Controls.Add(semestrLabel2);
-            this.tabPage8.Controls.Add(this.semestrListBox2);
-            this.tabPage8.Controls.Add(uchebGodLabel1);
-            this.tabPage8.Controls.Add(this.uchebGodTextBox1);
-            this.tabPage8.Controls.Add(id_PredmetLabel);
-            this.tabPage8.Controls.Add(this.id_PredmetComboBox);
-            this.tabPage8.Controls.Add(numGroupLabel1);
-            this.tabPage8.Controls.Add(this.numGroupComboBox1);
-            this.tabPage8.Location = new System.Drawing.Point(4, 40);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(723, 436);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "Результаты обучения";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // tabPage11
-            // 
-            this.tabPage11.Controls.Add(this.groupBox7);
-            this.tabPage11.Controls.Add(this.groupBox6);
-            this.tabPage11.Location = new System.Drawing.Point(4, 40);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(723, 436);
-            this.tabPage11.TabIndex = 10;
-            this.tabPage11.Text = "Чтение предмета";
-            this.tabPage11.UseVisualStyleBackColor = true;
-            // 
-            // gruppaTableAdapter
-            // 
-            this.gruppaTableAdapter.ClearBeforeFill = true;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.Filter = "Image Files (*.bmp, *.jpg, *.jpeg, *.png)|*.bmp;*.jpg;*.jpeg;*.png";
-            // 
-            // openFileDialog2
-            // 
-            this.openFileDialog2.DefaultExt = "pdf";
-            this.openFileDialog2.Filter = "PDF Files|*.pdf;";
-            // 
-            // prepodavatelTableAdapter
-            // 
-            this.prepodavatelTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.GruppaTableAdapter = this.gruppaTableAdapter;
-            this.tableAdapterManager.LanguageTableAdapter = null;
-            this.tableAdapterManager.LectureReadingTableAdapter = this.lectureReadingTableAdapter;
-            this.tableAdapterManager.MoveStudentTableAdapter = null;
-            this.tableAdapterManager.NagruzkaPlanTableAdapter = null;
-            this.tableAdapterManager.ObazanostTableAdapter = null;
-            this.tableAdapterManager.PredmetTableAdapter = this.predmetTableAdapter;
-            this.tableAdapterManager.PrepodavatelTableAdapter = this.prepodavatelTableAdapter;
-            this.tableAdapterManager.ProjectTableAdapter = null;
-            this.tableAdapterManager.Publikacija_TeacherTableAdapter = null;
-            this.tableAdapterManager.PublikacijaTableAdapter = null;
-            this.tableAdapterManager.RezultatiObuchenijaTableAdapter = null;
-            this.tableAdapterManager.TeacherProjectTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = LecturerDB.KafedraDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VipolnenijePlanaTableAdapter = null;
-            this.tableAdapterManager.ZaschitaDiplomaTableAdapter = null;
-            // 
-            // lectureReadingTableAdapter
-            // 
-            this.lectureReadingTableAdapter.ClearBeforeFill = true;
-            // 
-            // predmetTableAdapter
-            // 
-            this.predmetTableAdapter.ClearBeforeFill = true;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // lectureReadingBindingSource
-            // 
-            this.lectureReadingBindingSource.DataMember = "PredmetLectureReading";
-            this.lectureReadingBindingSource.DataSource = this.predmetBindingSource;
-            // 
-            // openFileDialog3
-            // 
-            this.openFileDialog3.FileName = "openFileDialog3";
-            this.openFileDialog3.Filter = "Any Document | *.doc;*.docx;*.pdf";
-            // 
-            // openFileDialog4
-            // 
-            this.openFileDialog4.FileName = "openFileDialog4";
-            this.openFileDialog4.Filter = "Any Document | *.doc;*.docx;*.pdf";
-            // 
-            // vipolnenijePlanaTableAdapter
-            // 
-            this.vipolnenijePlanaTableAdapter.ClearBeforeFill = true;
-            // 
-            // vipolnenijePlanaBindingSource1
-            // 
-            this.vipolnenijePlanaBindingSource1.DataMember = "GruppaVipolnenijePlana";
-            this.vipolnenijePlanaBindingSource1.DataSource = this.gruppaBindingSource;
-            // 
-            // zaschitaDiplomaTableAdapter
-            // 
-            this.zaschitaDiplomaTableAdapter.ClearBeforeFill = true;
-            // 
-            // nagruzkaPlanTableAdapter
-            // 
-            this.nagruzkaPlanTableAdapter.ClearBeforeFill = true;
-            // 
-            // nagruzkaPlanDataGridView
-            // 
-            this.nagruzkaPlanDataGridView.AutoGenerateColumns = false;
-            this.nagruzkaPlanDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.nagruzkaPlanDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn29,
-            this.dataGridViewTextBoxColumn30,
-            this.dataGridViewTextBoxColumn31,
-            this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn33,
-            this.dataGridViewTextBoxColumn34,
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37,
-            this.dataGridViewTextBoxColumn38,
-            this.dataGridViewTextBoxColumn39,
-            this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41});
-            this.nagruzkaPlanDataGridView.DataSource = this.nagruzkaPlanBindingSource;
-            this.nagruzkaPlanDataGridView.Location = new System.Drawing.Point(9, 213);
-            this.nagruzkaPlanDataGridView.Name = "nagruzkaPlanDataGridView";
-            this.nagruzkaPlanDataGridView.Size = new System.Drawing.Size(709, 220);
-            this.nagruzkaPlanDataGridView.TabIndex = 24;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "Gruppa";
-            this.dataGridViewTextBoxColumn29.HeaderText = "Gruppa";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            this.dataGridViewTextBoxColumn30.DataPropertyName = "KodPredmeta";
-            this.dataGridViewTextBoxColumn30.HeaderText = "KodPredmeta";
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this.dataGridViewTextBoxColumn31.DataPropertyName = "UchebGod";
-            this.dataGridViewTextBoxColumn31.HeaderText = "UchebGod";
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.DataPropertyName = "Semestr";
-            this.dataGridViewTextBoxColumn32.HeaderText = "Semestr";
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.DataPropertyName = "Lekcii";
-            this.dataGridViewTextBoxColumn33.HeaderText = "Lekcii";
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.DataPropertyName = "Praktiki";
-            this.dataGridViewTextBoxColumn34.HeaderText = "Praktiki";
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "Labor";
-            this.dataGridViewTextBoxColumn35.HeaderText = "Labor";
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.DataPropertyName = "Kursovaja";
-            this.dataGridViewTextBoxColumn36.HeaderText = "Kursovaja";
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "PersonKodPrepodavatel";
-            this.dataGridViewTextBoxColumn37.HeaderText = "PersonKodPrepodavatel";
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.DataPropertyName = "Jazik";
-            this.dataGridViewTextBoxColumn38.HeaderText = "Jazik";
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.DataPropertyName = "Koef_nagruz";
-            this.dataGridViewTextBoxColumn39.HeaderText = "Koef_nagruz";
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.DataPropertyName = "TotalChasi";
-            this.dataGridViewTextBoxColumn40.HeaderText = "TotalChasi";
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.DataPropertyName = "KontaktChasi";
-            this.dataGridViewTextBoxColumn41.HeaderText = "KontaktChasi";
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(600, 175);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 25;
-            this.button17.Text = "Сохранить";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(163, 175);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 26;
-            this.button18.Text = "Удалить";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(44, 175);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
-            this.button19.TabIndex = 27;
-            this.button19.Text = "Очистить";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // obazanostBindingSource
-            // 
-            this.obazanostBindingSource.DataMember = "Obazanost";
-            this.obazanostBindingSource.DataSource = this.kafedraDataSet;
-            // 
-            // obazanostTableAdapter
-            // 
-            this.obazanostTableAdapter.ClearBeforeFill = true;
-            // 
-            // objazanostLabel
-            // 
-            objazanostLabel.AutoSize = true;
-            objazanostLabel.Location = new System.Drawing.Point(55, 54);
-            objazanostLabel.Name = "objazanostLabel";
-            objazanostLabel.Size = new System.Drawing.Size(63, 13);
-            objazanostLabel.TabIndex = 0;
-            objazanostLabel.Text = "Objazanost:";
-            // 
-            // objazanostTextBox
-            // 
-            this.objazanostTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.obazanostBindingSource, "Objazanost", true));
-            this.objazanostTextBox.Location = new System.Drawing.Point(124, 51);
-            this.objazanostTextBox.Name = "objazanostTextBox";
-            this.objazanostTextBox.Size = new System.Drawing.Size(121, 20);
-            this.objazanostTextBox.TabIndex = 1;
-            // 
-            // dataStartLabel
-            // 
-            dataStartLabel.AutoSize = true;
-            dataStartLabel.Location = new System.Drawing.Point(341, 18);
-            dataStartLabel.Name = "dataStartLabel";
-            dataStartLabel.Size = new System.Drawing.Size(58, 13);
-            dataStartLabel.TabIndex = 2;
-            dataStartLabel.Text = "Data Start:";
-            // 
-            // dataStartDateTimePicker
-            // 
-            this.dataStartDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.obazanostBindingSource, "DataStart", true));
-            this.dataStartDateTimePicker.Location = new System.Drawing.Point(405, 14);
-            this.dataStartDateTimePicker.Name = "dataStartDateTimePicker";
-            this.dataStartDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.dataStartDateTimePicker.TabIndex = 3;
-            // 
-            // dataEndLabel
-            // 
-            dataEndLabel.AutoSize = true;
-            dataEndLabel.Location = new System.Drawing.Point(344, 51);
-            dataEndLabel.Name = "dataEndLabel";
-            dataEndLabel.Size = new System.Drawing.Size(55, 13);
-            dataEndLabel.TabIndex = 4;
-            dataEndLabel.Text = "Data End:";
-            // 
-            // dataEndDateTimePicker
-            // 
-            this.dataEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.obazanostBindingSource, "DataEnd", true));
-            this.dataEndDateTimePicker.Location = new System.Drawing.Point(405, 47);
-            this.dataEndDateTimePicker.Name = "dataEndDateTimePicker";
-            this.dataEndDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.dataEndDateTimePicker.TabIndex = 5;
-            // 
-            // persKodPrepodLabel1
-            // 
-            persKodPrepodLabel1.AutoSize = true;
-            persKodPrepodLabel1.Location = new System.Drawing.Point(28, 21);
-            persKodPrepodLabel1.Name = "persKodPrepodLabel1";
-            persKodPrepodLabel1.Size = new System.Drawing.Size(90, 13);
-            persKodPrepodLabel1.TabIndex = 6;
-            persKodPrepodLabel1.Text = "Pers Kod Prepod:";
-            // 
-            // persKodPrepodComboBox1
-            // 
-            this.persKodPrepodComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.obazanostBindingSource, "PersKodPrepod", true));
-            this.persKodPrepodComboBox1.DataSource = this.prepodavatelBindingSource;
-            this.persKodPrepodComboBox1.DisplayMember = "PersKodTeacher";
-            this.persKodPrepodComboBox1.FormattingEnabled = true;
-            this.persKodPrepodComboBox1.Location = new System.Drawing.Point(124, 18);
-            this.persKodPrepodComboBox1.Name = "persKodPrepodComboBox1";
-            this.persKodPrepodComboBox1.Size = new System.Drawing.Size(121, 21);
-            this.persKodPrepodComboBox1.TabIndex = 7;
-            this.persKodPrepodComboBox1.ValueMember = "PersKodTeacher";
-            // 
-            // obazanostDataGridView
-            // 
-            this.obazanostDataGridView.AutoGenerateColumns = false;
-            this.obazanostDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.obazanostDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn42,
-            this.dataGridViewTextBoxColumn43,
-            this.dataGridViewTextBoxColumn44,
-            this.dataGridViewTextBoxColumn45,
-            this.dataGridViewTextBoxColumn46});
-            this.obazanostDataGridView.DataSource = this.obazanostBindingSource;
-            this.obazanostDataGridView.Location = new System.Drawing.Point(92, 182);
-            this.obazanostDataGridView.Name = "obazanostDataGridView";
-            this.obazanostDataGridView.Size = new System.Drawing.Size(549, 220);
-            this.obazanostDataGridView.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            this.dataGridViewTextBoxColumn42.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn42.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this.dataGridViewTextBoxColumn43.DataPropertyName = "Objazanost";
-            this.dataGridViewTextBoxColumn43.HeaderText = "Objazanost";
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this.dataGridViewTextBoxColumn44.DataPropertyName = "DataStart";
-            this.dataGridViewTextBoxColumn44.HeaderText = "DataStart";
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            this.dataGridViewTextBoxColumn45.DataPropertyName = "DataEnd";
-            this.dataGridViewTextBoxColumn45.HeaderText = "DataEnd";
-            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
-            // 
-            // dataGridViewTextBoxColumn46
-            // 
-            this.dataGridViewTextBoxColumn46.DataPropertyName = "PersKodPrepod";
-            this.dataGridViewTextBoxColumn46.HeaderText = "PersKodPrepod";
-            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
-            // 
-            // moveStudentBindingSource
-            // 
-            this.moveStudentBindingSource.DataMember = "MoveStudent";
-            this.moveStudentBindingSource.DataSource = this.kafedraDataSet;
-            // 
-            // moveStudentTableAdapter
-            // 
-            this.moveStudentTableAdapter.ClearBeforeFill = true;
-            // 
-            // numGroupLabel
-            // 
-            numGroupLabel.AutoSize = true;
-            numGroupLabel.Location = new System.Drawing.Point(8, 19);
-            numGroupLabel.Name = "numGroupLabel";
-            numGroupLabel.Size = new System.Drawing.Size(83, 13);
-            numGroupLabel.TabIndex = 0;
-            numGroupLabel.Text = "Номер группы:";
-            // 
-            // numGroupComboBox
-            // 
-            this.numGroupComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moveStudentBindingSource, "NumGroup", true));
-            this.numGroupComboBox.FormattingEnabled = true;
-            this.numGroupComboBox.Location = new System.Drawing.Point(96, 16);
-            this.numGroupComboBox.Name = "numGroupComboBox";
-            this.numGroupComboBox.Size = new System.Drawing.Size(121, 21);
-            this.numGroupComboBox.TabIndex = 1;
-            // 
-            // godUchebnijLabel
-            // 
-            godUchebnijLabel.AutoSize = true;
-            godUchebnijLabel.Location = new System.Drawing.Point(16, 46);
-            godUchebnijLabel.Name = "godUchebnijLabel";
-            godUchebnijLabel.Size = new System.Drawing.Size(75, 13);
-            godUchebnijLabel.TabIndex = 2;
-            godUchebnijLabel.Text = "Учебный год:";
-            // 
-            // godUchebnijTextBox
-            // 
-            this.godUchebnijTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moveStudentBindingSource, "GodUchebnij", true));
-            this.godUchebnijTextBox.Location = new System.Drawing.Point(97, 43);
-            this.godUchebnijTextBox.MaxLength = 255;
-            this.godUchebnijTextBox.Name = "godUchebnijTextBox";
-            this.godUchebnijTextBox.Size = new System.Drawing.Size(120, 20);
-            this.godUchebnijTextBox.TabIndex = 3;
-            // 
-            // semestrLabel1
-            // 
-            semestrLabel1.AutoSize = true;
-            semestrLabel1.Location = new System.Drawing.Point(43, 69);
-            semestrLabel1.Name = "semestrLabel1";
-            semestrLabel1.Size = new System.Drawing.Size(54, 13);
-            semestrLabel1.TabIndex = 4;
-            semestrLabel1.Text = "Семестр:";
-            // 
-            // semestrListBox1
-            // 
-            this.semestrListBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.moveStudentBindingSource, "Semestr", true));
-            this.semestrListBox1.FormattingEnabled = true;
-            this.semestrListBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.semestrListBox1.Location = new System.Drawing.Point(97, 69);
-            this.semestrListBox1.Name = "semestrListBox1";
-            this.semestrListBox1.Size = new System.Drawing.Size(120, 56);
-            this.semestrListBox1.TabIndex = 5;
-            // 
-            // kolichestvoStartSemLabel
-            // 
-            kolichestvoStartSemLabel.AutoSize = true;
-            kolichestvoStartSemLabel.Location = new System.Drawing.Point(286, 24);
-            kolichestvoStartSemLabel.Name = "kolichestvoStartSemLabel";
-            kolichestvoStartSemLabel.Size = new System.Drawing.Size(168, 13);
-            kolichestvoStartSemLabel.TabIndex = 6;
-            kolichestvoStartSemLabel.Text = "Количество в начале семестра:";
-            // 
-            // kolichestvoStartSemNumericUpDown
-            // 
-            this.kolichestvoStartSemNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.moveStudentBindingSource, "KolichestvoStartSem", true));
-            this.kolichestvoStartSemNumericUpDown.Location = new System.Drawing.Point(460, 22);
-            this.kolichestvoStartSemNumericUpDown.Name = "kolichestvoStartSemNumericUpDown";
-            this.kolichestvoStartSemNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.kolichestvoStartSemNumericUpDown.TabIndex = 7;
-            this.kolichestvoStartSemNumericUpDown.ValueChanged += new System.EventHandler(this.kolichestvoStartSemNumericUpDown_ValueChanged);
-            // 
-            // kolichestvoEndSemLabel
-            // 
-            kolichestvoEndSemLabel.AutoSize = true;
-            kolichestvoEndSemLabel.Location = new System.Drawing.Point(286, 52);
-            kolichestvoEndSemLabel.Name = "kolichestvoEndSemLabel";
-            kolichestvoEndSemLabel.Size = new System.Drawing.Size(163, 13);
-            kolichestvoEndSemLabel.TabIndex = 8;
-            kolichestvoEndSemLabel.Text = "Количество в конце семестра:";
-            // 
-            // kolichestvoEndSemNumericUpDown
-            // 
-            this.kolichestvoEndSemNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.moveStudentBindingSource, "KolichestvoEndSem", true));
-            this.kolichestvoEndSemNumericUpDown.Location = new System.Drawing.Point(460, 50);
-            this.kolichestvoEndSemNumericUpDown.Name = "kolichestvoEndSemNumericUpDown";
-            this.kolichestvoEndSemNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.kolichestvoEndSemNumericUpDown.TabIndex = 9;
-            this.kolichestvoEndSemNumericUpDown.ValueChanged += new System.EventHandler(this.kolichestvoEndSemNumericUpDown_ValueChanged);
-            // 
-            // otchislenoLabel
-            // 
-            otchislenoLabel.AutoSize = true;
-            otchislenoLabel.Location = new System.Drawing.Point(385, 78);
-            otchislenoLabel.Name = "otchislenoLabel";
-            otchislenoLabel.Size = new System.Drawing.Size(64, 13);
-            otchislenoLabel.TabIndex = 10;
-            otchislenoLabel.Text = "Отчислено:";
-            // 
-            // otchislenoNumericUpDown
-            // 
-            this.otchislenoNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.moveStudentBindingSource, "Otchisleno", true));
-            this.otchislenoNumericUpDown.Location = new System.Drawing.Point(460, 76);
-            this.otchislenoNumericUpDown.Name = "otchislenoNumericUpDown";
-            this.otchislenoNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.otchislenoNumericUpDown.TabIndex = 11;
-            // 
-            // prichinaLabel
-            // 
-            prichinaLabel.AutoSize = true;
-            prichinaLabel.Location = new System.Drawing.Point(396, 105);
-            prichinaLabel.Name = "prichinaLabel";
-            prichinaLabel.Size = new System.Drawing.Size(53, 13);
-            prichinaLabel.TabIndex = 12;
-            prichinaLabel.Text = "Причина:";
-            // 
-            // prichinaTextBox
-            // 
-            this.prichinaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moveStudentBindingSource, "Prichina", true));
-            this.prichinaTextBox.Location = new System.Drawing.Point(460, 102);
-            this.prichinaTextBox.Name = "prichinaTextBox";
-            this.prichinaTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.prichinaTextBox.Size = new System.Drawing.Size(120, 20);
-            this.prichinaTextBox.TabIndex = 13;
-            // 
-            // moveStudentDataGridView
-            // 
-            this.moveStudentDataGridView.AutoGenerateColumns = false;
-            this.moveStudentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.moveStudentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn47,
-            this.dataGridViewTextBoxColumn48,
-            this.dataGridViewTextBoxColumn49,
-            this.dataGridViewTextBoxColumn50,
-            this.dataGridViewTextBoxColumn51,
-            this.dataGridViewTextBoxColumn52,
-            this.dataGridViewTextBoxColumn53});
-            this.moveStudentDataGridView.DataSource = this.moveStudentBindingSource;
-            this.moveStudentDataGridView.Location = new System.Drawing.Point(11, 200);
-            this.moveStudentDataGridView.MultiSelect = false;
-            this.moveStudentDataGridView.Name = "moveStudentDataGridView";
-            this.moveStudentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.moveStudentDataGridView.Size = new System.Drawing.Size(709, 220);
-            this.moveStudentDataGridView.TabIndex = 14;
-            // 
-            // dataGridViewTextBoxColumn47
-            // 
-            this.dataGridViewTextBoxColumn47.DataPropertyName = "NumGroup";
-            this.dataGridViewTextBoxColumn47.HeaderText = "NumGroup";
-            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
-            // 
-            // dataGridViewTextBoxColumn48
-            // 
-            this.dataGridViewTextBoxColumn48.DataPropertyName = "GodUchebnij";
-            this.dataGridViewTextBoxColumn48.HeaderText = "GodUchebnij";
-            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
-            // 
-            // dataGridViewTextBoxColumn49
-            // 
-            this.dataGridViewTextBoxColumn49.DataPropertyName = "Semestr";
-            this.dataGridViewTextBoxColumn49.HeaderText = "Semestr";
-            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
-            // 
-            // dataGridViewTextBoxColumn50
-            // 
-            this.dataGridViewTextBoxColumn50.DataPropertyName = "KolichestvoStartSem";
-            this.dataGridViewTextBoxColumn50.HeaderText = "KolichestvoStartSem";
-            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
-            // 
-            // dataGridViewTextBoxColumn51
-            // 
-            this.dataGridViewTextBoxColumn51.DataPropertyName = "KolichestvoEndSem";
-            this.dataGridViewTextBoxColumn51.HeaderText = "KolichestvoEndSem";
-            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
-            // 
-            // dataGridViewTextBoxColumn52
-            // 
-            this.dataGridViewTextBoxColumn52.DataPropertyName = "Otchisleno";
-            this.dataGridViewTextBoxColumn52.HeaderText = "Otchisleno";
-            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
-            // 
-            // dataGridViewTextBoxColumn53
-            // 
-            this.dataGridViewTextBoxColumn53.DataPropertyName = "Prichina";
-            this.dataGridViewTextBoxColumn53.HeaderText = "Prichina";
-            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(589, 156);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 15;
-            this.button20.Text = "button20";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(177, 156);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 23);
-            this.button21.TabIndex = 16;
-            this.button21.Text = "button21";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(22, 156);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 17;
-            this.button22.Text = "button22";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // vipolnenijePlanaDataGridView
-            // 
-            this.vipolnenijePlanaDataGridView.AutoGenerateColumns = false;
-            this.vipolnenijePlanaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vipolnenijePlanaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn54,
-            this.dataGridViewTextBoxColumn55,
-            this.dataGridViewTextBoxColumn56,
-            this.dataGridViewTextBoxColumn57,
-            this.dataGridViewTextBoxColumn58,
-            this.dataGridViewTextBoxColumn59,
-            this.dataGridViewTextBoxColumn60,
-            this.dataGridViewTextBoxColumn61,
-            this.dataGridViewTextBoxColumn62});
-            this.vipolnenijePlanaDataGridView.DataSource = this.vipolnenijePlanaBindingSource;
-            this.vipolnenijePlanaDataGridView.Location = new System.Drawing.Point(25, 247);
-            this.vipolnenijePlanaDataGridView.Name = "vipolnenijePlanaDataGridView";
-            this.vipolnenijePlanaDataGridView.Size = new System.Drawing.Size(688, 186);
-            this.vipolnenijePlanaDataGridView.TabIndex = 17;
-            // 
-            // dataGridViewTextBoxColumn54
-            // 
-            this.dataGridViewTextBoxColumn54.DataPropertyName = "PersKodPrepod";
-            this.dataGridViewTextBoxColumn54.HeaderText = "PersKodPrepod";
-            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
-            // 
-            // dataGridViewTextBoxColumn55
-            // 
-            this.dataGridViewTextBoxColumn55.DataPropertyName = "KodPredmet";
-            this.dataGridViewTextBoxColumn55.HeaderText = "KodPredmet";
-            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
-            // 
-            // dataGridViewTextBoxColumn56
-            // 
-            this.dataGridViewTextBoxColumn56.DataPropertyName = "NumGruppa";
-            this.dataGridViewTextBoxColumn56.HeaderText = "NumGruppa";
-            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
-            // 
-            // dataGridViewTextBoxColumn57
-            // 
-            this.dataGridViewTextBoxColumn57.DataPropertyName = "DataProvZanjatija";
-            this.dataGridViewTextBoxColumn57.HeaderText = "DataProvZanjatija";
-            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
-            // 
-            // dataGridViewTextBoxColumn58
-            // 
-            this.dataGridViewTextBoxColumn58.DataPropertyName = "TipZanjatija";
-            this.dataGridViewTextBoxColumn58.HeaderText = "TipZanjatija";
-            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
-            // 
-            // dataGridViewTextBoxColumn59
-            // 
-            this.dataGridViewTextBoxColumn59.DataPropertyName = "TemaZanjatijaPlan";
-            this.dataGridViewTextBoxColumn59.HeaderText = "TemaZanjatijaPlan";
-            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
-            // 
-            // dataGridViewTextBoxColumn60
-            // 
-            this.dataGridViewTextBoxColumn60.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn60.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
-            // 
-            // dataGridViewTextBoxColumn61
-            // 
-            this.dataGridViewTextBoxColumn61.DataPropertyName = "TemaZanjatijaFact";
-            this.dataGridViewTextBoxColumn61.HeaderText = "TemaZanjatijaFact";
-            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
-            // 
-            // dataGridViewTextBoxColumn62
-            // 
-            this.dataGridViewTextBoxColumn62.DataPropertyName = "Chasi";
-            this.dataGridViewTextBoxColumn62.HeaderText = "Chasi";
-            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(601, 192);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 23);
-            this.button23.TabIndex = 18;
-            this.button23.Text = "button23";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(435, 192);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 23);
-            this.button24.TabIndex = 19;
-            this.button24.Text = "button24";
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(287, 192);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(75, 23);
-            this.button25.TabIndex = 20;
-            this.button25.Text = "button25";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Location = new System.Drawing.Point(92, 134);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(75, 23);
-            this.button26.TabIndex = 9;
-            this.button26.Text = "button26";
-            this.button26.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            this.button27.Location = new System.Drawing.Point(196, 134);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(75, 23);
-            this.button27.TabIndex = 10;
-            this.button27.Text = "button27";
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(566, 134);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 23);
-            this.button28.TabIndex = 11;
-            this.button28.Text = "button28";
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // projectBindingSource
-            // 
-            this.projectBindingSource.DataMember = "Project";
-            this.projectBindingSource.DataSource = this.kafedraDataSet;
-            // 
-            // projectTableAdapter
-            // 
-            this.projectTableAdapter.ClearBeforeFill = true;
-            // 
-            // numProjectLabel
-            // 
-            numProjectLabel.AutoSize = true;
-            numProjectLabel.Location = new System.Drawing.Point(25, 26);
-            numProjectLabel.Name = "numProjectLabel";
-            numProjectLabel.Size = new System.Drawing.Size(68, 13);
-            numProjectLabel.TabIndex = 0;
-            numProjectLabel.Text = "Num Project:";
-            // 
-            // numProjectTextBox
-            // 
-            this.numProjectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectBindingSource, "NumProject", true));
-            this.numProjectTextBox.Location = new System.Drawing.Point(99, 23);
-            this.numProjectTextBox.Name = "numProjectTextBox";
-            this.numProjectTextBox.Size = new System.Drawing.Size(100, 20);
-            this.numProjectTextBox.TabIndex = 1;
-            // 
-            // nazvanijeLabel
-            // 
-            nazvanijeLabel.AutoSize = true;
-            nazvanijeLabel.Location = new System.Drawing.Point(36, 52);
-            nazvanijeLabel.Name = "nazvanijeLabel";
-            nazvanijeLabel.Size = new System.Drawing.Size(57, 13);
-            nazvanijeLabel.TabIndex = 2;
-            nazvanijeLabel.Text = "Nazvanije:";
-            // 
-            // nazvanijeTextBox
-            // 
-            this.nazvanijeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectBindingSource, "Nazvanije", true));
-            this.nazvanijeTextBox.Location = new System.Drawing.Point(99, 49);
-            this.nazvanijeTextBox.Name = "nazvanijeTextBox";
-            this.nazvanijeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nazvanijeTextBox.TabIndex = 3;
-            // 
-            // typeLabel
-            // 
-            typeLabel.AutoSize = true;
-            typeLabel.Location = new System.Drawing.Point(59, 78);
-            typeLabel.Name = "typeLabel";
-            typeLabel.Size = new System.Drawing.Size(34, 13);
-            typeLabel.TabIndex = 4;
-            typeLabel.Text = "Type:";
-            // 
-            // typeTextBox
-            // 
-            this.typeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectBindingSource, "Type", true));
-            this.typeTextBox.Location = new System.Drawing.Point(99, 75);
-            this.typeTextBox.Name = "typeTextBox";
-            this.typeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.typeTextBox.TabIndex = 5;
-            // 
-            // dataStartLabel1
-            // 
-            dataStartLabel1.AutoSize = true;
-            dataStartLabel1.Location = new System.Drawing.Point(297, 27);
-            dataStartLabel1.Name = "dataStartLabel1";
-            dataStartLabel1.Size = new System.Drawing.Size(58, 13);
-            dataStartLabel1.TabIndex = 6;
-            dataStartLabel1.Text = "Data Start:";
-            // 
-            // dataStartDateTimePicker1
-            // 
-            this.dataStartDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.projectBindingSource, "DataStart", true));
-            this.dataStartDateTimePicker1.Location = new System.Drawing.Point(361, 23);
-            this.dataStartDateTimePicker1.Name = "dataStartDateTimePicker1";
-            this.dataStartDateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dataStartDateTimePicker1.TabIndex = 7;
-            // 
-            // dataEndLabel1
-            // 
-            dataEndLabel1.AutoSize = true;
-            dataEndLabel1.Location = new System.Drawing.Point(300, 56);
-            dataEndLabel1.Name = "dataEndLabel1";
-            dataEndLabel1.Size = new System.Drawing.Size(55, 13);
-            dataEndLabel1.TabIndex = 8;
-            dataEndLabel1.Text = "Data End:";
-            // 
-            // dataEndDateTimePicker1
-            // 
-            this.dataEndDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.projectBindingSource, "DataEnd", true));
-            this.dataEndDateTimePicker1.Location = new System.Drawing.Point(361, 52);
-            this.dataEndDateTimePicker1.Name = "dataEndDateTimePicker1";
-            this.dataEndDateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dataEndDateTimePicker1.TabIndex = 9;
-            // 
-            // teacherProjectBindingSource
-            // 
-            this.teacherProjectBindingSource.DataMember = "ProjectTeacherProject";
-            this.teacherProjectBindingSource.DataSource = this.projectBindingSource;
-            // 
-            // teacherProjectTableAdapter
-            // 
-            this.teacherProjectTableAdapter.ClearBeforeFill = true;
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(636, 146);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(75, 23);
+            this.button31.TabIndex = 13;
+            this.button31.Text = "button31";
+            this.button31.UseVisualStyleBackColor = true;
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(118, 146);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(75, 23);
+            this.button30.TabIndex = 12;
+            this.button30.Text = "button30";
+            this.button30.UseVisualStyleBackColor = true;
+            // 
+            // button29
+            // 
+            this.button29.Location = new System.Drawing.Point(21, 146);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(75, 23);
+            this.button29.TabIndex = 11;
+            this.button29.Text = "button29";
+            this.button29.UseVisualStyleBackColor = true;
             // 
             // teacherProjectDataGridView
             // 
@@ -3603,135 +3479,142 @@
             this.dataGridViewTextBoxColumn67.HeaderText = "Note";
             this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
             // 
-            // button29
+            // teacherProjectBindingSource
             // 
-            this.button29.Location = new System.Drawing.Point(21, 146);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 23);
-            this.button29.TabIndex = 11;
-            this.button29.Text = "button29";
-            this.button29.UseVisualStyleBackColor = true;
+            this.teacherProjectBindingSource.DataMember = "ProjectTeacherProject";
+            this.teacherProjectBindingSource.DataSource = this.projectBindingSource;
             // 
-            // button30
+            // projectBindingSource
             // 
-            this.button30.Location = new System.Drawing.Point(118, 146);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 23);
-            this.button30.TabIndex = 12;
-            this.button30.Text = "button30";
-            this.button30.UseVisualStyleBackColor = true;
+            this.projectBindingSource.DataMember = "Project";
+            this.projectBindingSource.DataSource = this.kafedraDataSet;
             // 
-            // button31
+            // dataEndDateTimePicker1
             // 
-            this.button31.Location = new System.Drawing.Point(636, 146);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(75, 23);
-            this.button31.TabIndex = 13;
-            this.button31.Text = "button31";
-            this.button31.UseVisualStyleBackColor = true;
+            this.dataEndDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.projectBindingSource, "DataEnd", true));
+            this.dataEndDateTimePicker1.Location = new System.Drawing.Point(361, 52);
+            this.dataEndDateTimePicker1.Name = "dataEndDateTimePicker1";
+            this.dataEndDateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dataEndDateTimePicker1.TabIndex = 9;
             // 
-            // publikacijaBindingSource
+            // dataStartDateTimePicker1
             // 
-            this.publikacijaBindingSource.DataMember = "Publikacija";
-            this.publikacijaBindingSource.DataSource = this.kafedraDataSet;
+            this.dataStartDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.projectBindingSource, "DataStart", true));
+            this.dataStartDateTimePicker1.Location = new System.Drawing.Point(361, 23);
+            this.dataStartDateTimePicker1.Name = "dataStartDateTimePicker1";
+            this.dataStartDateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dataStartDateTimePicker1.TabIndex = 7;
             // 
-            // publikacijaTableAdapter
+            // typeTextBox
             // 
-            this.publikacijaTableAdapter.ClearBeforeFill = true;
+            this.typeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectBindingSource, "Type", true));
+            this.typeTextBox.Location = new System.Drawing.Point(99, 75);
+            this.typeTextBox.Name = "typeTextBox";
+            this.typeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.typeTextBox.TabIndex = 5;
             // 
-            // iD_publikaciiLabel
+            // nazvanijeTextBox
             // 
-            iD_publikaciiLabel.AutoSize = true;
-            iD_publikaciiLabel.Location = new System.Drawing.Point(32, 24);
-            iD_publikaciiLabel.Name = "iD_publikaciiLabel";
-            iD_publikaciiLabel.Size = new System.Drawing.Size(68, 13);
-            iD_publikaciiLabel.TabIndex = 0;
-            iD_publikaciiLabel.Text = "ID publikacii:";
+            this.nazvanijeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectBindingSource, "Nazvanije", true));
+            this.nazvanijeTextBox.Location = new System.Drawing.Point(99, 49);
+            this.nazvanijeTextBox.Name = "nazvanijeTextBox";
+            this.nazvanijeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nazvanijeTextBox.TabIndex = 3;
             // 
-            // iD_publikaciiTextBox
+            // numProjectTextBox
             // 
-            this.iD_publikaciiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "ID_publikacii", true));
-            this.iD_publikaciiTextBox.Location = new System.Drawing.Point(106, 21);
-            this.iD_publikaciiTextBox.Name = "iD_publikaciiTextBox";
-            this.iD_publikaciiTextBox.Size = new System.Drawing.Size(100, 20);
-            this.iD_publikaciiTextBox.TabIndex = 1;
+            this.numProjectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectBindingSource, "NumProject", true));
+            this.numProjectTextBox.Location = new System.Drawing.Point(99, 23);
+            this.numProjectTextBox.Name = "numProjectTextBox";
+            this.numProjectTextBox.Size = new System.Drawing.Size(100, 20);
+            this.numProjectTextBox.TabIndex = 1;
             // 
-            // nazvanijeLabel1
+            // tabPage13
             // 
-            nazvanijeLabel1.AutoSize = true;
-            nazvanijeLabel1.Location = new System.Drawing.Point(43, 50);
-            nazvanijeLabel1.Name = "nazvanijeLabel1";
-            nazvanijeLabel1.Size = new System.Drawing.Size(57, 13);
-            nazvanijeLabel1.TabIndex = 2;
-            nazvanijeLabel1.Text = "Nazvanije:";
+            this.tabPage13.AutoScroll = true;
+            this.tabPage13.Controls.Add(this.button34);
+            this.tabPage13.Controls.Add(this.button33);
+            this.tabPage13.Controls.Add(this.button32);
+            this.tabPage13.Controls.Add(this.publikacija_TeacherDataGridView);
+            this.tabPage13.Controls.Add(this.publikacijaDataGridView);
+            this.tabPage13.Controls.Add(reitingLabel);
+            this.tabPage13.Controls.Add(this.reitingTextBox);
+            this.tabPage13.Controls.Add(placeLabel);
+            this.tabPage13.Controls.Add(this.placeTextBox);
+            this.tabPage13.Controls.Add(godLabel);
+            this.tabPage13.Controls.Add(this.godTextBox);
+            this.tabPage13.Controls.Add(nazvanijeLabel1);
+            this.tabPage13.Controls.Add(this.nazvanijeTextBox1);
+            this.tabPage13.Controls.Add(iD_publikaciiLabel);
+            this.tabPage13.Controls.Add(this.iD_publikaciiTextBox);
+            this.tabPage13.Location = new System.Drawing.Point(4, 40);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Size = new System.Drawing.Size(723, 436);
+            this.tabPage13.TabIndex = 12;
+            this.tabPage13.Text = "Публикации";
+            this.tabPage13.UseVisualStyleBackColor = true;
             // 
-            // nazvanijeTextBox1
+            // button34
             // 
-            this.nazvanijeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "Nazvanije", true));
-            this.nazvanijeTextBox1.Location = new System.Drawing.Point(106, 47);
-            this.nazvanijeTextBox1.Name = "nazvanijeTextBox1";
-            this.nazvanijeTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.nazvanijeTextBox1.TabIndex = 3;
+            this.button34.Location = new System.Drawing.Point(563, 178);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(75, 23);
+            this.button34.TabIndex = 14;
+            this.button34.Text = "button34";
+            this.button34.UseVisualStyleBackColor = true;
             // 
-            // godLabel
+            // button33
             // 
-            godLabel.AutoSize = true;
-            godLabel.Location = new System.Drawing.Point(70, 76);
-            godLabel.Name = "godLabel";
-            godLabel.Size = new System.Drawing.Size(30, 13);
-            godLabel.TabIndex = 4;
-            godLabel.Text = "God:";
+            this.button33.Location = new System.Drawing.Point(185, 178);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(75, 23);
+            this.button33.TabIndex = 13;
+            this.button33.Text = "button33";
+            this.button33.UseVisualStyleBackColor = true;
             // 
-            // godTextBox
+            // button32
             // 
-            this.godTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "God", true));
-            this.godTextBox.Location = new System.Drawing.Point(106, 73);
-            this.godTextBox.Name = "godTextBox";
-            this.godTextBox.Size = new System.Drawing.Size(100, 20);
-            this.godTextBox.TabIndex = 5;
+            this.button32.Location = new System.Drawing.Point(91, 178);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(75, 23);
+            this.button32.TabIndex = 12;
+            this.button32.Text = "button32";
+            this.button32.UseVisualStyleBackColor = true;
             // 
-            // placeLabel
+            // publikacija_TeacherDataGridView
             // 
-            placeLabel.AutoSize = true;
-            placeLabel.Location = new System.Drawing.Point(63, 102);
-            placeLabel.Name = "placeLabel";
-            placeLabel.Size = new System.Drawing.Size(37, 13);
-            placeLabel.TabIndex = 6;
-            placeLabel.Text = "Place:";
+            this.publikacija_TeacherDataGridView.AutoGenerateColumns = false;
+            this.publikacija_TeacherDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.publikacija_TeacherDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn73,
+            this.dataGridViewTextBoxColumn74});
+            this.publikacija_TeacherDataGridView.DataSource = this.publikacija_TeacherBindingSource;
+            this.publikacija_TeacherDataGridView.Location = new System.Drawing.Point(420, 3);
+            this.publikacija_TeacherDataGridView.Name = "publikacija_TeacherDataGridView";
+            this.publikacija_TeacherDataGridView.Size = new System.Drawing.Size(300, 169);
+            this.publikacija_TeacherDataGridView.TabIndex = 11;
             // 
-            // placeTextBox
+            // dataGridViewTextBoxColumn73
             // 
-            this.placeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "Place", true));
-            this.placeTextBox.Location = new System.Drawing.Point(106, 99);
-            this.placeTextBox.Name = "placeTextBox";
-            this.placeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.placeTextBox.TabIndex = 7;
+            this.dataGridViewTextBoxColumn73.DataPropertyName = "ID_pulikacii";
+            this.dataGridViewTextBoxColumn73.HeaderText = "ID_pulikacii";
+            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
             // 
-            // reitingLabel
+            // dataGridViewTextBoxColumn74
             // 
-            reitingLabel.AutoSize = true;
-            reitingLabel.Location = new System.Drawing.Point(57, 128);
-            reitingLabel.Name = "reitingLabel";
-            reitingLabel.Size = new System.Drawing.Size(43, 13);
-            reitingLabel.TabIndex = 8;
-            reitingLabel.Text = "Reiting:";
-            // 
-            // reitingTextBox
-            // 
-            this.reitingTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "Reiting", true));
-            this.reitingTextBox.Location = new System.Drawing.Point(106, 125);
-            this.reitingTextBox.Name = "reitingTextBox";
-            this.reitingTextBox.Size = new System.Drawing.Size(100, 20);
-            this.reitingTextBox.TabIndex = 9;
+            this.dataGridViewTextBoxColumn74.DataPropertyName = "PersKodTeacher";
+            this.dataGridViewTextBoxColumn74.HeaderText = "PersKodTeacher";
+            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
             // 
             // publikacija_TeacherBindingSource
             // 
             this.publikacija_TeacherBindingSource.DataMember = "PublikacijaPublikacija-Teacher";
             this.publikacija_TeacherBindingSource.DataSource = this.publikacijaBindingSource;
             // 
-            // publikacija_TeacherTableAdapter
+            // publikacijaBindingSource
             // 
-            this.publikacija_TeacherTableAdapter.ClearBeforeFill = true;
+            this.publikacijaBindingSource.DataMember = "Publikacija";
+            this.publikacijaBindingSource.DataSource = this.kafedraDataSet;
             // 
             // publikacijaDataGridView
             // 
@@ -3779,171 +3662,98 @@
             this.dataGridViewTextBoxColumn72.HeaderText = "Reiting";
             this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
             // 
-            // publikacija_TeacherDataGridView
+            // reitingTextBox
             // 
-            this.publikacija_TeacherDataGridView.AutoGenerateColumns = false;
-            this.publikacija_TeacherDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.publikacija_TeacherDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn73,
-            this.dataGridViewTextBoxColumn74});
-            this.publikacija_TeacherDataGridView.DataSource = this.publikacija_TeacherBindingSource;
-            this.publikacija_TeacherDataGridView.Location = new System.Drawing.Point(420, 3);
-            this.publikacija_TeacherDataGridView.Name = "publikacija_TeacherDataGridView";
-            this.publikacija_TeacherDataGridView.Size = new System.Drawing.Size(300, 169);
-            this.publikacija_TeacherDataGridView.TabIndex = 11;
+            this.reitingTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "Reiting", true));
+            this.reitingTextBox.Location = new System.Drawing.Point(106, 125);
+            this.reitingTextBox.Name = "reitingTextBox";
+            this.reitingTextBox.Size = new System.Drawing.Size(100, 20);
+            this.reitingTextBox.TabIndex = 9;
             // 
-            // dataGridViewTextBoxColumn73
+            // placeTextBox
             // 
-            this.dataGridViewTextBoxColumn73.DataPropertyName = "ID_pulikacii";
-            this.dataGridViewTextBoxColumn73.HeaderText = "ID_pulikacii";
-            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
+            this.placeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "Place", true));
+            this.placeTextBox.Location = new System.Drawing.Point(106, 99);
+            this.placeTextBox.Name = "placeTextBox";
+            this.placeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.placeTextBox.TabIndex = 7;
             // 
-            // dataGridViewTextBoxColumn74
+            // godTextBox
             // 
-            this.dataGridViewTextBoxColumn74.DataPropertyName = "PersKodTeacher";
-            this.dataGridViewTextBoxColumn74.HeaderText = "PersKodTeacher";
-            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
+            this.godTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "God", true));
+            this.godTextBox.Location = new System.Drawing.Point(106, 73);
+            this.godTextBox.Name = "godTextBox";
+            this.godTextBox.Size = new System.Drawing.Size(100, 20);
+            this.godTextBox.TabIndex = 5;
             // 
-            // button32
+            // nazvanijeTextBox1
             // 
-            this.button32.Location = new System.Drawing.Point(91, 178);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(75, 23);
-            this.button32.TabIndex = 12;
-            this.button32.Text = "button32";
-            this.button32.UseVisualStyleBackColor = true;
+            this.nazvanijeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "Nazvanije", true));
+            this.nazvanijeTextBox1.Location = new System.Drawing.Point(106, 47);
+            this.nazvanijeTextBox1.Name = "nazvanijeTextBox1";
+            this.nazvanijeTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.nazvanijeTextBox1.TabIndex = 3;
             // 
-            // button33
+            // iD_publikaciiTextBox
             // 
-            this.button33.Location = new System.Drawing.Point(185, 178);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(75, 23);
-            this.button33.TabIndex = 13;
-            this.button33.Text = "button33";
-            this.button33.UseVisualStyleBackColor = true;
+            this.iD_publikaciiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publikacijaBindingSource, "ID_publikacii", true));
+            this.iD_publikaciiTextBox.Location = new System.Drawing.Point(106, 21);
+            this.iD_publikaciiTextBox.Name = "iD_publikaciiTextBox";
+            this.iD_publikaciiTextBox.Size = new System.Drawing.Size(100, 20);
+            this.iD_publikaciiTextBox.TabIndex = 1;
             // 
-            // button34
+            // tabPage8
             // 
-            this.button34.Location = new System.Drawing.Point(563, 178);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 23);
-            this.button34.TabIndex = 14;
-            this.button34.Text = "button34";
-            this.button34.UseVisualStyleBackColor = true;
+            this.tabPage8.AutoScroll = true;
+            this.tabPage8.Controls.Add(this.button37);
+            this.tabPage8.Controls.Add(this.button36);
+            this.tabPage8.Controls.Add(this.button35);
+            this.tabPage8.Controls.Add(this.rezultatiObuchenijaDataGridView);
+            this.tabPage8.Controls.Add(kolichestvoNeudovLabel);
+            this.tabPage8.Controls.Add(this.kolichestvoNeudovNumericUpDown);
+            this.tabPage8.Controls.Add(srednijBallLabel);
+            this.tabPage8.Controls.Add(this.srednijBallNumericUpDown);
+            this.tabPage8.Controls.Add(semestrLabel2);
+            this.tabPage8.Controls.Add(this.semestrListBox2);
+            this.tabPage8.Controls.Add(uchebGodLabel1);
+            this.tabPage8.Controls.Add(this.uchebGodTextBox1);
+            this.tabPage8.Controls.Add(id_PredmetLabel);
+            this.tabPage8.Controls.Add(this.id_PredmetComboBox);
+            this.tabPage8.Controls.Add(numGroupLabel1);
+            this.tabPage8.Controls.Add(this.numGroupComboBox1);
+            this.tabPage8.Location = new System.Drawing.Point(4, 40);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(723, 436);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Результаты обучения";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // rezultatiObuchenijaBindingSource
+            // button37
             // 
-            this.rezultatiObuchenijaBindingSource.DataMember = "RezultatiObuchenija";
-            this.rezultatiObuchenijaBindingSource.DataSource = this.kafedraDataSet;
+            this.button37.Location = new System.Drawing.Point(624, 163);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(75, 23);
+            this.button37.TabIndex = 15;
+            this.button37.Text = "button37";
+            this.button37.UseVisualStyleBackColor = true;
             // 
-            // rezultatiObuchenijaTableAdapter
+            // button36
             // 
-            this.rezultatiObuchenijaTableAdapter.ClearBeforeFill = true;
+            this.button36.Location = new System.Drawing.Point(334, 163);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(75, 23);
+            this.button36.TabIndex = 14;
+            this.button36.Text = "button36";
+            this.button36.UseVisualStyleBackColor = true;
             // 
-            // numGroupLabel1
+            // button35
             // 
-            numGroupLabel1.AutoSize = true;
-            numGroupLabel1.Location = new System.Drawing.Point(10, 15);
-            numGroupLabel1.Name = "numGroupLabel1";
-            numGroupLabel1.Size = new System.Drawing.Size(64, 13);
-            numGroupLabel1.TabIndex = 0;
-            numGroupLabel1.Text = "Num Group:";
-            // 
-            // numGroupComboBox1
-            // 
-            this.numGroupComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rezultatiObuchenijaBindingSource, "NumGroup", true));
-            this.numGroupComboBox1.FormattingEnabled = true;
-            this.numGroupComboBox1.Location = new System.Drawing.Point(80, 12);
-            this.numGroupComboBox1.Name = "numGroupComboBox1";
-            this.numGroupComboBox1.Size = new System.Drawing.Size(121, 21);
-            this.numGroupComboBox1.TabIndex = 1;
-            // 
-            // id_PredmetLabel
-            // 
-            id_PredmetLabel.AutoSize = true;
-            id_PredmetLabel.Location = new System.Drawing.Point(13, 42);
-            id_PredmetLabel.Name = "id_PredmetLabel";
-            id_PredmetLabel.Size = new System.Drawing.Size(61, 13);
-            id_PredmetLabel.TabIndex = 2;
-            id_PredmetLabel.Text = "Id Predmet:";
-            // 
-            // id_PredmetComboBox
-            // 
-            this.id_PredmetComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rezultatiObuchenijaBindingSource, "Id_Predmet", true));
-            this.id_PredmetComboBox.FormattingEnabled = true;
-            this.id_PredmetComboBox.Location = new System.Drawing.Point(80, 39);
-            this.id_PredmetComboBox.Name = "id_PredmetComboBox";
-            this.id_PredmetComboBox.Size = new System.Drawing.Size(121, 21);
-            this.id_PredmetComboBox.TabIndex = 3;
-            // 
-            // uchebGodLabel1
-            // 
-            uchebGodLabel1.AutoSize = true;
-            uchebGodLabel1.Location = new System.Drawing.Point(9, 69);
-            uchebGodLabel1.Name = "uchebGodLabel1";
-            uchebGodLabel1.Size = new System.Drawing.Size(65, 13);
-            uchebGodLabel1.TabIndex = 4;
-            uchebGodLabel1.Text = "Ucheb God:";
-            // 
-            // uchebGodTextBox1
-            // 
-            this.uchebGodTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rezultatiObuchenijaBindingSource, "UchebGod", true));
-            this.uchebGodTextBox1.Location = new System.Drawing.Point(80, 66);
-            this.uchebGodTextBox1.Name = "uchebGodTextBox1";
-            this.uchebGodTextBox1.Size = new System.Drawing.Size(121, 20);
-            this.uchebGodTextBox1.TabIndex = 5;
-            // 
-            // semestrLabel2
-            // 
-            semestrLabel2.AutoSize = true;
-            semestrLabel2.Location = new System.Drawing.Point(26, 92);
-            semestrLabel2.Name = "semestrLabel2";
-            semestrLabel2.Size = new System.Drawing.Size(48, 13);
-            semestrLabel2.TabIndex = 6;
-            semestrLabel2.Text = "Semestr:";
-            // 
-            // semestrListBox2
-            // 
-            this.semestrListBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.rezultatiObuchenijaBindingSource, "Semestr", true));
-            this.semestrListBox2.FormattingEnabled = true;
-            this.semestrListBox2.Location = new System.Drawing.Point(80, 92);
-            this.semestrListBox2.Name = "semestrListBox2";
-            this.semestrListBox2.Size = new System.Drawing.Size(120, 95);
-            this.semestrListBox2.TabIndex = 7;
-            // 
-            // srednijBallLabel
-            // 
-            srednijBallLabel.AutoSize = true;
-            srednijBallLabel.Location = new System.Drawing.Point(266, 13);
-            srednijBallLabel.Name = "srednijBallLabel";
-            srednijBallLabel.Size = new System.Drawing.Size(62, 13);
-            srednijBallLabel.TabIndex = 8;
-            srednijBallLabel.Text = "Srednij Ball:";
-            // 
-            // srednijBallNumericUpDown
-            // 
-            this.srednijBallNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.rezultatiObuchenijaBindingSource, "SrednijBall", true));
-            this.srednijBallNumericUpDown.Location = new System.Drawing.Point(334, 13);
-            this.srednijBallNumericUpDown.Name = "srednijBallNumericUpDown";
-            this.srednijBallNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.srednijBallNumericUpDown.TabIndex = 9;
-            // 
-            // kolichestvoNeudovLabel
-            // 
-            kolichestvoNeudovLabel.AutoSize = true;
-            kolichestvoNeudovLabel.Location = new System.Drawing.Point(222, 42);
-            kolichestvoNeudovLabel.Name = "kolichestvoNeudovLabel";
-            kolichestvoNeudovLabel.Size = new System.Drawing.Size(106, 13);
-            kolichestvoNeudovLabel.TabIndex = 10;
-            kolichestvoNeudovLabel.Text = "Kolichestvo Neudov:";
-            // 
-            // kolichestvoNeudovNumericUpDown
-            // 
-            this.kolichestvoNeudovNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.rezultatiObuchenijaBindingSource, "KolichestvoNeudov", true));
-            this.kolichestvoNeudovNumericUpDown.Location = new System.Drawing.Point(334, 42);
-            this.kolichestvoNeudovNumericUpDown.Name = "kolichestvoNeudovNumericUpDown";
-            this.kolichestvoNeudovNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.kolichestvoNeudovNumericUpDown.TabIndex = 11;
+            this.button35.Location = new System.Drawing.Point(225, 163);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(75, 23);
+            this.button35.TabIndex = 13;
+            this.button35.Text = "button35";
+            this.button35.UseVisualStyleBackColor = true;
             // 
             // rezultatiObuchenijaDataGridView
             // 
@@ -3998,70 +3808,72 @@
             this.dataGridViewTextBoxColumn80.HeaderText = "KolichestvoNeudov";
             this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
             // 
-            // button35
+            // rezultatiObuchenijaBindingSource
             // 
-            this.button35.Location = new System.Drawing.Point(225, 163);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(75, 23);
-            this.button35.TabIndex = 13;
-            this.button35.Text = "button35";
-            this.button35.UseVisualStyleBackColor = true;
+            this.rezultatiObuchenijaBindingSource.DataMember = "RezultatiObuchenija";
+            this.rezultatiObuchenijaBindingSource.DataSource = this.kafedraDataSet;
             // 
-            // button36
+            // kolichestvoNeudovNumericUpDown
             // 
-            this.button36.Location = new System.Drawing.Point(334, 163);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(75, 23);
-            this.button36.TabIndex = 14;
-            this.button36.Text = "button36";
-            this.button36.UseVisualStyleBackColor = true;
+            this.kolichestvoNeudovNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.rezultatiObuchenijaBindingSource, "KolichestvoNeudov", true));
+            this.kolichestvoNeudovNumericUpDown.Location = new System.Drawing.Point(334, 42);
+            this.kolichestvoNeudovNumericUpDown.Name = "kolichestvoNeudovNumericUpDown";
+            this.kolichestvoNeudovNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.kolichestvoNeudovNumericUpDown.TabIndex = 11;
             // 
-            // button37
+            // srednijBallNumericUpDown
             // 
-            this.button37.Location = new System.Drawing.Point(624, 163);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(75, 23);
-            this.button37.TabIndex = 15;
-            this.button37.Text = "button37";
-            this.button37.UseVisualStyleBackColor = true;
+            this.srednijBallNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.rezultatiObuchenijaBindingSource, "SrednijBall", true));
+            this.srednijBallNumericUpDown.Location = new System.Drawing.Point(334, 13);
+            this.srednijBallNumericUpDown.Name = "srednijBallNumericUpDown";
+            this.srednijBallNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.srednijBallNumericUpDown.TabIndex = 9;
             // 
-            // groupBox6
+            // semestrListBox2
             // 
-            this.groupBox6.Controls.Add(this.languageDataGridView);
-            this.groupBox6.Controls.Add(languageLabel);
-            this.groupBox6.Controls.Add(this.languageTextBox);
-            this.groupBox6.Location = new System.Drawing.Point(4, 4);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(354, 329);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Язык";
+            this.semestrListBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.rezultatiObuchenijaBindingSource, "Semestr", true));
+            this.semestrListBox2.FormattingEnabled = true;
+            this.semestrListBox2.Location = new System.Drawing.Point(80, 92);
+            this.semestrListBox2.Name = "semestrListBox2";
+            this.semestrListBox2.Size = new System.Drawing.Size(120, 95);
+            this.semestrListBox2.TabIndex = 7;
             // 
-            // languageBindingSource
+            // uchebGodTextBox1
             // 
-            this.languageBindingSource.DataMember = "Language";
-            this.languageBindingSource.DataSource = this.kafedraDataSet;
+            this.uchebGodTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rezultatiObuchenijaBindingSource, "UchebGod", true));
+            this.uchebGodTextBox1.Location = new System.Drawing.Point(80, 66);
+            this.uchebGodTextBox1.Name = "uchebGodTextBox1";
+            this.uchebGodTextBox1.Size = new System.Drawing.Size(121, 20);
+            this.uchebGodTextBox1.TabIndex = 5;
             // 
-            // languageTableAdapter
+            // id_PredmetComboBox
             // 
-            this.languageTableAdapter.ClearBeforeFill = true;
+            this.id_PredmetComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rezultatiObuchenijaBindingSource, "Id_Predmet", true));
+            this.id_PredmetComboBox.FormattingEnabled = true;
+            this.id_PredmetComboBox.Location = new System.Drawing.Point(80, 39);
+            this.id_PredmetComboBox.Name = "id_PredmetComboBox";
+            this.id_PredmetComboBox.Size = new System.Drawing.Size(121, 21);
+            this.id_PredmetComboBox.TabIndex = 3;
             // 
-            // languageLabel
+            // numGroupComboBox1
             // 
-            languageLabel.AutoSize = true;
-            languageLabel.Location = new System.Drawing.Point(21, 45);
-            languageLabel.Name = "languageLabel";
-            languageLabel.Size = new System.Drawing.Size(58, 13);
-            languageLabel.TabIndex = 0;
-            languageLabel.Text = "Language:";
+            this.numGroupComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rezultatiObuchenijaBindingSource, "NumGroup", true));
+            this.numGroupComboBox1.FormattingEnabled = true;
+            this.numGroupComboBox1.Location = new System.Drawing.Point(80, 12);
+            this.numGroupComboBox1.Name = "numGroupComboBox1";
+            this.numGroupComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.numGroupComboBox1.TabIndex = 1;
             // 
-            // languageTextBox
+            // tabPage11
             // 
-            this.languageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.languageBindingSource, "Language", true));
-            this.languageTextBox.Location = new System.Drawing.Point(85, 42);
-            this.languageTextBox.Name = "languageTextBox";
-            this.languageTextBox.Size = new System.Drawing.Size(100, 20);
-            this.languageTextBox.TabIndex = 1;
+            this.tabPage11.Controls.Add(this.groupBox7);
+            this.tabPage11.Controls.Add(this.groupBox6);
+            this.tabPage11.Location = new System.Drawing.Point(4, 40);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Size = new System.Drawing.Size(723, 436);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.Text = "Чтение предмета";
+            this.tabPage11.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -4082,59 +3894,32 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Чтение предмета";
             // 
-            // iD_languageLabel
+            // button40
             // 
-            iD_languageLabel.AutoSize = true;
-            iD_languageLabel.Location = new System.Drawing.Point(17, 26);
-            iD_languageLabel.Name = "iD_languageLabel";
-            iD_languageLabel.Size = new System.Drawing.Size(68, 13);
-            iD_languageLabel.TabIndex = 0;
-            iD_languageLabel.Text = "ID language:";
+            this.button40.Location = new System.Drawing.Point(370, 160);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(75, 23);
+            this.button40.TabIndex = 9;
+            this.button40.Text = "button40";
+            this.button40.UseVisualStyleBackColor = true;
             // 
-            // iD_languageComboBox
+            // button39
             // 
-            this.iD_languageComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectureReadingBindingSource, "ID_language", true));
-            this.iD_languageComboBox.FormattingEnabled = true;
-            this.iD_languageComboBox.Location = new System.Drawing.Point(91, 23);
-            this.iD_languageComboBox.Name = "iD_languageComboBox";
-            this.iD_languageComboBox.Size = new System.Drawing.Size(121, 21);
-            this.iD_languageComboBox.TabIndex = 1;
+            this.button39.Location = new System.Drawing.Point(112, 160);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(75, 23);
+            this.button39.TabIndex = 8;
+            this.button39.Text = "button39";
+            this.button39.UseVisualStyleBackColor = true;
             // 
-            // iD_subjectLabel
+            // button38
             // 
-            iD_subjectLabel.AutoSize = true;
-            iD_subjectLabel.Location = new System.Drawing.Point(27, 53);
-            iD_subjectLabel.Name = "iD_subjectLabel";
-            iD_subjectLabel.Size = new System.Drawing.Size(58, 13);
-            iD_subjectLabel.TabIndex = 2;
-            iD_subjectLabel.Text = "ID subject:";
-            // 
-            // iD_subjectComboBox
-            // 
-            this.iD_subjectComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectureReadingBindingSource, "ID_subject", true));
-            this.iD_subjectComboBox.FormattingEnabled = true;
-            this.iD_subjectComboBox.Location = new System.Drawing.Point(91, 50);
-            this.iD_subjectComboBox.Name = "iD_subjectComboBox";
-            this.iD_subjectComboBox.Size = new System.Drawing.Size(121, 21);
-            this.iD_subjectComboBox.TabIndex = 3;
-            // 
-            // pK_lecturerLabel
-            // 
-            pK_lecturerLabel.AutoSize = true;
-            pK_lecturerLabel.Location = new System.Drawing.Point(23, 82);
-            pK_lecturerLabel.Name = "pK_lecturerLabel";
-            pK_lecturerLabel.Size = new System.Drawing.Size(62, 13);
-            pK_lecturerLabel.TabIndex = 4;
-            pK_lecturerLabel.Text = "PK lecturer:";
-            // 
-            // pK_lecturerComboBox
-            // 
-            this.pK_lecturerComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectureReadingBindingSource, "PK_lecturer", true));
-            this.pK_lecturerComboBox.FormattingEnabled = true;
-            this.pK_lecturerComboBox.Location = new System.Drawing.Point(91, 79);
-            this.pK_lecturerComboBox.Name = "pK_lecturerComboBox";
-            this.pK_lecturerComboBox.Size = new System.Drawing.Size(121, 21);
-            this.pK_lecturerComboBox.TabIndex = 5;
+            this.button38.Location = new System.Drawing.Point(20, 160);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(75, 23);
+            this.button38.TabIndex = 7;
+            this.button38.Text = "button38";
+            this.button38.UseVisualStyleBackColor = true;
             // 
             // lectureReadingDataGridView
             // 
@@ -4168,32 +3953,49 @@
             this.dataGridViewTextBoxColumn83.HeaderText = "PK_lecturer";
             this.dataGridViewTextBoxColumn83.Name = "dataGridViewTextBoxColumn83";
             // 
-            // button38
+            // lectureReadingBindingSource
             // 
-            this.button38.Location = new System.Drawing.Point(20, 160);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(75, 23);
-            this.button38.TabIndex = 7;
-            this.button38.Text = "button38";
-            this.button38.UseVisualStyleBackColor = true;
+            this.lectureReadingBindingSource.DataMember = "PredmetLectureReading";
+            this.lectureReadingBindingSource.DataSource = this.predmetBindingSource;
             // 
-            // button39
+            // pK_lecturerComboBox
             // 
-            this.button39.Location = new System.Drawing.Point(112, 160);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(75, 23);
-            this.button39.TabIndex = 8;
-            this.button39.Text = "button39";
-            this.button39.UseVisualStyleBackColor = true;
+            this.pK_lecturerComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectureReadingBindingSource, "PK_lecturer", true));
+            this.pK_lecturerComboBox.FormattingEnabled = true;
+            this.pK_lecturerComboBox.Location = new System.Drawing.Point(91, 79);
+            this.pK_lecturerComboBox.Name = "pK_lecturerComboBox";
+            this.pK_lecturerComboBox.Size = new System.Drawing.Size(121, 21);
+            this.pK_lecturerComboBox.TabIndex = 5;
             // 
-            // button40
+            // iD_subjectComboBox
             // 
-            this.button40.Location = new System.Drawing.Point(370, 160);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(75, 23);
-            this.button40.TabIndex = 9;
-            this.button40.Text = "button40";
-            this.button40.UseVisualStyleBackColor = true;
+            this.iD_subjectComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectureReadingBindingSource, "ID_subject", true));
+            this.iD_subjectComboBox.FormattingEnabled = true;
+            this.iD_subjectComboBox.Location = new System.Drawing.Point(91, 50);
+            this.iD_subjectComboBox.Name = "iD_subjectComboBox";
+            this.iD_subjectComboBox.Size = new System.Drawing.Size(121, 21);
+            this.iD_subjectComboBox.TabIndex = 3;
+            // 
+            // iD_languageComboBox
+            // 
+            this.iD_languageComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectureReadingBindingSource, "ID_language", true));
+            this.iD_languageComboBox.FormattingEnabled = true;
+            this.iD_languageComboBox.Location = new System.Drawing.Point(91, 23);
+            this.iD_languageComboBox.Name = "iD_languageComboBox";
+            this.iD_languageComboBox.Size = new System.Drawing.Size(121, 21);
+            this.iD_languageComboBox.TabIndex = 1;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.languageDataGridView);
+            this.groupBox6.Controls.Add(languageLabel);
+            this.groupBox6.Controls.Add(this.languageTextBox);
+            this.groupBox6.Location = new System.Drawing.Point(4, 4);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(354, 329);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Язык";
             // 
             // languageDataGridView
             // 
@@ -4220,6 +4022,207 @@
             this.dataGridViewTextBoxColumn85.HeaderText = "Language";
             this.dataGridViewTextBoxColumn85.Name = "dataGridViewTextBoxColumn85";
             // 
+            // languageBindingSource
+            // 
+            this.languageBindingSource.DataMember = "Language";
+            this.languageBindingSource.DataSource = this.kafedraDataSet;
+            // 
+            // languageTextBox
+            // 
+            this.languageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.languageBindingSource, "Language", true));
+            this.languageTextBox.Location = new System.Drawing.Point(85, 42);
+            this.languageTextBox.Name = "languageTextBox";
+            this.languageTextBox.Size = new System.Drawing.Size(100, 20);
+            this.languageTextBox.TabIndex = 1;
+            // 
+            // gruppaTableAdapter
+            // 
+            this.gruppaTableAdapter.ClearBeforeFill = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.Filter = "Image Files (*.bmp, *.jpg, *.jpeg, *.png)|*.bmp;*.jpg;*.jpeg;*.png";
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.DefaultExt = "pdf";
+            this.openFileDialog2.Filter = "PDF Files|*.pdf;";
+            // 
+            // prepodavatelTableAdapter
+            // 
+            this.prepodavatelTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.GruppaTableAdapter = this.gruppaTableAdapter;
+            this.tableAdapterManager.LanguageTableAdapter = null;
+            this.tableAdapterManager.LectureReadingTableAdapter = this.lectureReadingTableAdapter;
+            this.tableAdapterManager.MoveStudentTableAdapter = null;
+            this.tableAdapterManager.NagruzkaPlanTableAdapter = null;
+            this.tableAdapterManager.ObazanostTableAdapter = null;
+            this.tableAdapterManager.PredmetTableAdapter = this.predmetTableAdapter;
+            this.tableAdapterManager.PrepodavatelTableAdapter = this.prepodavatelTableAdapter;
+            this.tableAdapterManager.ProjectTableAdapter = null;
+            this.tableAdapterManager.Publikacija_TeacherTableAdapter = null;
+            this.tableAdapterManager.PublikacijaTableAdapter = null;
+            this.tableAdapterManager.RezultatiObuchenijaTableAdapter = null;
+            this.tableAdapterManager.TeacherProjectTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = LecturerDB.KafedraDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VipolnenijePlanaTableAdapter = null;
+            this.tableAdapterManager.ZaschitaDiplomaTableAdapter = null;
+            // 
+            // lectureReadingTableAdapter
+            // 
+            this.lectureReadingTableAdapter.ClearBeforeFill = true;
+            // 
+            // predmetTableAdapter
+            // 
+            this.predmetTableAdapter.ClearBeforeFill = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // openFileDialog3
+            // 
+            this.openFileDialog3.FileName = "openFileDialog3";
+            this.openFileDialog3.Filter = "Any Document | *.doc;*.docx;*.pdf";
+            // 
+            // openFileDialog4
+            // 
+            this.openFileDialog4.FileName = "openFileDialog4";
+            this.openFileDialog4.Filter = "Any Document | *.doc;*.docx;*.pdf";
+            // 
+            // vipolnenijePlanaTableAdapter
+            // 
+            this.vipolnenijePlanaTableAdapter.ClearBeforeFill = true;
+            // 
+            // vipolnenijePlanaBindingSource1
+            // 
+            this.vipolnenijePlanaBindingSource1.DataMember = "GruppaVipolnenijePlana";
+            this.vipolnenijePlanaBindingSource1.DataSource = this.gruppaBindingSource;
+            // 
+            // zaschitaDiplomaTableAdapter
+            // 
+            this.zaschitaDiplomaTableAdapter.ClearBeforeFill = true;
+            // 
+            // nagruzkaPlanTableAdapter
+            // 
+            this.nagruzkaPlanTableAdapter.ClearBeforeFill = true;
+            // 
+            // obazanostTableAdapter
+            // 
+            this.obazanostTableAdapter.ClearBeforeFill = true;
+            // 
+            // moveStudentTableAdapter
+            // 
+            this.moveStudentTableAdapter.ClearBeforeFill = true;
+            // 
+            // projectTableAdapter
+            // 
+            this.projectTableAdapter.ClearBeforeFill = true;
+            // 
+            // teacherProjectTableAdapter
+            // 
+            this.teacherProjectTableAdapter.ClearBeforeFill = true;
+            // 
+            // publikacijaTableAdapter
+            // 
+            this.publikacijaTableAdapter.ClearBeforeFill = true;
+            // 
+            // publikacija_TeacherTableAdapter
+            // 
+            this.publikacija_TeacherTableAdapter.ClearBeforeFill = true;
+            // 
+            // rezultatiObuchenijaTableAdapter
+            // 
+            this.rezultatiObuchenijaTableAdapter.ClearBeforeFill = true;
+            // 
+            // languageTableAdapter
+            // 
+            this.languageTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "Gruppa";
+            this.dataGridViewTextBoxColumn29.HeaderText = "Группа";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "KodPredmeta";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Код предмета";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "UchebGod";
+            this.dataGridViewTextBoxColumn31.HeaderText = "Учебный год";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "Semestr";
+            this.dataGridViewTextBoxColumn32.HeaderText = "Семестр";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "PersonKodPrepodavatel";
+            this.dataGridViewTextBoxColumn37.HeaderText = "Преподаватель";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "Jazik";
+            this.dataGridViewTextBoxColumn38.HeaderText = "Язык";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "Koef_nagruz";
+            this.dataGridViewTextBoxColumn39.HeaderText = "Нагрузка";
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "Lekcii";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Лекции";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "Praktiki";
+            this.dataGridViewTextBoxColumn34.HeaderText = "Практики";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "Labor";
+            this.dataGridViewTextBoxColumn35.HeaderText = "Лабораторные";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "KontaktChasi";
+            this.dataGridViewTextBoxColumn41.HeaderText = "Контактыне часы";
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "TotalChasi";
+            this.dataGridViewTextBoxColumn40.HeaderText = "Всего часов";
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "Kursovaja";
+            this.dataGridViewTextBoxColumn36.HeaderText = "Курсовая";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4232,9 +4235,10 @@
             this.tabPanel1.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chasiNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kafedraDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chasiNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruppaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.predmetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prepodavatelBindingSource)).EndInit();
@@ -4250,8 +4254,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ocenkaNumericUpDown)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kontaktChasiNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nagruzkaPlanDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nagruzkaPlanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kontaktChasiNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalChasiNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.koef_nagruzNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laborNumericUpDown)).EndInit();
@@ -4259,8 +4264,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.lekciiNumericUpDown)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.obazanostDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obazanostBindingSource)).EndInit();
             this.tabPage12.ResumeLayout(false);
             this.tabPage12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moveStudentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moveStudentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.otchislenoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoEndSemNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoStartSemNumericUpDown)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.predmetDataGridView)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -4289,41 +4301,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherProjectDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherProjectBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
             this.tabPage13.ResumeLayout(false);
             this.tabPage13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.publikacija_TeacherDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.publikacija_TeacherBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.publikacijaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.publikacijaDataGridView)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            this.tabPage11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lectureReadingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nagruzkaPlanDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obazanostBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obazanostDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moveStudentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoStartSemNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoEndSemNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.otchislenoNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moveStudentDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherProjectBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherProjectDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publikacijaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publikacija_TeacherBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publikacijaDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publikacija_TeacherDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rezultatiObuchenijaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.srednijBallNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoNeudovNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezultatiObuchenijaDataGridView)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.languageBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rezultatiObuchenijaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kolichestvoNeudovNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.srednijBallNumericUpDown)).EndInit();
+            this.tabPage11.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lectureReadingDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectureReadingBindingSource)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.languageDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.languageBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vipolnenijePlanaBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4509,19 +4512,6 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.DataGridView nagruzkaPlanDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
         private System.Windows.Forms.BindingSource obazanostBindingSource;
         private KafedraDataSetTableAdapters.ObazanostTableAdapter obazanostTableAdapter;
         private System.Windows.Forms.DataGridView obazanostDataGridView;
@@ -4645,6 +4635,19 @@
         private System.Windows.Forms.DataGridView languageDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn84;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn85;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn36;
     }
 }
 
