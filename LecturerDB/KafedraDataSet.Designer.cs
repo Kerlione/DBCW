@@ -1525,6 +1525,10 @@ namespace LecturerDB {
             
             private global::System.Data.DataColumn columnPK_lecturer;
             
+            private global::System.Data.DataColumn columnReadYear;
+            
+            private global::System.Data.DataColumn columnReadSemester;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public LectureReadingDataTable() {
@@ -1584,6 +1588,22 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ReadYearColumn {
+                get {
+                    return this.columnReadYear;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ReadSemesterColumn {
+                get {
+                    return this.columnReadSemester;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1619,12 +1639,14 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public LectureReadingRow AddLectureReadingRow(LanguageRow parentLanguageRowByLanguageLectureReading, PredmetRow parentPredmetRowByPredmetLectureReading, PrepodavatelRow parentPrepodavatelRowByPrepodavatelLectureReading) {
+            public LectureReadingRow AddLectureReadingRow(LanguageRow parentLanguageRowByLanguageLectureReading, PredmetRow parentPredmetRowByPredmetLectureReading, PrepodavatelRow parentPrepodavatelRowByPrepodavatelLectureReading, int ReadYear, int ReadSemester) {
                 LectureReadingRow rowLectureReadingRow = ((LectureReadingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        null};
+                        null,
+                        ReadYear,
+                        ReadSemester};
                 if ((parentLanguageRowByLanguageLectureReading != null)) {
                     columnValuesArray[0] = parentLanguageRowByLanguageLectureReading[0];
                 }
@@ -1637,6 +1659,17 @@ namespace LecturerDB {
                 rowLectureReadingRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLectureReadingRow);
                 return rowLectureReadingRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public LectureReadingRow FindByID_languageID_subjectPK_lecturerReadYearReadSemester(int ID_language, string ID_subject, string PK_lecturer, int ReadYear, int ReadSemester) {
+                return ((LectureReadingRow)(this.Rows.Find(new object[] {
+                            ID_language,
+                            ID_subject,
+                            PK_lecturer,
+                            ReadYear,
+                            ReadSemester})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1659,6 +1692,8 @@ namespace LecturerDB {
                 this.columnID_language = base.Columns["ID_language"];
                 this.columnID_subject = base.Columns["ID_subject"];
                 this.columnPK_lecturer = base.Columns["PK_lecturer"];
+                this.columnReadYear = base.Columns["ReadYear"];
+                this.columnReadSemester = base.Columns["ReadSemester"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1670,8 +1705,23 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnID_subject);
                 this.columnPK_lecturer = new global::System.Data.DataColumn("PK_lecturer", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPK_lecturer);
+                this.columnReadYear = new global::System.Data.DataColumn("ReadYear", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReadYear);
+                this.columnReadSemester = new global::System.Data.DataColumn("ReadSemester", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReadSemester);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_language,
+                                this.columnID_subject,
+                                this.columnPK_lecturer,
+                                this.columnReadYear,
+                                this.columnReadSemester}, true));
+                this.columnID_language.AllowDBNull = false;
+                this.columnID_subject.AllowDBNull = false;
                 this.columnID_subject.MaxLength = 255;
+                this.columnPK_lecturer.AllowDBNull = false;
                 this.columnPK_lecturer.MaxLength = 255;
+                this.columnReadYear.AllowDBNull = false;
+                this.columnReadSemester.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1965,6 +2015,15 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MoveStudentRow FindByNumGroupGodUchebnijSemestr(string NumGroup, int GodUchebnij, int Semestr) {
+                return ((MoveStudentRow)(this.Rows.Find(new object[] {
+                            NumGroup,
+                            GodUchebnij,
+                            Semestr})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 MoveStudentDataTable cln = ((MoveStudentDataTable)(base.Clone()));
                 cln.InitVars();
@@ -2006,7 +2065,14 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnOtchisleno);
                 this.columnPrichina = new global::System.Data.DataColumn("Prichina", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrichina);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNumGroup,
+                                this.columnGodUchebnij,
+                                this.columnSemestr}, true));
+                this.columnNumGroup.AllowDBNull = false;
                 this.columnNumGroup.MaxLength = 255;
+                this.columnGodUchebnij.AllowDBNull = false;
+                this.columnSemestr.AllowDBNull = false;
                 this.columnPrichina.MaxLength = 536870910;
             }
             
@@ -2373,6 +2439,16 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public NagruzkaPlanRow FindByGruppaKodPredmetaUchebGodPersonKodPrepodavatel(string Gruppa, string KodPredmeta, string UchebGod, string PersonKodPrepodavatel) {
+                return ((NagruzkaPlanRow)(this.Rows.Find(new object[] {
+                            Gruppa,
+                            KodPredmeta,
+                            UchebGod,
+                            PersonKodPrepodavatel})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 NagruzkaPlanDataTable cln = ((NagruzkaPlanDataTable)(base.Clone()));
                 cln.InitVars();
@@ -2432,10 +2508,19 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnTotalChasi);
                 this.columnKontaktChasi = new global::System.Data.DataColumn("KontaktChasi", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKontaktChasi);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnGruppa,
+                                this.columnKodPredmeta,
+                                this.columnUchebGod,
+                                this.columnPersonKodPrepodavatel}, true));
+                this.columnGruppa.AllowDBNull = false;
                 this.columnGruppa.MaxLength = 255;
+                this.columnKodPredmeta.AllowDBNull = false;
                 this.columnKodPredmeta.MaxLength = 255;
+                this.columnUchebGod.AllowDBNull = false;
                 this.columnUchebGod.MaxLength = 255;
                 this.columnSemestr.MaxLength = 255;
+                this.columnPersonKodPrepodavatel.AllowDBNull = false;
                 this.columnPersonKodPrepodavatel.MaxLength = 255;
                 this.columnJazik.MaxLength = 255;
             }
@@ -4905,6 +4990,16 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RezultatiObuchenijaRow FindByNumGroupId_PredmetUchebGodSemestr(string NumGroup, string Id_Predmet, int UchebGod, int Semestr) {
+                return ((RezultatiObuchenijaRow)(this.Rows.Find(new object[] {
+                            NumGroup,
+                            Id_Predmet,
+                            UchebGod,
+                            Semestr})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 RezultatiObuchenijaDataTable cln = ((RezultatiObuchenijaDataTable)(base.Clone()));
                 cln.InitVars();
@@ -4943,8 +5038,17 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnSrednijBall);
                 this.columnKolichestvoNeudov = new global::System.Data.DataColumn("KolichestvoNeudov", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKolichestvoNeudov);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNumGroup,
+                                this.columnId_Predmet,
+                                this.columnUchebGod,
+                                this.columnSemestr}, true));
+                this.columnNumGroup.AllowDBNull = false;
                 this.columnNumGroup.MaxLength = 255;
+                this.columnId_Predmet.AllowDBNull = false;
                 this.columnId_Predmet.MaxLength = 255;
+                this.columnUchebGod.AllowDBNull = false;
+                this.columnSemestr.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5915,6 +6019,15 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ZaschitaDiplomaRow FindByTemaRabotiRukovoditelDataZaschiti(string TemaRaboti, string Rukovoditel, System.DateTime DataZaschiti) {
+                return ((ZaschitaDiplomaRow)(this.Rows.Find(new object[] {
+                            TemaRaboti,
+                            Rukovoditel,
+                            DataZaschiti})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 ZaschitaDiplomaDataTable cln = ((ZaschitaDiplomaDataTable)(base.Clone()));
                 cln.InitVars();
@@ -5950,8 +6063,15 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnOcenka);
                 this.columnTypeRaboti = new global::System.Data.DataColumn("TypeRaboti", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTypeRaboti);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTemaRaboti,
+                                this.columnRukovoditel,
+                                this.columnDataZaschiti}, true));
+                this.columnTemaRaboti.AllowDBNull = false;
                 this.columnTemaRaboti.MaxLength = 255;
+                this.columnRukovoditel.AllowDBNull = false;
                 this.columnRukovoditel.MaxLength = 255;
+                this.columnDataZaschiti.AllowDBNull = false;
                 this.columnTypeRaboti.MaxLength = 255;
             }
             
@@ -6428,12 +6548,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID_language {
                 get {
-                    try {
-                        return ((int)(this[this.tableLectureReading.ID_languageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ID_language\' in table \'LectureReading\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableLectureReading.ID_languageColumn]));
                 }
                 set {
                     this[this.tableLectureReading.ID_languageColumn] = value;
@@ -6444,12 +6559,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string ID_subject {
                 get {
-                    try {
-                        return ((string)(this[this.tableLectureReading.ID_subjectColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ID_subject\' in table \'LectureReading\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableLectureReading.ID_subjectColumn]));
                 }
                 set {
                     this[this.tableLectureReading.ID_subjectColumn] = value;
@@ -6460,15 +6570,32 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string PK_lecturer {
                 get {
-                    try {
-                        return ((string)(this[this.tableLectureReading.PK_lecturerColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PK_lecturer\' in table \'LectureReading\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableLectureReading.PK_lecturerColumn]));
                 }
                 set {
                     this[this.tableLectureReading.PK_lecturerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ReadYear {
+                get {
+                    return ((int)(this[this.tableLectureReading.ReadYearColumn]));
+                }
+                set {
+                    this[this.tableLectureReading.ReadYearColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ReadSemester {
+                get {
+                    return ((int)(this[this.tableLectureReading.ReadSemesterColumn]));
+                }
+                set {
+                    this[this.tableLectureReading.ReadSemesterColumn] = value;
                 }
             }
             
@@ -6504,42 +6631,6 @@ namespace LecturerDB {
                     this.SetParentRow(value, this.Table.ParentRelations["PrepodavatelLectureReading"]);
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsID_languageNull() {
-                return this.IsNull(this.tableLectureReading.ID_languageColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetID_languageNull() {
-                this[this.tableLectureReading.ID_languageColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsID_subjectNull() {
-                return this.IsNull(this.tableLectureReading.ID_subjectColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetID_subjectNull() {
-                this[this.tableLectureReading.ID_subjectColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPK_lecturerNull() {
-                return this.IsNull(this.tableLectureReading.PK_lecturerColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPK_lecturerNull() {
-                this[this.tableLectureReading.PK_lecturerColumn] = global::System.Convert.DBNull;
-            }
         }
         
         /// <summary>
@@ -6560,12 +6651,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string NumGroup {
                 get {
-                    try {
-                        return ((string)(this[this.tableMoveStudent.NumGroupColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NumGroup\' in table \'MoveStudent\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableMoveStudent.NumGroupColumn]));
                 }
                 set {
                     this[this.tableMoveStudent.NumGroupColumn] = value;
@@ -6576,12 +6662,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int GodUchebnij {
                 get {
-                    try {
-                        return ((int)(this[this.tableMoveStudent.GodUchebnijColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'GodUchebnij\' in table \'MoveStudent\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableMoveStudent.GodUchebnijColumn]));
                 }
                 set {
                     this[this.tableMoveStudent.GodUchebnijColumn] = value;
@@ -6592,12 +6673,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Semestr {
                 get {
-                    try {
-                        return ((int)(this[this.tableMoveStudent.SemestrColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Semestr\' in table \'MoveStudent\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableMoveStudent.SemestrColumn]));
                 }
                 set {
                     this[this.tableMoveStudent.SemestrColumn] = value;
@@ -6681,42 +6757,6 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNumGroupNull() {
-                return this.IsNull(this.tableMoveStudent.NumGroupColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNumGroupNull() {
-                this[this.tableMoveStudent.NumGroupColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsGodUchebnijNull() {
-                return this.IsNull(this.tableMoveStudent.GodUchebnijColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetGodUchebnijNull() {
-                this[this.tableMoveStudent.GodUchebnijColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSemestrNull() {
-                return this.IsNull(this.tableMoveStudent.SemestrColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSemestrNull() {
-                this[this.tableMoveStudent.SemestrColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsKolichestvoStartSemNull() {
                 return this.IsNull(this.tableMoveStudent.KolichestvoStartSemColumn);
             }
@@ -6782,12 +6822,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Gruppa {
                 get {
-                    try {
-                        return ((string)(this[this.tableNagruzkaPlan.GruppaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Gruppa\' in table \'NagruzkaPlan\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableNagruzkaPlan.GruppaColumn]));
                 }
                 set {
                     this[this.tableNagruzkaPlan.GruppaColumn] = value;
@@ -6798,12 +6833,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string KodPredmeta {
                 get {
-                    try {
-                        return ((string)(this[this.tableNagruzkaPlan.KodPredmetaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'KodPredmeta\' in table \'NagruzkaPlan\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableNagruzkaPlan.KodPredmetaColumn]));
                 }
                 set {
                     this[this.tableNagruzkaPlan.KodPredmetaColumn] = value;
@@ -6814,12 +6844,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string UchebGod {
                 get {
-                    try {
-                        return ((string)(this[this.tableNagruzkaPlan.UchebGodColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'UchebGod\' in table \'NagruzkaPlan\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableNagruzkaPlan.UchebGodColumn]));
                 }
                 set {
                     this[this.tableNagruzkaPlan.UchebGodColumn] = value;
@@ -6910,12 +6935,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string PersonKodPrepodavatel {
                 get {
-                    try {
-                        return ((string)(this[this.tableNagruzkaPlan.PersonKodPrepodavatelColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PersonKodPrepodavatel\' in table \'NagruzkaPlan\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableNagruzkaPlan.PersonKodPrepodavatelColumn]));
                 }
                 set {
                     this[this.tableNagruzkaPlan.PersonKodPrepodavatelColumn] = value;
@@ -7021,42 +7041,6 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsGruppaNull() {
-                return this.IsNull(this.tableNagruzkaPlan.GruppaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetGruppaNull() {
-                this[this.tableNagruzkaPlan.GruppaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsKodPredmetaNull() {
-                return this.IsNull(this.tableNagruzkaPlan.KodPredmetaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetKodPredmetaNull() {
-                this[this.tableNagruzkaPlan.KodPredmetaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsUchebGodNull() {
-                return this.IsNull(this.tableNagruzkaPlan.UchebGodColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetUchebGodNull() {
-                this[this.tableNagruzkaPlan.UchebGodColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSemestrNull() {
                 return this.IsNull(this.tableNagruzkaPlan.SemestrColumn);
             }
@@ -7113,18 +7097,6 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetKursovajaNull() {
                 this[this.tableNagruzkaPlan.KursovajaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPersonKodPrepodavatelNull() {
-                return this.IsNull(this.tableNagruzkaPlan.PersonKodPrepodavatelColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPersonKodPrepodavatelNull() {
-                this[this.tableNagruzkaPlan.PersonKodPrepodavatelColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8697,12 +8669,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string NumGroup {
                 get {
-                    try {
-                        return ((string)(this[this.tableRezultatiObuchenija.NumGroupColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NumGroup\' in table \'RezultatiObuchenija\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableRezultatiObuchenija.NumGroupColumn]));
                 }
                 set {
                     this[this.tableRezultatiObuchenija.NumGroupColumn] = value;
@@ -8713,12 +8680,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Id_Predmet {
                 get {
-                    try {
-                        return ((string)(this[this.tableRezultatiObuchenija.Id_PredmetColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Id_Predmet\' in table \'RezultatiObuchenija\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableRezultatiObuchenija.Id_PredmetColumn]));
                 }
                 set {
                     this[this.tableRezultatiObuchenija.Id_PredmetColumn] = value;
@@ -8729,12 +8691,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int UchebGod {
                 get {
-                    try {
-                        return ((int)(this[this.tableRezultatiObuchenija.UchebGodColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'UchebGod\' in table \'RezultatiObuchenija\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableRezultatiObuchenija.UchebGodColumn]));
                 }
                 set {
                     this[this.tableRezultatiObuchenija.UchebGodColumn] = value;
@@ -8745,12 +8702,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Semestr {
                 get {
-                    try {
-                        return ((int)(this[this.tableRezultatiObuchenija.SemestrColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Semestr\' in table \'RezultatiObuchenija\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableRezultatiObuchenija.SemestrColumn]));
                 }
                 set {
                     this[this.tableRezultatiObuchenija.SemestrColumn] = value;
@@ -8799,54 +8751,6 @@ namespace LecturerDB {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["GruppaRezultatiObuchenija"]);
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNumGroupNull() {
-                return this.IsNull(this.tableRezultatiObuchenija.NumGroupColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNumGroupNull() {
-                this[this.tableRezultatiObuchenija.NumGroupColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsId_PredmetNull() {
-                return this.IsNull(this.tableRezultatiObuchenija.Id_PredmetColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetId_PredmetNull() {
-                this[this.tableRezultatiObuchenija.Id_PredmetColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsUchebGodNull() {
-                return this.IsNull(this.tableRezultatiObuchenija.UchebGodColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetUchebGodNull() {
-                this[this.tableRezultatiObuchenija.UchebGodColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSemestrNull() {
-                return this.IsNull(this.tableRezultatiObuchenija.SemestrColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSemestrNull() {
-                this[this.tableRezultatiObuchenija.SemestrColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9352,12 +9256,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string TemaRaboti {
                 get {
-                    try {
-                        return ((string)(this[this.tableZaschitaDiploma.TemaRabotiColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TemaRaboti\' in table \'ZaschitaDiploma\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableZaschitaDiploma.TemaRabotiColumn]));
                 }
                 set {
                     this[this.tableZaschitaDiploma.TemaRabotiColumn] = value;
@@ -9368,12 +9267,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Rukovoditel {
                 get {
-                    try {
-                        return ((string)(this[this.tableZaschitaDiploma.RukovoditelColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Rukovoditel\' in table \'ZaschitaDiploma\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableZaschitaDiploma.RukovoditelColumn]));
                 }
                 set {
                     this[this.tableZaschitaDiploma.RukovoditelColumn] = value;
@@ -9384,12 +9278,7 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime DataZaschiti {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableZaschitaDiploma.DataZaschitiColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DataZaschiti\' in table \'ZaschitaDiploma\' is DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tableZaschitaDiploma.DataZaschitiColumn]));
                 }
                 set {
                     this[this.tableZaschitaDiploma.DataZaschitiColumn] = value;
@@ -9426,42 +9315,6 @@ namespace LecturerDB {
                 set {
                     this[this.tableZaschitaDiploma.TypeRabotiColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTemaRabotiNull() {
-                return this.IsNull(this.tableZaschitaDiploma.TemaRabotiColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTemaRabotiNull() {
-                this[this.tableZaschitaDiploma.TemaRabotiColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsRukovoditelNull() {
-                return this.IsNull(this.tableZaschitaDiploma.RukovoditelColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetRukovoditelNull() {
-                this[this.tableZaschitaDiploma.RukovoditelColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDataZaschitiNull() {
-                return this.IsNull(this.tableZaschitaDiploma.DataZaschitiColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDataZaschitiNull() {
-                this[this.tableZaschitaDiploma.DataZaschitiColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11010,15 +10863,45 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ID_language", "ID_language");
             tableMapping.ColumnMappings.Add("ID_subject", "ID_subject");
             tableMapping.ColumnMappings.Add("PK_lecturer", "PK_lecturer");
+            tableMapping.ColumnMappings.Add("ReadYear", "ReadYear");
+            tableMapping.ColumnMappings.Add("ReadSemester", "ReadSemester");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `LectureReading` WHERE ((`ID_language` = ?) AND (`ID_subject` = ?) AN" +
+                "D (`PK_lecturer` = ?) AND (`ReadYear` = ?) AND (`ReadSemester` = ?))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID_language", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_language", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID_subject", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_subject", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PK_lecturer", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PK_lecturer", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ReadYear", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReadYear", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ReadSemester", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReadSemester", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `LectureReading` (`ID_language`, `ID_subject`, `PK_lecturer`) VALUES " +
-                "(?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `LectureReading` (`ID_language`, `ID_subject`, `PK_lecturer`, `ReadYe" +
+                "ar`, `ReadSemester`) VALUES (?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID_language", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_language", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID_subject", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_subject", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PK_lecturer", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PK_lecturer", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ReadYear", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReadYear", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ReadSemester", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReadSemester", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE `LectureReading` SET `ID_language` = ?, `ID_subject` = ?, `PK_lecturer` = " +
+                "?, `ReadYear` = ?, `ReadSemester` = ? WHERE ((`ID_language` = ?) AND (`ID_subjec" +
+                "t` = ?) AND (`PK_lecturer` = ?) AND (`ReadYear` = ?) AND (`ReadSemester` = ?))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID_language", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_language", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID_subject", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_subject", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PK_lecturer", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PK_lecturer", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ReadYear", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReadYear", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ReadSemester", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReadSemester", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID_language", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_language", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID_subject", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_subject", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PK_lecturer", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PK_lecturer", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ReadYear", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReadYear", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ReadSemester", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReadSemester", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11034,7 +10917,8 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_language, ID_subject, PK_lecturer FROM LectureReading";
+            this._commandCollection[0].CommandText = "SELECT ID_language, ID_subject, PK_lecturer, ReadYear, ReadSemester FROM LectureR" +
+                "eading";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11094,8 +10978,59 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(global::System.Nullable<int> Original_ID_language, string Original_ID_subject, string Original_PK_lecturer, global::System.Nullable<int> Original_ReadYear, global::System.Nullable<int> Original_ReadSemester) {
+            if ((Original_ID_language.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_language.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ID_subject == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ID_subject));
+            }
+            if ((Original_PK_lecturer == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_PK_lecturer));
+            }
+            if ((Original_ReadYear.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_ReadYear.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ReadSemester.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_ReadSemester.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> ID_language, string ID_subject, string PK_lecturer) {
+        public virtual int Insert(global::System.Nullable<int> ID_language, string ID_subject, string PK_lecturer, global::System.Nullable<int> ReadYear, global::System.Nullable<int> ReadSemester) {
             if ((ID_language.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_language.Value));
             }
@@ -11114,6 +11049,18 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(PK_lecturer));
             }
+            if ((ReadYear.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(ReadYear.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((ReadSemester.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ReadSemester.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11128,6 +11075,95 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> ID_language, string ID_subject, string PK_lecturer, global::System.Nullable<int> ReadYear, global::System.Nullable<int> ReadSemester, global::System.Nullable<int> Original_ID_language, string Original_ID_subject, string Original_PK_lecturer, global::System.Nullable<int> Original_ReadYear, global::System.Nullable<int> Original_ReadSemester) {
+            if ((ID_language.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_language.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((ID_subject == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ID_subject));
+            }
+            if ((PK_lecturer == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(PK_lecturer));
+            }
+            if ((ReadYear.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(ReadYear.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((ReadSemester.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ReadSemester.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ID_language.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_language.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ID_subject == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_ID_subject));
+            }
+            if ((Original_PK_lecturer == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_PK_lecturer));
+            }
+            if ((Original_ReadYear.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_ReadYear.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ReadSemester.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ReadSemester.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> Original_ID_language, string Original_ID_subject, string Original_PK_lecturer, global::System.Nullable<int> Original_ReadYear, global::System.Nullable<int> Original_ReadSemester) {
+            return this.Update(Original_ID_language, Original_ID_subject, Original_PK_lecturer, Original_ReadYear, Original_ReadSemester, Original_ID_language, Original_ID_subject, Original_PK_lecturer, Original_ReadYear, Original_ReadSemester);
         }
     }
     
@@ -11260,6 +11296,19 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Otchisleno", "Otchisleno");
             tableMapping.ColumnMappings.Add("Prichina", "Prichina");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `MoveStudent` WHERE ((`NumGroup` = ?) AND (`GodUchebnij` = ?) AND (`Semestr` = ?) AND ((? = 1 AND `KolichestvoStartSem` IS NULL) OR (`KolichestvoStartSem` = ?)) AND ((? = 1 AND `KolichestvoEndSem` IS NULL) OR (`KolichestvoEndSem` = ?)) AND ((? = 1 AND `Otchisleno` IS NULL) OR (`Otchisleno` = ?)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_NumGroup", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumGroup", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_GodUchebnij", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GodUchebnij", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Semestr", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_KolichestvoStartSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoStartSem", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KolichestvoStartSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoStartSem", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_KolichestvoEndSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoEndSem", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KolichestvoEndSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoEndSem", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Otchisleno", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Otchisleno", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Otchisleno", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Otchisleno", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `MoveStudent` (`NumGroup`, `GodUchebnij`, `Semestr`, `KolichestvoStar" +
@@ -11273,6 +11322,26 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KolichestvoEndSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoEndSem", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Otchisleno", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Otchisleno", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Prichina", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Prichina", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `MoveStudent` SET `NumGroup` = ?, `GodUchebnij` = ?, `Semestr` = ?, `KolichestvoStartSem` = ?, `KolichestvoEndSem` = ?, `Otchisleno` = ?, `Prichina` = ? WHERE ((`NumGroup` = ?) AND (`GodUchebnij` = ?) AND (`Semestr` = ?) AND ((? = 1 AND `KolichestvoStartSem` IS NULL) OR (`KolichestvoStartSem` = ?)) AND ((? = 1 AND `KolichestvoEndSem` IS NULL) OR (`KolichestvoEndSem` = ?)) AND ((? = 1 AND `Otchisleno` IS NULL) OR (`Otchisleno` = ?)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NumGroup", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumGroup", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("GodUchebnij", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GodUchebnij", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Semestr", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KolichestvoStartSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoStartSem", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KolichestvoEndSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoEndSem", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Otchisleno", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Otchisleno", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Prichina", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Prichina", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_NumGroup", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumGroup", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_GodUchebnij", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GodUchebnij", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Semestr", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_KolichestvoStartSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoStartSem", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KolichestvoStartSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoStartSem", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_KolichestvoEndSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoEndSem", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KolichestvoEndSem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoEndSem", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Otchisleno", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Otchisleno", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Otchisleno", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Otchisleno", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11349,6 +11418,69 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_NumGroup, global::System.Nullable<int> Original_GodUchebnij, global::System.Nullable<int> Original_Semestr, global::System.Nullable<int> Original_KolichestvoStartSem, global::System.Nullable<int> Original_KolichestvoEndSem, global::System.Nullable<int> Original_Otchisleno) {
+            if ((Original_NumGroup == null)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_NumGroup));
+            }
+            if ((Original_GodUchebnij.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_GodUchebnij.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Semestr.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Semestr.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_KolichestvoStartSem.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_KolichestvoStartSem.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_KolichestvoEndSem.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_KolichestvoEndSem.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Otchisleno.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Otchisleno.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string NumGroup, global::System.Nullable<int> GodUchebnij, global::System.Nullable<int> Semestr, global::System.Nullable<int> KolichestvoStartSem, global::System.Nullable<int> KolichestvoEndSem, global::System.Nullable<int> Otchisleno, string Prichina) {
             if ((NumGroup == null)) {
@@ -11407,6 +11539,119 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string NumGroup, global::System.Nullable<int> GodUchebnij, global::System.Nullable<int> Semestr, global::System.Nullable<int> KolichestvoStartSem, global::System.Nullable<int> KolichestvoEndSem, global::System.Nullable<int> Otchisleno, string Prichina, string Original_NumGroup, global::System.Nullable<int> Original_GodUchebnij, global::System.Nullable<int> Original_Semestr, global::System.Nullable<int> Original_KolichestvoStartSem, global::System.Nullable<int> Original_KolichestvoEndSem, global::System.Nullable<int> Original_Otchisleno) {
+            if ((NumGroup == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NumGroup));
+            }
+            if ((GodUchebnij.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GodUchebnij.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Semestr.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Semestr.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((KolichestvoStartSem.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(KolichestvoStartSem.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((KolichestvoEndSem.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(KolichestvoEndSem.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Otchisleno.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Otchisleno.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Prichina == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Prichina));
+            }
+            if ((Original_NumGroup == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_NumGroup));
+            }
+            if ((Original_GodUchebnij.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_GodUchebnij.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Semestr.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Semestr.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_KolichestvoStartSem.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_KolichestvoStartSem.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_KolichestvoEndSem.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_KolichestvoEndSem.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Otchisleno.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Otchisleno.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> KolichestvoStartSem, global::System.Nullable<int> KolichestvoEndSem, global::System.Nullable<int> Otchisleno, string Prichina, string Original_NumGroup, global::System.Nullable<int> Original_GodUchebnij, global::System.Nullable<int> Original_Semestr, global::System.Nullable<int> Original_KolichestvoStartSem, global::System.Nullable<int> Original_KolichestvoEndSem, global::System.Nullable<int> Original_Otchisleno) {
+            return this.Update(Original_NumGroup, Original_GodUchebnij, Original_Semestr, KolichestvoStartSem, KolichestvoEndSem, Otchisleno, Prichina, Original_NumGroup, Original_GodUchebnij, Original_Semestr, Original_KolichestvoStartSem, Original_KolichestvoEndSem, Original_Otchisleno);
         }
     }
     
@@ -11545,6 +11790,32 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TotalChasi", "TotalChasi");
             tableMapping.ColumnMappings.Add("KontaktChasi", "KontaktChasi");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `NagruzkaPlan` WHERE ((`Gruppa` = ?) AND (`KodPredmeta` = ?) AND (`UchebGod` = ?) AND ((? = 1 AND `Semestr` IS NULL) OR (`Semestr` = ?)) AND ((? = 1 AND `Lekcii` IS NULL) OR (`Lekcii` = ?)) AND ((? = 1 AND `Praktiki` IS NULL) OR (`Praktiki` = ?)) AND ((? = 1 AND `Labor` IS NULL) OR (`Labor` = ?)) AND ((? = 1 AND `Kursovaja` IS NULL) OR (`Kursovaja` = ?)) AND (`PersonKodPrepodavatel` = ?) AND ((? = 1 AND `Jazik` IS NULL) OR (`Jazik` = ?)) AND ((? = 1 AND `Koef_nagruz` IS NULL) OR (`Koef_nagruz` = ?)) AND ((? = 1 AND `TotalChasi` IS NULL) OR (`TotalChasi` = ?)) AND ((? = 1 AND `KontaktChasi` IS NULL) OR (`KontaktChasi` = ?)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Gruppa", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gruppa", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KodPredmeta", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KodPredmeta", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UchebGod", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UchebGod", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Semestr", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Semestr", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Lekcii", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lekcii", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Lekcii", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lekcii", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Praktiki", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Praktiki", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Praktiki", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Praktiki", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Labor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Labor", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Labor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Labor", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Kursovaja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kursovaja", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Kursovaja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kursovaja", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PersonKodPrepodavatel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PersonKodPrepodavatel", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Jazik", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Jazik", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Jazik", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Jazik", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Koef_nagruz", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Koef_nagruz", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Koef_nagruz", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Koef_nagruz", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TotalChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TotalChasi", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TotalChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TotalChasi", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_KontaktChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KontaktChasi", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KontaktChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KontaktChasi", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `NagruzkaPlan` (`Gruppa`, `KodPredmeta`, `UchebGod`, `Semestr`, `Lekc" +
@@ -11565,6 +11836,45 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Koef_nagruz", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Koef_nagruz", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TotalChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TotalChasi", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KontaktChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KontaktChasi", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `NagruzkaPlan` SET `Gruppa` = ?, `KodPredmeta` = ?, `UchebGod` = ?, `Semestr` = ?, `Lekcii` = ?, `Praktiki` = ?, `Labor` = ?, `Kursovaja` = ?, `PersonKodPrepodavatel` = ?, `Jazik` = ?, `Koef_nagruz` = ?, `TotalChasi` = ?, `KontaktChasi` = ? WHERE ((`Gruppa` = ?) AND (`KodPredmeta` = ?) AND (`UchebGod` = ?) AND ((? = 1 AND `Semestr` IS NULL) OR (`Semestr` = ?)) AND ((? = 1 AND `Lekcii` IS NULL) OR (`Lekcii` = ?)) AND ((? = 1 AND `Praktiki` IS NULL) OR (`Praktiki` = ?)) AND ((? = 1 AND `Labor` IS NULL) OR (`Labor` = ?)) AND ((? = 1 AND `Kursovaja` IS NULL) OR (`Kursovaja` = ?)) AND (`PersonKodPrepodavatel` = ?) AND ((? = 1 AND `Jazik` IS NULL) OR (`Jazik` = ?)) AND ((? = 1 AND `Koef_nagruz` IS NULL) OR (`Koef_nagruz` = ?)) AND ((? = 1 AND `TotalChasi` IS NULL) OR (`TotalChasi` = ?)) AND ((? = 1 AND `KontaktChasi` IS NULL) OR (`KontaktChasi` = ?)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gruppa", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gruppa", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KodPredmeta", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KodPredmeta", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UchebGod", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UchebGod", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Semestr", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lekcii", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lekcii", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Praktiki", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Praktiki", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Labor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Labor", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Kursovaja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kursovaja", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PersonKodPrepodavatel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PersonKodPrepodavatel", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Jazik", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Jazik", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Koef_nagruz", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Koef_nagruz", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TotalChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TotalChasi", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KontaktChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KontaktChasi", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Gruppa", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gruppa", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KodPredmeta", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KodPredmeta", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UchebGod", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UchebGod", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Semestr", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Semestr", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Lekcii", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lekcii", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Lekcii", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lekcii", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Praktiki", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Praktiki", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Praktiki", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Praktiki", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Labor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Labor", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Labor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Labor", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Kursovaja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kursovaja", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Kursovaja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kursovaja", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PersonKodPrepodavatel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PersonKodPrepodavatel", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Jazik", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Jazik", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Jazik", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Jazik", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Koef_nagruz", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Koef_nagruz", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Koef_nagruz", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Koef_nagruz", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TotalChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TotalChasi", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TotalChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TotalChasi", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_KontaktChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KontaktChasi", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KontaktChasi", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KontaktChasi", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11637,6 +11947,123 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_Gruppa, string Original_KodPredmeta, string Original_UchebGod, string Original_Semestr, global::System.Nullable<int> Original_Lekcii, global::System.Nullable<int> Original_Praktiki, global::System.Nullable<int> Original_Labor, global::System.Nullable<int> Original_Kursovaja, string Original_PersonKodPrepodavatel, string Original_Jazik, global::System.Nullable<int> Original_Koef_nagruz, global::System.Nullable<int> Original_TotalChasi, global::System.Nullable<int> Original_KontaktChasi) {
+            if ((Original_Gruppa == null)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Gruppa));
+            }
+            if ((Original_KodPredmeta == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_KodPredmeta));
+            }
+            if ((Original_UchebGod == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_UchebGod));
+            }
+            if ((Original_Semestr == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Semestr));
+            }
+            if ((Original_Lekcii.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Lekcii.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Praktiki.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Praktiki.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Labor.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Labor.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Kursovaja.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_Kursovaja.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PersonKodPrepodavatel == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_PersonKodPrepodavatel));
+            }
+            if ((Original_Jazik == null)) {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_Jazik));
+            }
+            if ((Original_Koef_nagruz.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_Koef_nagruz.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_TotalChasi.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((int)(Original_TotalChasi.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_KontaktChasi.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((int)(Original_KontaktChasi.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11736,6 +12163,257 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Gruppa, 
+                    string KodPredmeta, 
+                    string UchebGod, 
+                    string Semestr, 
+                    global::System.Nullable<int> Lekcii, 
+                    global::System.Nullable<int> Praktiki, 
+                    global::System.Nullable<int> Labor, 
+                    global::System.Nullable<int> Kursovaja, 
+                    string PersonKodPrepodavatel, 
+                    string Jazik, 
+                    global::System.Nullable<int> Koef_nagruz, 
+                    global::System.Nullable<int> TotalChasi, 
+                    global::System.Nullable<int> KontaktChasi, 
+                    string Original_Gruppa, 
+                    string Original_KodPredmeta, 
+                    string Original_UchebGod, 
+                    string Original_Semestr, 
+                    global::System.Nullable<int> Original_Lekcii, 
+                    global::System.Nullable<int> Original_Praktiki, 
+                    global::System.Nullable<int> Original_Labor, 
+                    global::System.Nullable<int> Original_Kursovaja, 
+                    string Original_PersonKodPrepodavatel, 
+                    string Original_Jazik, 
+                    global::System.Nullable<int> Original_Koef_nagruz, 
+                    global::System.Nullable<int> Original_TotalChasi, 
+                    global::System.Nullable<int> Original_KontaktChasi) {
+            if ((Gruppa == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Gruppa));
+            }
+            if ((KodPredmeta == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(KodPredmeta));
+            }
+            if ((UchebGod == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(UchebGod));
+            }
+            if ((Semestr == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Semestr));
+            }
+            if ((Lekcii.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Lekcii.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Praktiki.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Praktiki.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Labor.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Labor.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Kursovaja.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Kursovaja.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((PersonKodPrepodavatel == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(PersonKodPrepodavatel));
+            }
+            if ((Jazik == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Jazik));
+            }
+            if ((Koef_nagruz.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Koef_nagruz.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((TotalChasi.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(TotalChasi.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((KontaktChasi.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(KontaktChasi.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Gruppa == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Gruppa));
+            }
+            if ((Original_KodPredmeta == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_KodPredmeta));
+            }
+            if ((Original_UchebGod == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_UchebGod));
+            }
+            if ((Original_Semestr == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Semestr));
+            }
+            if ((Original_Lekcii.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Lekcii.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Praktiki.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_Praktiki.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Labor.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_Labor.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Kursovaja.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_Kursovaja.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PersonKodPrepodavatel == null)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_PersonKodPrepodavatel));
+            }
+            if ((Original_Jazik == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Jazik));
+            }
+            if ((Original_Koef_nagruz.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_Koef_nagruz.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            if ((Original_TotalChasi.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_TotalChasi.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_KontaktChasi.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_KontaktChasi.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Semestr, 
+                    global::System.Nullable<int> Lekcii, 
+                    global::System.Nullable<int> Praktiki, 
+                    global::System.Nullable<int> Labor, 
+                    global::System.Nullable<int> Kursovaja, 
+                    string Jazik, 
+                    global::System.Nullable<int> Koef_nagruz, 
+                    global::System.Nullable<int> TotalChasi, 
+                    global::System.Nullable<int> KontaktChasi, 
+                    string Original_Gruppa, 
+                    string Original_KodPredmeta, 
+                    string Original_UchebGod, 
+                    string Original_Semestr, 
+                    global::System.Nullable<int> Original_Lekcii, 
+                    global::System.Nullable<int> Original_Praktiki, 
+                    global::System.Nullable<int> Original_Labor, 
+                    global::System.Nullable<int> Original_Kursovaja, 
+                    string Original_PersonKodPrepodavatel, 
+                    string Original_Jazik, 
+                    global::System.Nullable<int> Original_Koef_nagruz, 
+                    global::System.Nullable<int> Original_TotalChasi, 
+                    global::System.Nullable<int> Original_KontaktChasi) {
+            return this.Update(Original_Gruppa, Original_KodPredmeta, Original_UchebGod, Semestr, Lekcii, Praktiki, Labor, Kursovaja, Original_PersonKodPrepodavatel, Jazik, Koef_nagruz, TotalChasi, KontaktChasi, Original_Gruppa, Original_KodPredmeta, Original_UchebGod, Original_Semestr, Original_Lekcii, Original_Praktiki, Original_Labor, Original_Kursovaja, Original_PersonKodPrepodavatel, Original_Jazik, Original_Koef_nagruz, Original_TotalChasi, Original_KontaktChasi);
         }
     }
     
@@ -14983,6 +15661,18 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("SrednijBall", "SrednijBall");
             tableMapping.ColumnMappings.Add("KolichestvoNeudov", "KolichestvoNeudov");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `RezultatiObuchenija` WHERE ((`NumGroup` = ?) AND (`Id_Predmet` = ?) AND (`UchebGod` = ?) AND (`Semestr` = ?) AND ((? = 1 AND `SrednijBall` IS NULL) OR (`SrednijBall` = ?)) AND ((? = 1 AND `KolichestvoNeudov` IS NULL) OR (`KolichestvoNeudov` = ?)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_NumGroup", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumGroup", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_Predmet", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Predmet", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UchebGod", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UchebGod", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Semestr", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_SrednijBall", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SrednijBall", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_SrednijBall", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SrednijBall", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_KolichestvoNeudov", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoNeudov", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KolichestvoNeudov", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoNeudov", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `RezultatiObuchenija` (`NumGroup`, `Id_Predmet`, `UchebGod`, `Semestr" +
@@ -14994,6 +15684,24 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Semestr", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SrednijBall", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SrednijBall", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KolichestvoNeudov", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoNeudov", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `RezultatiObuchenija` SET `NumGroup` = ?, `Id_Predmet` = ?, `UchebGod` = ?, `Semestr` = ?, `SrednijBall` = ?, `KolichestvoNeudov` = ? WHERE ((`NumGroup` = ?) AND (`Id_Predmet` = ?) AND (`UchebGod` = ?) AND (`Semestr` = ?) AND ((? = 1 AND `SrednijBall` IS NULL) OR (`SrednijBall` = ?)) AND ((? = 1 AND `KolichestvoNeudov` IS NULL) OR (`KolichestvoNeudov` = ?)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NumGroup", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumGroup", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Id_Predmet", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Predmet", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("UchebGod", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UchebGod", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Semestr", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SrednijBall", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SrednijBall", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("KolichestvoNeudov", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoNeudov", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_NumGroup", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumGroup", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Id_Predmet", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Id_Predmet", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_UchebGod", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "UchebGod", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Semestr", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Semestr", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_SrednijBall", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SrednijBall", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_SrednijBall", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SrednijBall", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_KolichestvoNeudov", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoNeudov", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_KolichestvoNeudov", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "KolichestvoNeudov", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15070,6 +15778,67 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_NumGroup, string Original_Id_Predmet, global::System.Nullable<int> Original_UchebGod, global::System.Nullable<int> Original_Semestr, global::System.Nullable<int> Original_SrednijBall, global::System.Nullable<int> Original_KolichestvoNeudov) {
+            if ((Original_NumGroup == null)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_NumGroup));
+            }
+            if ((Original_Id_Predmet == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Id_Predmet));
+            }
+            if ((Original_UchebGod.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_UchebGod.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Semestr.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Semestr.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SrednijBall.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_SrednijBall.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_KolichestvoNeudov.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_KolichestvoNeudov.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string NumGroup, string Id_Predmet, global::System.Nullable<int> UchebGod, global::System.Nullable<int> Semestr, global::System.Nullable<int> SrednijBall, global::System.Nullable<int> KolichestvoNeudov) {
             if ((NumGroup == null)) {
@@ -15122,6 +15891,111 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string NumGroup, string Id_Predmet, global::System.Nullable<int> UchebGod, global::System.Nullable<int> Semestr, global::System.Nullable<int> SrednijBall, global::System.Nullable<int> KolichestvoNeudov, string Original_NumGroup, string Original_Id_Predmet, global::System.Nullable<int> Original_UchebGod, global::System.Nullable<int> Original_Semestr, global::System.Nullable<int> Original_SrednijBall, global::System.Nullable<int> Original_KolichestvoNeudov) {
+            if ((NumGroup == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NumGroup));
+            }
+            if ((Id_Predmet == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Id_Predmet));
+            }
+            if ((UchebGod.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(UchebGod.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Semestr.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Semestr.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((SrednijBall.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(SrednijBall.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((KolichestvoNeudov.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(KolichestvoNeudov.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_NumGroup == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_NumGroup));
+            }
+            if ((Original_Id_Predmet == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Id_Predmet));
+            }
+            if ((Original_UchebGod.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_UchebGod.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Semestr.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Semestr.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SrednijBall.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_SrednijBall.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_KolichestvoNeudov.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_KolichestvoNeudov.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> SrednijBall, global::System.Nullable<int> KolichestvoNeudov, string Original_NumGroup, string Original_Id_Predmet, global::System.Nullable<int> Original_UchebGod, global::System.Nullable<int> Original_Semestr, global::System.Nullable<int> Original_SrednijBall, global::System.Nullable<int> Original_KolichestvoNeudov) {
+            return this.Update(Original_NumGroup, Original_Id_Predmet, Original_UchebGod, Original_Semestr, SrednijBall, KolichestvoNeudov, Original_NumGroup, Original_Id_Predmet, Original_UchebGod, Original_Semestr, Original_SrednijBall, Original_KolichestvoNeudov);
         }
     }
     
@@ -16088,6 +16962,19 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Ocenka", "Ocenka");
             tableMapping.ColumnMappings.Add("TypeRaboti", "TypeRaboti");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `ZaschitaDiploma` WHERE ((`TemaRaboti` = ?) AND (`Rukovoditel` = ?) A" +
+                "ND (`DataZaschiti` = ?) AND ((? = 1 AND `Ocenka` IS NULL) OR (`Ocenka` = ?)) AND" +
+                " ((? = 1 AND `TypeRaboti` IS NULL) OR (`TypeRaboti` = ?)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TemaRaboti", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TemaRaboti", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Rukovoditel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rukovoditel", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DataZaschiti", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DataZaschiti", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Ocenka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ocenka", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Ocenka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ocenka", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TypeRaboti", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TypeRaboti", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TypeRaboti", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TypeRaboti", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `ZaschitaDiploma` (`TemaRaboti`, `Rukovoditel`, `DataZaschiti`, `Ocen" +
@@ -16098,6 +16985,22 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DataZaschiti", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DataZaschiti", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Ocenka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ocenka", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TypeRaboti", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TypeRaboti", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `ZaschitaDiploma` SET `TemaRaboti` = ?, `Rukovoditel` = ?, `DataZaschiti` = ?, `Ocenka` = ?, `TypeRaboti` = ? WHERE ((`TemaRaboti` = ?) AND (`Rukovoditel` = ?) AND (`DataZaschiti` = ?) AND ((? = 1 AND `Ocenka` IS NULL) OR (`Ocenka` = ?)) AND ((? = 1 AND `TypeRaboti` IS NULL) OR (`TypeRaboti` = ?)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TemaRaboti", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TemaRaboti", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Rukovoditel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rukovoditel", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DataZaschiti", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DataZaschiti", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Ocenka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ocenka", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TypeRaboti", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TypeRaboti", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TemaRaboti", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TemaRaboti", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Rukovoditel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Rukovoditel", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DataZaschiti", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DataZaschiti", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Ocenka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ocenka", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Ocenka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ocenka", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TypeRaboti", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TypeRaboti", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TypeRaboti", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TypeRaboti", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16174,6 +17077,61 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_TemaRaboti, string Original_Rukovoditel, global::System.Nullable<global::System.DateTime> Original_DataZaschiti, global::System.Nullable<int> Original_Ocenka, string Original_TypeRaboti) {
+            if ((Original_TemaRaboti == null)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_TemaRaboti));
+            }
+            if ((Original_Rukovoditel == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Rukovoditel));
+            }
+            if ((Original_DataZaschiti.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DataZaschiti.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ocenka.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Ocenka.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_TypeRaboti == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_TypeRaboti));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string TemaRaboti, string Rukovoditel, global::System.Nullable<global::System.DateTime> DataZaschiti, global::System.Nullable<int> Ocenka, string TypeRaboti) {
             if ((TemaRaboti == null)) {
@@ -16220,6 +17178,99 @@ namespace LecturerDB.KafedraDataSetTableAdapters {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string TemaRaboti, string Rukovoditel, global::System.Nullable<global::System.DateTime> DataZaschiti, global::System.Nullable<int> Ocenka, string TypeRaboti, string Original_TemaRaboti, string Original_Rukovoditel, global::System.Nullable<global::System.DateTime> Original_DataZaschiti, global::System.Nullable<int> Original_Ocenka, string Original_TypeRaboti) {
+            if ((TemaRaboti == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(TemaRaboti));
+            }
+            if ((Rukovoditel == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Rukovoditel));
+            }
+            if ((DataZaschiti.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DataZaschiti.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Ocenka.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Ocenka.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((TypeRaboti == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(TypeRaboti));
+            }
+            if ((Original_TemaRaboti == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_TemaRaboti));
+            }
+            if ((Original_Rukovoditel == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Rukovoditel));
+            }
+            if ((Original_DataZaschiti.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_DataZaschiti.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ocenka.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Ocenka.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_TypeRaboti == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_TypeRaboti));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> Ocenka, string TypeRaboti, string Original_TemaRaboti, string Original_Rukovoditel, global::System.Nullable<global::System.DateTime> Original_DataZaschiti, global::System.Nullable<int> Original_Ocenka, string Original_TypeRaboti) {
+            return this.Update(Original_TemaRaboti, Original_Rukovoditel, Original_DataZaschiti, Ocenka, TypeRaboti, Original_TemaRaboti, Original_Rukovoditel, Original_DataZaschiti, Original_Ocenka, Original_TypeRaboti);
         }
     }
     
