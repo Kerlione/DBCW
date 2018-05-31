@@ -114,7 +114,7 @@ namespace LecturerDB {
             }
             catch (Exception)
             {
-                errorProvider1.SetError(button4,"Персональный код должен быть уникальным!");
+                
             }
         }
 
@@ -327,28 +327,6 @@ namespace LecturerDB {
                     temaZanjatijaFactTextBox.Text,
                     (int)chasiNumericUpDown.Value);
 
-            }
-            catch (Exception)
-            {
-
-            }
-            this.vipolnenijePlanaTableAdapter.Update(this.kafedraDataSet.VipolnenijePlana);
-            vipolnenijePlanaBindingSource.DataSource = vipolnenijePlanaTableAdapter.GetData();
-        }
-
-        private void button24_Click(object sender, EventArgs e) //plan accomplishment delete
-        {
-            try
-            {
-                vipolnenijePlanaTableAdapter.Delete(personKodPrepodavatelComboBox.SelectedText,
-                    kodPredmetaComboBox.SelectedText,
-                    numGruppaComboBox.SelectedText,
-                    dataProvZanjatijaDateTimePicker.Value,
-                    tipZanjatijaListBox.SelectedItem.ToString(), // TODO - fix not converting 
-                    temaZanjatijaPlanTextBox.Text,
-                    (int)iDNumericUpDown.Value,
-                    temaZanjatijaFactTextBox.Text,
-                    (int)chasiNumericUpDown.Value);
             }
             catch (Exception)
             {
@@ -876,28 +854,97 @@ namespace LecturerDB {
         private void clearLanguage()
         {
             languageTextBox.Clear();
-            iD_langTextBox.Clear();
         }
 
-        private void button41_Click(object sender, EventArgs e) // language delete
-        {
-            try
-            {
-                languageTableAdapter.Delete(Convert.ToInt16(iD_langTextBox.Text),
-                    languageTextBox.Text);
-            }
-            catch (Exception)
-            {
-
-            }
-            clearLanguage();
-            this.languageTableAdapter.Update(this.kafedraDataSet.Language);
-            languageBindingSource.DataSource = languageTableAdapter.GetData();
-        }
+        
 
         private void button42_Click(object sender, EventArgs e)
         {
             clearLanguage();
+        }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.prepodavatelBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vipolnenijePlanaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton2_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.gruppaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton3_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.zaschitaDiplomaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton4_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.nagruzkaPlanBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton5_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.obazanostBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton6_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.moveStudentBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton8_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.projectBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton9_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.publikacijaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton10_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.rezultatiObuchenijaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton12_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.lectureReadingBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+        }
+
+        private void saveToolStripButton11_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.languageBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
         }
     }
 }
