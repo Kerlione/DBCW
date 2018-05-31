@@ -55,10 +55,6 @@ namespace LecturerDB {
 
         }
 
-        private void button1_Click(object sender, EventArgs e) {
-
-        }
-
         private void refreshGruppaGrid()
         {
             gruppaTableAdapter.Update(kafedraDataSet.Gruppa);
@@ -94,8 +90,7 @@ namespace LecturerDB {
         {
             try
             {
-                prepodavatelTableAdapter.Insert(
-                    persKodTeacherMaskedTextBox.Text,
+                prepodavatelTableAdapter.Insert(persKodTeacherMaskedTextBox.Text,
                     imjaTextBox.Text,
                     familijaTextBox.Text,
                     nauchnajaStepenTextBox.Text,
@@ -107,15 +102,16 @@ namespace LecturerDB {
                     otchestvoTextBox.Text,
                     jazikiTextBox.Text,
                     iD_KafTextBox.Text);
-                
+                prepodavatelTableAdapter.Update(kafedraDataSet.Prepodavatel);
+                MessageBox.Show("Запись успешно обновлена");
                 clearFields();
-                prepodavatelBindingSource.DataSource = new List<Lecturer>();
                 prepodavatelBindingSource.DataSource = prepodavatelTableAdapter.GetData();
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                errorProvider1.SetError(button4,"Персональный код должен быть уникальным!");
+                MessageBox.Show(exception.Message);
             }
+
         }
 
         private void clearFields()
@@ -898,6 +894,56 @@ namespace LecturerDB {
         private void button42_Click(object sender, EventArgs e)
         {
             clearLanguage();
+        }
+
+        private void button44_Click(object sender, EventArgs e) //prepodavatel update
+        {
+            try
+            {
+                if (persKodTeacherMaskedTextBox.Text != "")
+                {
+                    prepodavatelTableAdapter.Update(kafedraDataSet.Prepodavatel);
+                    MessageBox.Show("Запись успешно обновлена");
+                    clearFields();
+                    prepodavatelBindingSource.DataSource = prepodavatelTableAdapter.GetData();
+                }
+                else
+                {
+                    MessageBox.Show("Персональный код не введен");
+                }
+            }
+            catch (SqlException)
+            {
+
+            }
+        }
+
+        private void prepodavatelDataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (prepodavatelDataGridView.SelectedRows.Count != 0)
+            {
+                persKodTeacherMaskedTextBox.Text = prepodavatelDataGridView.SelectedCells[0].Value.ToString();
+                imjaTextBox.Text = prepodavatelDataGridView.SelectedCells[1].Value.ToString();
+                familijaTextBox.Text = prepodavatelDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+                nauchnajaStepenTextBox.Text = prepodavatelDataGridView.SelectedRows[0].Cells[3].Value.ToString();
+                dolzhnostTextBox.Text = prepodavatelDataGridView.SelectedRows[0].Cells[4].Value.ToString();
+                
+                dataRozhdenijaDateTimePicker.Value = (DateTime) prepodavatelDataGridView.SelectedRows[0].Cells[7].Value;
+                //spisokPublikacijListBox.ValueMember = prepodavatelDataGridView.SelectedRows[0].Cells[8].Value;
+                otchestvoTextBox.Text = prepodavatelDataGridView.SelectedRows[0].Cells[9].Value.ToString();
+                jazikiTextBox.Text = prepodavatelDataGridView.SelectedRows[0].Cells[10].Value.ToString();
+                iD_KafTextBox.Text = prepodavatelDataGridView.SelectedRows[0].Cells[11].Value.ToString();
+            }
+        }
+
+        public static Bitmap ByteToImage(byte[] blob)
+        {
+            MemoryStream mStream = new MemoryStream();
+            byte[] pData = blob;
+            mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
+            Bitmap bm = new Bitmap(mStream, false);
+            mStream.Dispose();
+            return bm;
         }
     }
 }
