@@ -946,5 +946,8 @@ namespace LecturerDB {
             this.languageBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
         }
+
+
+        //ALL TO SQL
     }
 }
