@@ -90,37 +90,37 @@ namespace LecturerDB {
             }
         }
 
-        private void button4_Click(object sender, EventArgs e) //prepodavatel save
-        {
-            try
-            {
-                prepodavatelTableAdapter.Insert(
-                    persKodTeacherMaskedTextBox.Text,
-                    imjaTextBox.Text,
-                    familijaTextBox.Text,
-                    nauchnajaStepenTextBox.Text,
-                    dolzhnostTextBox.Text,
-                    _lecturer.CV,
-                    _lecturer.Photo,
-                    dataRozhdenijaDateTimePicker.Value,
-                    new byte[0], 
-                    otchestvoTextBox.Text,
-                    jazikiTextBox.Text,
-                    iD_KafTextBox.Text);
+        //private void button4_Click(object sender, EventArgs e) //prepodavatel save
+        //{
+        //    try
+        //    {
+        //        prepodavatelTableAdapter.Insert(
+        //            persKodTeacherMaskedTextBox.Text,
+        //            imjaTextBox.Text,
+        //            familijaTextBox.Text,
+        //            nauchnajaStepenTextBox.Text,
+        //            dolzhnostTextBox.Text,
+        //            _lecturer.CV,
+        //            _lecturer.Photo,
+        //            dataRozhdenijaDateTimePicker.Value,
+        //            new byte[0], 
+        //            otchestvoTextBox.Text,
+        //            jazikiTextBox.Text,
+        //            iD_KafTextBox.Text);
                 
-                clearFields();
-                prepodavatelBindingSource.DataSource = new List<Lecturer>();
-                prepodavatelBindingSource.DataSource = prepodavatelTableAdapter.GetData();
-            }
-            catch (Exception)
-            {
+        //        clearFields();
+        //        prepodavatelBindingSource.DataSource = new List<Lecturer>();
+        //        prepodavatelBindingSource.DataSource = prepodavatelTableAdapter.GetData();
+        //    }
+        //    catch (Exception)
+        //    {
                 
-            }
-        }
+        //    }
+        //}
 
         private void clearFields()
         {
-            persKodTeacherMaskedTextBox.Clear();
+           // persKodTeacherMaskedTextBox.Clear();
             imjaTextBox.Clear();
             familijaTextBox.Clear();
             nauchnajaStepenTextBox.Clear();
@@ -580,28 +580,28 @@ namespace LecturerDB {
             labor_ZNumberBox.Value = 0;
         }
 
-        private void button6_Click(object sender, EventArgs e) //delete prepodavatel
-        {
-            try
-            {
-                prepodavatelTableAdapter.Delete(persKodTeacherMaskedTextBox.Text,
-                    imjaTextBox.Text,
-                    familijaTextBox.Text,
-                    nauchnajaStepenTextBox.Text,
-                    dolzhnostTextBox.Text,
-                    dataRozhdenijaDateTimePicker.Value,
-                    otchestvoTextBox.Text,
-                    jazikiTextBox.Text,
-                    iD_KafTextBox.Text);
-            }
-            catch (Exception)
-            {
+        //private void button6_Click(object sender, EventArgs e) //delete prepodavatel
+        //{
+        //    try
+        //    {
+        //        prepodavatelTableAdapter.Delete(persKodTeacherMaskedTextBox.Text,
+        //            imjaTextBox.Text,
+        //            familijaTextBox.Text,
+        //            nauchnajaStepenTextBox.Text,
+        //            dolzhnostTextBox.Text,
+        //            dataRozhdenijaDateTimePicker.Value,
+        //            otchestvoTextBox.Text,
+        //            jazikiTextBox.Text,
+        //            iD_KafTextBox.Text);
+        //    }
+        //    catch (Exception)
+        //    {
 
-            }
-            clearFields();
-            this.prepodavatelTableAdapter.Update(this.kafedraDataSet.Prepodavatel);
-            prepodavatelBindingSource.DataSource = prepodavatelTableAdapter.GetData();
-        }
+        //    }
+        //    clearFields();
+        //    this.prepodavatelTableAdapter.Update(this.kafedraDataSet.Prepodavatel);
+        //    prepodavatelBindingSource.DataSource = prepodavatelTableAdapter.GetData();
+        //}
 
         private void button10_Click(object sender, EventArgs e)//predmet delete
         {
@@ -867,7 +867,9 @@ namespace LecturerDB {
         {
             this.Validate();
             this.prepodavatelBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.kafedraDataSet);
+            this.prepodavatelTableAdapter.Update(this.kafedraDataSet.Prepodavatel);
+            this.prepodavatelTableAdapter.GetData();
+            dataGridView1.Refresh();
         }
 
         private void saveToolStripButton1_Click(object sender, EventArgs e)

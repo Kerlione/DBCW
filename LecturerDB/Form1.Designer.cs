@@ -379,6 +379,8 @@
             this.nazvanijePredmeta_lvTextBox = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.prepodavatelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.prepodavatelNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -392,18 +394,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.prepodavatelDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn86 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn92 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn89 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn91 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn93 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn94 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jazikiTextBox = new System.Windows.Forms.TextBox();
             this.iD_KafTextBox = new System.Windows.Forms.TextBox();
             this.dolzhnostTextBox = new System.Windows.Forms.TextBox();
@@ -412,7 +402,6 @@
             this.publikacija_TeacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.publikacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataRozhdenijaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.persKodTeacherMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.otchestvoTextBox = new System.Windows.Forms.TextBox();
             this.familijaTextBox = new System.Windows.Forms.TextBox();
             this.imjaTextBox = new System.Windows.Forms.TextBox();
@@ -576,6 +565,19 @@
             this.publikacija_TeacherTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.Publikacija_TeacherTableAdapter();
             this.rezultatiObuchenijaTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.RezultatiObuchenijaTableAdapter();
             this.languageTableAdapter = new LecturerDB.KafedraDataSetTableAdapters.LanguageTableAdapter();
+            this.PersKodTeacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nauchnajaStepenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dolzhnostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cVDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataRozhdenijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.spisokPublikacijDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.otchestvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jazikiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDKafDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.persKodTeacherMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             kodPredmetaLabel = new System.Windows.Forms.Label();
             nazvanijePredmeta_rusLabel = new System.Windows.Forms.Label();
             kPLabel = new System.Windows.Forms.Label();
@@ -739,9 +741,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.kontaktchasiNumberBox)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prepodavatelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prepodavatelNavigator)).BeginInit();
             this.prepodavatelNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prepodavatelDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.publikacija_TeacherBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.publikacijaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1579,7 +1582,6 @@
             // 
             // spisokPublikacijLabel
             // 
-            spisokPublikacijLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             spisokPublikacijLabel.AutoSize = true;
             spisokPublikacijLabel.Location = new System.Drawing.Point(685, 27);
             spisokPublikacijLabel.Name = "spisokPublikacijLabel";
@@ -4259,8 +4261,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.prepodavatelNavigator);
-            this.groupBox1.Controls.Add(this.prepodavatelDataGridView);
             this.groupBox1.Controls.Add(jazikiLabel);
             this.groupBox1.Controls.Add(this.jazikiTextBox);
             this.groupBox1.Controls.Add(iD_KafLabel);
@@ -4291,11 +4293,44 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PersKodTeacher,
+            this.imjaDataGridViewTextBoxColumn,
+            this.familijaDataGridViewTextBoxColumn,
+            this.nauchnajaStepenDataGridViewTextBoxColumn,
+            this.dolzhnostDataGridViewTextBoxColumn,
+            this.cVDataGridViewImageColumn,
+            this.fotoDataGridViewImageColumn,
+            this.dataRozhdenijaDataGridViewTextBoxColumn,
+            this.spisokPublikacijDataGridViewImageColumn,
+            this.otchestvoDataGridViewTextBoxColumn,
+            this.jazikiDataGridViewTextBoxColumn,
+            this.iDKafDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.prepodavatelBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 251);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1080, 219);
+            this.dataGridView1.TabIndex = 40;
+            // 
+            // prepodavatelBindingSource1
+            // 
+            this.prepodavatelBindingSource1.DataMember = "Prepodavatel";
+            this.prepodavatelBindingSource1.DataSource = this.kafedraDataSet;
+            // 
             // prepodavatelNavigator
             // 
             this.prepodavatelNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.prepodavatelNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.prepodavatelNavigator.BindingSource = this.prepodavatelBindingSource;
+            this.prepodavatelNavigator.BindingSource = this.prepodavatelBindingSource1;
             this.prepodavatelNavigator.CountItem = this.bindingNavigatorCountItem;
             this.prepodavatelNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.prepodavatelNavigator.Dock = System.Windows.Forms.DockStyle.None;
@@ -4313,7 +4348,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.saveToolStripButton});
-            this.prepodavatelNavigator.Location = new System.Drawing.Point(782, 207);
+            this.prepodavatelNavigator.Location = new System.Drawing.Point(792, 207);
             this.prepodavatelNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.prepodavatelNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.prepodavatelNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -4419,116 +4454,11 @@
             this.saveToolStripButton.Text = "&Save";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
-            // prepodavatelDataGridView
-            // 
-            this.prepodavatelDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.prepodavatelDataGridView.AutoGenerateColumns = false;
-            this.prepodavatelDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.prepodavatelDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn86,
-            this.dataGridViewTextBoxColumn87,
-            this.dataGridViewTextBoxColumn92,
-            this.dataGridViewTextBoxColumn88,
-            this.dataGridViewTextBoxColumn89,
-            this.dataGridViewTextBoxColumn90,
-            this.dataGridViewImageColumn3,
-            this.dataGridViewImageColumn4,
-            this.dataGridViewTextBoxColumn91,
-            this.dataGridViewTextBoxColumn93,
-            this.dataGridViewTextBoxColumn94});
-            this.prepodavatelDataGridView.DataSource = this.prepodavatelBindingSource;
-            this.prepodavatelDataGridView.Location = new System.Drawing.Point(-6, 250);
-            this.prepodavatelDataGridView.MultiSelect = false;
-            this.prepodavatelDataGridView.Name = "prepodavatelDataGridView";
-            this.prepodavatelDataGridView.ReadOnly = true;
-            this.prepodavatelDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.prepodavatelDataGridView.Size = new System.Drawing.Size(1097, 220);
-            this.prepodavatelDataGridView.TabIndex = 38;
-            // 
-            // dataGridViewTextBoxColumn86
-            // 
-            this.dataGridViewTextBoxColumn86.DataPropertyName = "PersKodTeacher";
-            this.dataGridViewTextBoxColumn86.HeaderText = "PersKodTeacher";
-            this.dataGridViewTextBoxColumn86.Name = "dataGridViewTextBoxColumn86";
-            this.dataGridViewTextBoxColumn86.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn87
-            // 
-            this.dataGridViewTextBoxColumn87.DataPropertyName = "Imja";
-            this.dataGridViewTextBoxColumn87.HeaderText = "Imja";
-            this.dataGridViewTextBoxColumn87.Name = "dataGridViewTextBoxColumn87";
-            this.dataGridViewTextBoxColumn87.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn92
-            // 
-            this.dataGridViewTextBoxColumn92.DataPropertyName = "Otchestvo";
-            this.dataGridViewTextBoxColumn92.HeaderText = "Otchestvo";
-            this.dataGridViewTextBoxColumn92.Name = "dataGridViewTextBoxColumn92";
-            this.dataGridViewTextBoxColumn92.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn88
-            // 
-            this.dataGridViewTextBoxColumn88.DataPropertyName = "Familija";
-            this.dataGridViewTextBoxColumn88.HeaderText = "Familija";
-            this.dataGridViewTextBoxColumn88.Name = "dataGridViewTextBoxColumn88";
-            this.dataGridViewTextBoxColumn88.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn89
-            // 
-            this.dataGridViewTextBoxColumn89.DataPropertyName = "NauchnajaStepen";
-            this.dataGridViewTextBoxColumn89.HeaderText = "NauchnajaStepen";
-            this.dataGridViewTextBoxColumn89.Name = "dataGridViewTextBoxColumn89";
-            this.dataGridViewTextBoxColumn89.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn90
-            // 
-            this.dataGridViewTextBoxColumn90.DataPropertyName = "Dolzhnost";
-            this.dataGridViewTextBoxColumn90.HeaderText = "Dolzhnost";
-            this.dataGridViewTextBoxColumn90.Name = "dataGridViewTextBoxColumn90";
-            this.dataGridViewTextBoxColumn90.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn3
-            // 
-            this.dataGridViewImageColumn3.DataPropertyName = "CV";
-            this.dataGridViewImageColumn3.HeaderText = "CV";
-            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
-            this.dataGridViewImageColumn3.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn4
-            // 
-            this.dataGridViewImageColumn4.DataPropertyName = "Foto";
-            this.dataGridViewImageColumn4.HeaderText = "Foto";
-            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
-            this.dataGridViewImageColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn91
-            // 
-            this.dataGridViewTextBoxColumn91.DataPropertyName = "DataRozhdenija";
-            this.dataGridViewTextBoxColumn91.HeaderText = "DataRozhdenija";
-            this.dataGridViewTextBoxColumn91.Name = "dataGridViewTextBoxColumn91";
-            this.dataGridViewTextBoxColumn91.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn93
-            // 
-            this.dataGridViewTextBoxColumn93.DataPropertyName = "Jaziki";
-            this.dataGridViewTextBoxColumn93.HeaderText = "Jaziki";
-            this.dataGridViewTextBoxColumn93.Name = "dataGridViewTextBoxColumn93";
-            this.dataGridViewTextBoxColumn93.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn94
-            // 
-            this.dataGridViewTextBoxColumn94.DataPropertyName = "ID_Kaf";
-            this.dataGridViewTextBoxColumn94.HeaderText = "ID_Kaf";
-            this.dataGridViewTextBoxColumn94.Name = "dataGridViewTextBoxColumn94";
-            this.dataGridViewTextBoxColumn94.ReadOnly = true;
-            // 
             // jazikiTextBox
             // 
             this.jazikiTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.jazikiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource, "Jaziki", true));
+            this.jazikiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource1, "Jaziki", true));
             this.jazikiTextBox.Location = new System.Drawing.Point(477, 114);
             this.jazikiTextBox.Multiline = true;
             this.jazikiTextBox.Name = "jazikiTextBox";
@@ -4539,7 +4469,7 @@
             // 
             this.iD_KafTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iD_KafTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource, "ID_Kaf", true));
+            this.iD_KafTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource1, "ID_Kaf", true));
             this.iD_KafTextBox.Location = new System.Drawing.Point(477, 82);
             this.iD_KafTextBox.Name = "iD_KafTextBox";
             this.iD_KafTextBox.Size = new System.Drawing.Size(192, 20);
@@ -4549,7 +4479,7 @@
             // 
             this.dolzhnostTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dolzhnostTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource, "Dolzhnost", true));
+            this.dolzhnostTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource1, "Dolzhnost", true));
             this.dolzhnostTextBox.Location = new System.Drawing.Point(477, 52);
             this.dolzhnostTextBox.Name = "dolzhnostTextBox";
             this.dolzhnostTextBox.Size = new System.Drawing.Size(192, 20);
@@ -4559,7 +4489,7 @@
             // 
             this.nauchnajaStepenTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nauchnajaStepenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource, "NauchnajaStepen", true));
+            this.nauchnajaStepenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource1, "NauchnajaStepen", true));
             this.nauchnajaStepenTextBox.Location = new System.Drawing.Point(477, 24);
             this.nauchnajaStepenTextBox.Name = "nauchnajaStepenTextBox";
             this.nauchnajaStepenTextBox.Size = new System.Drawing.Size(192, 20);
@@ -4567,7 +4497,6 @@
             // 
             // spisokPublikacijListBox
             // 
-            this.spisokPublikacijListBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.spisokPublikacijListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.prepodavatelBindingSource, "SpisokPublikacij", true));
             this.spisokPublikacijListBox.DataSource = this.publikacija_TeacherBindingSource;
             this.spisokPublikacijListBox.DisplayMember = "ID_pulikacii";
@@ -4590,24 +4519,15 @@
             // 
             // dataRozhdenijaDateTimePicker
             // 
-            this.dataRozhdenijaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.prepodavatelBindingSource, "DataRozhdenija", true));
+            this.dataRozhdenijaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.prepodavatelBindingSource1, "DataRozhdenija", true));
             this.dataRozhdenijaDateTimePicker.Location = new System.Drawing.Point(123, 147);
             this.dataRozhdenijaDateTimePicker.Name = "dataRozhdenijaDateTimePicker";
             this.dataRozhdenijaDateTimePicker.Size = new System.Drawing.Size(193, 20);
             this.dataRozhdenijaDateTimePicker.TabIndex = 33;
             // 
-            // persKodTeacherMaskedTextBox
-            // 
-            this.persKodTeacherMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource, "PersKodTeacher", true));
-            this.persKodTeacherMaskedTextBox.Location = new System.Drawing.Point(123, 114);
-            this.persKodTeacherMaskedTextBox.Mask = "000000-00000";
-            this.persKodTeacherMaskedTextBox.Name = "persKodTeacherMaskedTextBox";
-            this.persKodTeacherMaskedTextBox.Size = new System.Drawing.Size(193, 20);
-            this.persKodTeacherMaskedTextBox.TabIndex = 32;
-            this.persKodTeacherMaskedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // otchestvoTextBox
             // 
+            this.otchestvoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource1, "Otchestvo", true));
             this.otchestvoTextBox.Location = new System.Drawing.Point(123, 82);
             this.otchestvoTextBox.Name = "otchestvoTextBox";
             this.otchestvoTextBox.Size = new System.Drawing.Size(189, 20);
@@ -4615,6 +4535,7 @@
             // 
             // familijaTextBox
             // 
+            this.familijaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource1, "Familija", true));
             this.familijaTextBox.Location = new System.Drawing.Point(123, 53);
             this.familijaTextBox.Name = "familijaTextBox";
             this.familijaTextBox.Size = new System.Drawing.Size(189, 20);
@@ -4622,6 +4543,7 @@
             // 
             // imjaTextBox
             // 
+            this.imjaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource1, "Imja", true));
             this.imjaTextBox.Location = new System.Drawing.Point(123, 24);
             this.imjaTextBox.Name = "imjaTextBox";
             this.imjaTextBox.Size = new System.Drawing.Size(189, 20);
@@ -4639,7 +4561,7 @@
             // 
             // button3
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Location = new System.Drawing.Point(944, 139);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 23);
@@ -4650,7 +4572,7 @@
             // 
             // button2
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(1017, 139);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(52, 23);
@@ -4661,7 +4583,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.prepodavatelBindingSource1, "Foto", true));
             this.pictureBox1.Location = new System.Drawing.Point(944, 18);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -6071,6 +5994,101 @@
             // 
             this.languageTableAdapter.ClearBeforeFill = true;
             // 
+            // PersKodTeacher
+            // 
+            this.PersKodTeacher.DataPropertyName = "PersKodTeacher";
+            this.PersKodTeacher.HeaderText = "PersKodTeacher";
+            this.PersKodTeacher.Name = "PersKodTeacher";
+            this.PersKodTeacher.ReadOnly = true;
+            // 
+            // imjaDataGridViewTextBoxColumn
+            // 
+            this.imjaDataGridViewTextBoxColumn.DataPropertyName = "Imja";
+            this.imjaDataGridViewTextBoxColumn.HeaderText = "Imja";
+            this.imjaDataGridViewTextBoxColumn.Name = "imjaDataGridViewTextBoxColumn";
+            this.imjaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // familijaDataGridViewTextBoxColumn
+            // 
+            this.familijaDataGridViewTextBoxColumn.DataPropertyName = "Familija";
+            this.familijaDataGridViewTextBoxColumn.HeaderText = "Familija";
+            this.familijaDataGridViewTextBoxColumn.Name = "familijaDataGridViewTextBoxColumn";
+            this.familijaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nauchnajaStepenDataGridViewTextBoxColumn
+            // 
+            this.nauchnajaStepenDataGridViewTextBoxColumn.DataPropertyName = "NauchnajaStepen";
+            this.nauchnajaStepenDataGridViewTextBoxColumn.HeaderText = "NauchnajaStepen";
+            this.nauchnajaStepenDataGridViewTextBoxColumn.Name = "nauchnajaStepenDataGridViewTextBoxColumn";
+            this.nauchnajaStepenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dolzhnostDataGridViewTextBoxColumn
+            // 
+            this.dolzhnostDataGridViewTextBoxColumn.DataPropertyName = "Dolzhnost";
+            this.dolzhnostDataGridViewTextBoxColumn.HeaderText = "Dolzhnost";
+            this.dolzhnostDataGridViewTextBoxColumn.Name = "dolzhnostDataGridViewTextBoxColumn";
+            this.dolzhnostDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cVDataGridViewImageColumn
+            // 
+            this.cVDataGridViewImageColumn.DataPropertyName = "CV";
+            this.cVDataGridViewImageColumn.HeaderText = "CV";
+            this.cVDataGridViewImageColumn.Name = "cVDataGridViewImageColumn";
+            this.cVDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // fotoDataGridViewImageColumn
+            // 
+            this.fotoDataGridViewImageColumn.DataPropertyName = "Foto";
+            this.fotoDataGridViewImageColumn.HeaderText = "Foto";
+            this.fotoDataGridViewImageColumn.Name = "fotoDataGridViewImageColumn";
+            this.fotoDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // dataRozhdenijaDataGridViewTextBoxColumn
+            // 
+            this.dataRozhdenijaDataGridViewTextBoxColumn.DataPropertyName = "DataRozhdenija";
+            this.dataRozhdenijaDataGridViewTextBoxColumn.HeaderText = "DataRozhdenija";
+            this.dataRozhdenijaDataGridViewTextBoxColumn.Name = "dataRozhdenijaDataGridViewTextBoxColumn";
+            this.dataRozhdenijaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // spisokPublikacijDataGridViewImageColumn
+            // 
+            this.spisokPublikacijDataGridViewImageColumn.DataPropertyName = "SpisokPublikacij";
+            this.spisokPublikacijDataGridViewImageColumn.HeaderText = "SpisokPublikacij";
+            this.spisokPublikacijDataGridViewImageColumn.Name = "spisokPublikacijDataGridViewImageColumn";
+            this.spisokPublikacijDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // otchestvoDataGridViewTextBoxColumn
+            // 
+            this.otchestvoDataGridViewTextBoxColumn.DataPropertyName = "Otchestvo";
+            this.otchestvoDataGridViewTextBoxColumn.HeaderText = "Otchestvo";
+            this.otchestvoDataGridViewTextBoxColumn.Name = "otchestvoDataGridViewTextBoxColumn";
+            this.otchestvoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jazikiDataGridViewTextBoxColumn
+            // 
+            this.jazikiDataGridViewTextBoxColumn.DataPropertyName = "Jaziki";
+            this.jazikiDataGridViewTextBoxColumn.HeaderText = "Jaziki";
+            this.jazikiDataGridViewTextBoxColumn.Name = "jazikiDataGridViewTextBoxColumn";
+            this.jazikiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDKafDataGridViewTextBoxColumn
+            // 
+            this.iDKafDataGridViewTextBoxColumn.DataPropertyName = "ID_Kaf";
+            this.iDKafDataGridViewTextBoxColumn.HeaderText = "ID_Kaf";
+            this.iDKafDataGridViewTextBoxColumn.Name = "iDKafDataGridViewTextBoxColumn";
+            this.iDKafDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // persKodTeacherMaskedTextBox
+            // 
+            this.persKodTeacherMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prepodavatelBindingSource1, "PersKodTeacher", true));
+            this.persKodTeacherMaskedTextBox.Location = new System.Drawing.Point(123, 114);
+            this.persKodTeacherMaskedTextBox.Mask = "000000-00000";
+            this.persKodTeacherMaskedTextBox.Name = "persKodTeacherMaskedTextBox";
+            this.persKodTeacherMaskedTextBox.Size = new System.Drawing.Size(193, 20);
+            this.persKodTeacherMaskedTextBox.TabIndex = 32;
+            this.persKodTeacherMaskedTextBox.Text = "00000000000";
+            this.persKodTeacherMaskedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6168,10 +6186,11 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prepodavatelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prepodavatelNavigator)).EndInit();
             this.prepodavatelNavigator.ResumeLayout(false);
             this.prepodavatelNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prepodavatelDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.publikacija_TeacherBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.publikacijaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -6459,7 +6478,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.TextBox familijaTextBox;
         private System.Windows.Forms.TextBox imjaTextBox;
-        private System.Windows.Forms.MaskedTextBox persKodTeacherMaskedTextBox;
         private System.Windows.Forms.TextBox otchestvoTextBox;
         private System.Windows.Forms.TextBox dolzhnostTextBox;
         private System.Windows.Forms.TextBox nauchnajaStepenTextBox;
@@ -6495,18 +6513,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ReadSemester;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn84;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn85;
-        private System.Windows.Forms.DataGridView prepodavatelDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn86;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn87;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn92;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn88;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn89;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn90;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn91;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn93;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn94;
         private System.Windows.Forms.NumericUpDown kursovajaNumericUpDown;
         private System.Windows.Forms.BindingNavigator prepodavatelNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -6679,6 +6685,21 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem11;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator35;
         private System.Windows.Forms.ToolStripButton saveToolStripButton11;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource prepodavatelBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersKodTeacher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imjaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn familijaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nauchnajaStepenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dolzhnostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn cVDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataRozhdenijaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn spisokPublikacijDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn otchestvoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jazikiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDKafDataGridViewTextBoxColumn;
+        private System.Windows.Forms.MaskedTextBox persKodTeacherMaskedTextBox;
     }
 }
 
